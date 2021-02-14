@@ -4,7 +4,5 @@
 
 ### Important links:
 
-
-
-- https://kimikurata.com
-- https://kimikurata.com/aau/wnm608/kurata.kimi
+- http://kimikurata.com
+- http://kimikurata.com/aau/wnm608/kurata.kimi
