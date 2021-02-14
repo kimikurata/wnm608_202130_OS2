@@ -6,4 +6,4 @@
 
 - http://kimikurata.com (under construction)
 - http://kimikurata.com/aau/wnm608/kurata.kimi
-- http:////kimikurata.com/aau/wnm608/kurata.kimi/recipes
+- http://kimikurata.com/aau/wnm608/kurata.kimi/recipes
