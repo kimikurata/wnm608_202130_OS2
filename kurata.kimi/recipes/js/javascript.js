@@ -47,6 +47,13 @@ $(document).ready(function(){
      .parent().removeClass("active")
      .end().filter("[href='#"+id+"']").parent().addClass("active");
    });
+
+  $("#mybtn1").click(function(){
+    $("#recipe1_toggle").toggle();
+  });
  
 
 });
+
+
+

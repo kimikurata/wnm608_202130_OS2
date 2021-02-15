@@ -3,8 +3,8 @@ body{
 	font-family: 'Mulish', sans-serif;
 }
 .side_paddign{
-	padding-left: 130px;
-	padding-right: 130px;
+	padding-left: 160px;
+	padding-right: 160px;
 }
 #top-menu {
     position: fixed;
@@ -15,7 +15,7 @@ body{
     height: 50px;
 }
 .navbar_container{
-	background-color: rgb(255, 145, 0, 1);
+	background-color: rgb(255, 111, 0, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,11 +42,9 @@ body{
 	font-weight: 500;
 		padding: 10px;
 		margin: 5px
-
-
 }
 .active{
-	background-color: rgb(237, 119, 0, 1);
+	background-color: rgb(237, 186, 89, 1);
 }
 .nav li:first-child{
 	margin-right: 600px;
@@ -55,21 +53,128 @@ body{
 	background-color: none;
 }
 
-
-
 .top_container{
-	background-color: red;
-	height: 800px;
+	position: relative;
+	top:10px;
+	background-color: rgb(247, 247, 247,1);;
+	height: 600px;
+	background-image: url(images/topbg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-.recipe1_container{
-	background-color: gray;
+.top_title{
+	position: relative;
+	padding-top:155px;
+	color: white;
+	font-size:3em;
+	font-weight: 700;
+	width: 30%;
+}
+.top_text{
+	font-size:1.5em;
+	color: white;
+	font-weight: 300;
+	width: 30%;
+}
+.recipe_container{
+	background-color: white;
 	height: 800px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.recipe_image_container{
+	width: 40%;
+	display: flex;
+	flex-grow: 1;
+	min-width: 300px;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+.recipe_card_container{
+	width: 40%;
+	min-width: 500px;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.toggle_btn{
+	background-color: white;
+	border: none;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	color: rgb(235, 64, 52,1);
+	font-size:1.2em;
+	font-weight: 500;
+}
+.recipe_card{
+	margin: 20px;
+	padding: 50px;
+	border-radius: 30px;
+	color: #f0f0f0;
+	background-color: rgb(235, 64, 52,1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipe1_title {
+	color:white;
+}
+.recipe1_image{
+	width: 100%;
+
+}
+.ingredients_li{
+	font-size:1.2em;
+	font-weight: 300;
+}
+.initiallyHidden { 
+	display: none; 
+}
+.step{
+	width: 30%;
+	font-size:1.3em;
+	font-weight: 500;
+}
+.step_image_container{
+	width: 30%;
+	margin-bottom: 20px;
+}
+.step_image{
+	object-fit: cover;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 30px;
+
+}
+.recipe_steps_container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.individual_step{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 .recipe2_container{
-	background-color: green;
+	background-color: rgb(235, 64, 52,1);
 	height: 800px;
 }
 .recipe3_container{
-	background-color: blue;
+	background-color: white;
 	height: 800px;
 }
