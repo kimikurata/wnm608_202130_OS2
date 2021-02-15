@@ -51,6 +51,21 @@ $(document).ready(function(){
   $("#mybtn1").click(function(){
     $("#recipe1_toggle").toggle();
   });
+  $("#mybtn2").click(function(){
+    $("#recipe1_toggle").toggle();
+  });
+  $("#mybtn3").click(function(){
+    $("#recipe2_toggle").toggle();
+  });
+  $("#mybtn4").click(function(){
+    $("#recipe2_toggle").toggle();
+  });
+  $("#mybtn5").click(function(){
+    $("#recipe3_toggle").toggle();
+  });
+  $("#mybtn6").click(function(){
+    $("#recipe3_toggle").toggle();
+  });
  
 
 });
