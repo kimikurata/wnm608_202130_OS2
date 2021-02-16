@@ -50,21 +50,51 @@ $(document).ready(function(){
 
   $("#mybtn1").click(function(){
     $("#recipe1_toggle").toggle();
+    if ($(this).html() == "Read directions"){
+      $(this).html("Hide directions");
+    } else {
+      $(this).html("Read directions");
+    };
   });
   $("#mybtn2").click(function(){
     $("#recipe1_toggle").toggle();
+    if ($("#mybtn1").html() == "Read directions"){
+      $("#mybtn1").html("Hide directions");
+    } else {
+      $("#mybtn1").html("Read directions");
+    };
   });
   $("#mybtn3").click(function(){
     $("#recipe2_toggle").toggle();
+    if ($(this).html() == "Read directions"){
+      $(this).html("Hide directions");
+    } else {
+      $(this).html("Read directions");
+    };
   });
   $("#mybtn4").click(function(){
     $("#recipe2_toggle").toggle();
+    if ($("#mybtn3").html() == "Read directions"){
+      $("#mybtn3").html("Hide directions");
+    } else {
+      $("#mybtn3").html("Read directions");
+    };
   });
   $("#mybtn5").click(function(){
     $("#recipe3_toggle").toggle();
+    if ($(this).html() == "Read directions"){
+      $(this).html("Hide directions");
+    } else {
+      $(this).html("Read directions");
+    };
   });
   $("#mybtn6").click(function(){
     $("#recipe3_toggle").toggle();
+    if ($("#mybtn5").html() == "Read directions"){
+      $("#mybtn5").html("Hide directions");
+    } else {
+      $("#mybtn5").html("Read directions");
+    };
   });
  
 
