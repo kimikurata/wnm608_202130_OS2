@@ -1,21 +1,13 @@
 $(document).ready(function(){
+
+// Menu bar 
 	// reference code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_active_element
 			var link = $(".link_item")
-			// for(var i= 0; i < link.length; i++){
-			// 	link[i].addEventListener("click", function(){
-			// 		var current = $(".active");
-			// 		current[0].className = current[0].className.replace(" active", "");
-		 //  			this.className += " active";
-			// 	});
-			// };
-	//change 
-
 	// reference code from https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
-	var topMenu = $("#top-menu");
-	var    topMenuHeight = topMenu.outerHeight()+15;
+	   var topMenu = $("#top-menu");
+	   var    topMenuHeight = topMenu.outerHeight()+15;
     // All list items
     var menuItems = topMenu.find("a");
-    console.log(menuItems);
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function(){
       var item = $($(this).attr("href"));
@@ -25,10 +17,6 @@ $(document).ready(function(){
       }
     });
     console.log( scrollItems);
-
-
-
-    
 
     $(window).scroll(function(){
    		// Get container scroll position
@@ -48,6 +36,7 @@ $(document).ready(function(){
      .end().filter("[href='#"+id+"']").parent().addClass("active");
    });
 
+// display recipe steps 
   $("#mybtn1").click(function(){
     $("#recipe1_toggle").toggle();
     if ($(this).html() == "Read directions"){
@@ -96,8 +85,6 @@ $(document).ready(function(){
       $("#mybtn5").html("Read directions");
     };
   });
- 
-
 });
 
 
