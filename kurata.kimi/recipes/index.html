@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Recipes</title>
-	<link rel="stylesheet" href="css//stylesheet.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
-	<script src="https:/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-190077089-1"></script>
 	<script>
@@ -17,22 +10,41 @@
 
   		gtag('config', 'UA-190077089-1');
 	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recipes</title>
+	<link rel="stylesheet" href="css//stylesheet.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+	<script src="https:/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WXGXXJT');</script>
+	<!-- End Google Tag Manager -->
+	
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXGXXJT"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 	<nav id="top-menu" class="navbar_container">
 		
 			<ul class="nav">
-			  <li class="active">
-			    <a href="#toppage">KIMI.RECIPES</a>
+			  <li class="active" >
+			    <a id="home" href="#toppage">KIMI.RECIPES</a>
 			  </li>
-			  <li>
-			    <a href="#recipe1">Salsa</a>
+			  <li >
+			    <a id="salsa" href="#recipe1">Salsa</a>
 			  </li>
-			  <li>
-			    <a href="#recipe2">Totopos</a>
+			  <li >
+			    <a id="totopo" href="#recipe2">Totopos</a>
 			  </li>
-			  <li>
-			    <a href="#recipe3">Sandwich</a>
+			  <li >
+			    <a id="sandwitch" href="#recipe3">Sandwich</a>
 			  </li>
 			</ul>
 	
@@ -45,10 +57,10 @@
 	</div>
 <!-- new section 1 -->
 	<div id="recipe1" class="recipe_container">
-		<div class="recipe_image_container">
+		<div class="recipe_image_container_r">
 			<img class="recipe1_image" src="images/salsa1.png" alt="salsa1 image" >
 		</div>
-		<div class="recipe_card_container">
+		<div class="recipe_card_container_r">
 			<div class="recipe_card">
 				<h1 class="recipe1_title">Red Mid-spicy Salsa</h1>
 				<h3 class="cooking_time">Cooking Time:   <spam style="font-weight: 300">5 min </spam>      |   <spam style="font-weight: 300">    Servings: 4</spam></h3>
@@ -105,11 +117,11 @@
 				<img class="recipe1_image step_image" src="images/salsastep4.jpg" alt="salsa1 ingredients" >
 			</div>
 		</div>
-		<button id="mybtn2" class="toggle_btn">Hide directions</button>
+		<button id="mybtn2" class="hidedirec toggle_btn">Hide directions</button>
 	</div>
 <!-- new section 2 -->
 	<div id="recipe2" class="recipe_container">
-		<div class="recipe_card_container  ">
+		<div class="recipe_card_container_l  ">
 			<div class="recipe_card recipe_card2">
 				<h1 class="recipe1_title">Gold Corn Totopo Chips</h1>
 				<h3 class="cooking_time">Cooking Time:   <spam style="font-weight: 300">10 min</spam>      |   <spam style="font-weight: 300">    Servings: 2</spam></h3>
@@ -122,7 +134,7 @@
 			</div>
 			<a id="mybtn3" class="toggle_btn" href="#recipe2_toggle">Read directions</a>
 		</div>
-		<div class="recipe_image_container">
+		<div class="recipe_image_container_l">
 			<img class="recipe1_image" src="images/totopo1.png" alt="salsa1 image" >
 		</div>
 	</div>
@@ -158,14 +170,14 @@
 				<img class="recipe1_image step_image" src="images/totopostep3.jpg" alt="salsa1 ingredients" >
 			</div>
 		</div>
-		<button id="mybtn4" class="toggle_btn">Hide directions</button>
+		<button id="mybtn4" class="hidedirec toggle_btn ">Hide directions</button>
 	</div>
 	<!-- new section 3 -->
 	<div id="recipe3" class="recipe_container">
-		<div class="recipe_image_container">
+		<div class="recipe_image_container_r">
 			<img class="recipe1_image" src="images/sandwitch1.png" alt="salsa1 image" >
 		</div>
-		<div class="recipe_card_container">
+		<div class="recipe_card_container_r">
 			<div class="recipe_card recipe_card3">
 				<h1 class="recipe1_title">Prosciutto Sandwich Recipe</h1>
 				<h3 class="cooking_time">Cooking Time:   <spam style="font-weight: 300">8 min</spam>      |   <spam style="font-weight: 300">    Servings: 4</spam></h3>
@@ -183,7 +195,8 @@
 		</div>
 	</div>
 	<!--  section3 hidden  -->
-	<div id="recipe3_toggle" class="initiallyHidden recipe_steps_container">
+	<div id="recipe3_toggle" class="initiallyHidden recipe_steps_container" >
+		<div class="step_box">
 		<div class="individual_step">
 			<div class="step">
 				<ol>
@@ -224,7 +237,8 @@
 				<img class="recipe1_image step_image" src="images/sandstep4.jpg" alt="salsa1 ingredients" >
 			</div>
 		</div>
-		<button id="mybtn6" class="toggle_btn">Hide directions</button>
+		</div>
+		<button id="mybtn6" class="hidedirec toggle_btn " >Hide directions</button>
 	</div>
 	<footer class="footer_simple">
 		<p class="footer_text">Design by Kimi kurata</p>
