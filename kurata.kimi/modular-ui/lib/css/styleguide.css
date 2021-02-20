@@ -1,0 +1,63 @@
+/* CSS RESET */
+
+*, *::, *::after {
+	box-sizing: border-box;	
+}
+
+:root{
+	--color-neutral-light: blue;
+	--color-neutral-medium: blue;
+	--color-neutral-dark: blue;
+
+	--color-neutral-white: #fff;
+	--color-neutral-black: #111;
+
+
+	--font-sans: Helvetica, Arial, sans-serif;
+	--font-serif: Cambria, Georgia, "Times New Roman", serif;
+}
+
+body {
+	margin: 0;
+	font-size: 100%;  /*accept whatever the user have set*/
+	font-family: var(--font-sans);
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-family: var(--font-serif);
+} 
+
+a{
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* LAYOUT CLASSES */
+.container{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.hidden { display: none;}
+.display-block{display:block;}
+.display-inline-flex{ display: inline-flex;}
+.display-
+
+
+
+
+
+
+
