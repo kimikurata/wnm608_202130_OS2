@@ -7,8 +7,8 @@
 - http://kimikurata.com (under construction)
 - http://kimikurata.com/aau/wnm608/kurata.kimi
 - http://kimikurata.com/aau/wnm608/kurata.kimi/recipes
-- http://kimikurata.com/aau/wnm608/kurata.kimi/modular-ui
+- http://kimikurata.com/aau/wnm608/kurata.kimi/product-page
 
-### Instructor's link
+### Instructor's link:
 
 - https://hdraws.com/aau/wnm608/cline.hamilton/
