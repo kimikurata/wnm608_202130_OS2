@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2DBJFSDVN"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-T2DBJFSDVN');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Product website</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 	<script src="https:/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,61 +23,120 @@
 <body>
 	<!-- cmd + / , how to comment-->
 
-	<!-- header>h1+p -->
-	<header>
-		<h1>kimi Cool Website</h1>
-		<p>Such a cool website</p>
+	<header class="navbar">
+		<div class="container flex-row-between">
+			<div class="">
+				<a class="brand-text" href="#top">KIMIPOD</a>
+			</div>
+			<!-- <div class="flex-stretch"></div> DELETE IF COMMENTED-->
+			<!-- nav.nav>ul>li*4>a[href=#article$]{Link $} -->
+			<nav class="nav flex-row-center">
+				<ul class="flex-row-center">
+					<li><a class="active" href="#article1">Link 1</a></li>
+					<li><a href="#article2">Link 2</a></li>
+					<li><a href="#article3">Link 3</a></li>
+					<li><a href="#article4">Link 4</a></li>
+				</ul>
+			</nav>
+			
+		</div>
 	</header>
-	<!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->
-	<nav class="nav">
-		<ul>
-			<li><a href="#article1">Link 1</a></li>
-			<li><a href="#article2">Link 2</a></li>
-			<li><a href="#article3">Link 3</a></li>
-			<li><a href="#article4">Link 4</a></li>
-		</ul>
-	</nav>
+	<div id="top"  class="view-window display-flex navbar-spacer" style="background-image: url(images/genericbg1.png);">
+		<div class="flex-row-between container">
+			<div class="introduction-box flex-grow1">
+				<h1>Title here</h1>
+				<p class="body-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus rerum harum atque nulla nihil eaque dolorum, autem dolores nobis fugit!</p>
+				<button class="generic-btn" type="button">Click Me!</button>
+
+			</div>
+			<div class="image-box flex-grow1 flex-row-center">
+				<img  class="image-cover " src="images/placeholder1.png" alt="image placeholder" >
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	</div>
 	<!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*4>lorem40 -->
 	<div class="container">
-		<article id="article1" class="article">
+		<h2 class="flex-row-center top-margin-l">CARD STYLES</h2>
+		<hr class="bottom-margin-m">
+		<h2>cards with image</h2>
+		<div class="flex-row-between">
+			<div class="card">
+				<img src="images/placeholder1.png" alt="" class="image-cover">
+				<p class="product-name text-bold ">Title</p>
+				<p class="price text-highlight">$00.00</p>
+			</div>
+			<div class="card">
+				<img src="images/placeholder2.png" alt="" class="image-cover">
+				<p class="product-name text-bold ">Title</p>
+				<p class="price text-highlight ">$00.00</p>
+			</div>
+			<div class="card">
+				<img src="images/placeholder4.png" alt="" class="image-cover">
+				<p class="product-name text-bold ">Title</p>
+				<p class="price text-highlight">$00.00</p>
+			</div>
+			<div class="card">
+				<img src="images/placeholder5.png" alt="" class="image-cover">
+				<p class="product-name text-bold ">Title</p>
+				<p class="price text-highlight">$00.00</p>
+			</div>
+		</div>
+		<h2 class="top-margin-m">Large cards</h2>
+		<article id="article1" class="article card soft">
 			<h2>Article 1</h2>
 			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam sunt, beatae odit iste recusandae, laborum eveniet consequuntur earum illum quisquam eligendi enim iure, quasi. Veritatis, minus veniam corporis culpa impedit, debitis aliquid necessitatibus vitae, rem, sed illo amet quia!</p>
+				<p>Body text lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam sunt, beatae odit iste recusandae, laborum eveniet consequuntur earum illum quisquam eligendi enim iure, quasi. Veritatis, minus veniam corporis culpa impedit, debitis aliquid necessitatibus vitae, rem, sed illo amet quia!</p>
 				<p>Praesentium sapiente, molestiae blanditiis minus mollitia fugit alias adipisci voluptatum sed delectus totam dicta quod possimus asperiores vero voluptatem expedita. Beatae earum voluptate illo eius voluptas, tempora placeat dolor facilis magni reiciendis harum blanditiis, voluptatem animi nam magnam exercitationem, ullam.</p>
-				<p>Cupiditate vero ut quae nesciunt officiis ducimus molestiae aspernatur ipsum ipsa aliquam voluptate ipsam sit asperiores expedita autem, esse magni numquam iure saepe sed. Expedita nemo, blanditiis iusto distinctio. A molestiae, error tenetur, quibusdam autem eaque ea magnam reiciendis aspernatur.</p>
-				<p>Cumque quia unde voluptate eum quos, totam tempora quis repellat, modi, tempore nesciunt optio dignissimos. Eum tempore dolore magni molestiae porro quos explicabo corrupti voluptatum odio ipsam, inventore consequuntur, cupiditate sit illum iure laborum in, consequatur deserunt iste esse quas.</p>
 			</div>
 		</article>
-		<article id="article2" class="article">
+		<article id="article2" class="article card hard">
 			<h2>Article 2</h2>
 			<div class="article-body">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit amet beatae a totam! Voluptate in fugiat impedit similique sit tempore, ullam illo provident, unde? Itaque reprehenderit voluptate quam id optio officia minima tempora quia, porro voluptates laudantium. Cum, omnis, esse.</p>
 				<p>Harum cumque quam obcaecati, porro alias quasi eos quos eligendi temporibus rerum earum architecto incidunt deleniti. Suscipit recusandae sapiente, cumque quia. Libero pariatur rerum, nihil dolores amet provident nulla sed officiis, doloribus labore, magni! Corrupti debitis aperiam illum doloribus, repudiandae!</p>
-				<p>Aliquid in ipsum sunt fugiat provident aperiam dolorum accusamus distinctio voluptas illum veritatis, blanditiis quod unde laudantium ad neque quisquam. Odit soluta provident magnam molestiae? Error, quasi eius unde, quaerat nihil provident. Optio nesciunt, nobis ea, inventore enim odio libero.</p>
-				<p>Iste, ratione sunt? Enim illum rem, voluptatem amet beatae, recusandae nisi, necessitatibus distinctio, iusto sunt libero tempore incidunt fugiat modi quibusdam rerum. Magni molestiae quidem provident quod voluptate inventore unde facilis dolor, fugit doloremque eos quaerat doloribus voluptatibus, fuga voluptates.</p>
 			</div>
 		</article>
-		<article id="article3" class="article card">
-			<h2>Article 3</h2>
-			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo iure asperiores, quaerat cupiditate explicabo perspiciatis ex saepe numquam, unde, velit obcaecati, inventore ab ducimus! Tenetur, asperiores, a. Mollitia, ad accusantium sunt tenetur sequi deserunt, dignissimos, ipsa laudantium ducimus facilis voluptatibus.</p>
-				<p>Quis fuga cum error est eaque. Aliquam quasi possimus recusandae sequi soluta unde eaque nihil voluptatem quisquam tempora blanditiis voluptates quod esse placeat, perferendis ipsam natus ut consequatur, ab neque rerum quos quibusdam eum. Maxime repudiandae non quae suscipit ut.</p>
-				<p>Minima eveniet unde repudiandae non consectetur earum. Veniam consectetur illum hic voluptatum veritatis beatae quia, similique tempora minima nam officia perspiciatis deleniti ut ex adipisci, blanditiis eveniet iste exercitationem optio ratione facilis magnam impedit pariatur quod maiores? Quod, illo, alias?</p>
-				<p>Blanditiis dolorem, sed. Distinctio illo facere, nihil voluptates cum id obcaecati aperiam reprehenderit magnam tempora corrupti delectus ex nobis amet, sapiente dicta. Laborum, alias, blanditiis. Quisquam pariatur corrupti vitae temporibus, similique sit ab culpa eius ad perspiciatis obcaecati unde maxime?</p>
-			</div>
-		</article>
-		<article id="article4" class="article card">
+		<article id="article4" class="article card highlight">
 			<h2>Article 4</h2>
 			<div class="article-body">
 				<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Saepe dolorem dignissimos ad reiciendis similique fuga? Consequuntur, cumque facilis asperiores doloremque, optio hic tempore quasi in perspiciatis quidem. Molestiae natus error, quo inventore, fugiat, at quia eaque in aliquid, perferendis rem.</p>
 				<p>Reprehenderit eligendi accusamus minus deserunt, et quibusdam, fugiat error corporis facilis aliquid ducimus assumenda soluta, optio nemo harum odit inventore. Labore sunt, alias minus consectetur cupiditate ducimus enim et, blanditiis odit ipsam aut officia iste harum, quod, id nesciunt officiis.</p>
-				<p>Beatae, minus, quae est eos voluptate fugiat. Omnis voluptatem ad vero. Cupiditate odit, consectetur accusantium. Possimus ducimus soluta ex consectetur quos dolores magnam, repellendus rerum voluptate totam ipsum repudiandae! Aliquam provident obcaecati tenetur a similique quo cum dignissimos placeat blanditiis!</p>
-				<p>Ratione ducimus nam quasi recusandae quos nostrum odio, voluptates cum, est porro aliquam magnam suscipit molestiae amet, quibusdam animi, iste nesciunt assumenda distinctio quo ipsa. Repellendus, perspiciatis optio, vitae rem illo quia eum, ea ut nihil error ex, consequatur? Minima?</p>
+				
 			</div>
 		</article>
 	</div>
+	<div class="container top-margin-l bottom-margin-l">
+		<h2 class="bold flex-row-center ">BUTTON STYLES</h2>
+		<hr>
+		<div class="flex-row-around top-margin-m">
+			<button class="generic-btn">Solid btn</button>
+			<button class="generic-btn disable" >Disable</button>
+			<button class="generic-btn outline">Ouline btn</button>
+			<button class="generic-btn outline disable" >disable</button>
+		</div>
+	</div>
+	<div class="container bottom-margin-l">
+		<h2 class="bold flex-row-center top-margin-l">TEXT STYLES</h2>
+		<hr>
+		<h1 class="top-margin-m">H1 BIG TITLE GOES HERE</h1>
+		<h1 class="text-highlight"> H1 Title with highlight</h1>
+		<h2 >H2 Subtitle</h2>
+		<h2 class="text-highlight">H2 Subtitle</h2>
+		<p class="text-bold bottom-margin-s">P bold text</p>
+		<p class="text-bold text-highlight bottom-margin-xs">P bold text</p>
+		<p class="bottom-margin-s">Body text: lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt corporis iure, ullam temporibus nemo tenetur ipsum perspiciatis, ab qui possimus quas ad quis impedit eius, distinctio vero, debitis praesentium error! Aut quaerat, voluptatibus, veritatis doloremque commodi consequuntur aspernatur voluptate!</p>
+		<a href="" class="text-link ">Link example &#x27F6;</a>
+	</div>
+	
+	<div class="view-window" style="background-image: url(images/genericbg2.jpg);"></div>
 
-	<script src="js/javascript.js"></script
+	<footer class="flex-row-center">
+		<p>Design by Kimi Kurata 2021</p>
+	</footer>
+
+	<script src="js/javascript.js"></script>
 </body>
 </html>
 
