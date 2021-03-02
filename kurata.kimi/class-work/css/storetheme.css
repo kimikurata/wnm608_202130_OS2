@@ -1,0 +1,18 @@
+:root {
+   --color-neutral-light:#e9e2e5;
+   --color-neutral-medium:#94888e;
+   --color-neutral-dark:#9f0000;
+   --font-sans:'Rubik', Tahoma, sans-serif;
+}
+
+
+body {
+   background-color:#f8f8fa;
+}
+.navbar {
+   background-color:var(--color-neutral-dark);
+   
+}
+.navbar h1{
+	font-weight: 300;
+}
