@@ -108,11 +108,11 @@ footer p{
 .hidden{ display: none; }
 .display-block{ display: block; }
 .display-flex{ display: flex; }
-/*.display-inline-flex{ display: inline-flex; }*/
-/*.display-inline-block{ display: inline-block; }*/
+.display-inline-flex{ display: inline-flex; }
+.display-inline-block{ display: inline-block; }
 
 .flex-stretch{ flex: 1 1 auto; }
-/*.flex-none{ flex:none; }*/
+.flex-none{ flex:none; }
 
 
 
