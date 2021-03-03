@@ -45,3 +45,9 @@ a:hover{
 .card-des-m{
 	width: 30%;
 }
+.well{ 
+	background-color: var(--color-neutral-highlight); 
+	border-radius: 15px;
+	padding: 5px;
+	color: var(--color-white);
+}
