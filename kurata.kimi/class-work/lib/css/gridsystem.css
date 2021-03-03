@@ -34,7 +34,7 @@
 
 
 /* Extra samll Breakpoint */
-@media (min-width:350px){
+@media (min-width:0){
 	.col-xs-1{ grid-column: span 1; }
 	.col-xs-2{ grid-column: span 2; }
 	.col-xs-3{ grid-column: span 3; }
@@ -49,7 +49,7 @@
 	.col-xs-12{ grid-column: span 12; }
 }
 /* Small Breakpoint */
-@media (min-width:750px){
+@media (min-width:350px){
 	.col-sm-1{ grid-column: span 1; }
 	.col-sm-2{ grid-column: span 2; }
 	.col-sm-3{ grid-column: span 3; }

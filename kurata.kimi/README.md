@@ -11,6 +11,7 @@
 ### Instructor's link:
 
 - https://hdraws.com/aau/wnm608/cline.hamilton/
+- https://hdraws.com/aau/wnm608/cline.hamilton/demo/grid.html
 
 ### My class work links:
 

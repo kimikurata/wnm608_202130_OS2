@@ -47,13 +47,13 @@
 		</div>
 	</header>
 	<div id="top"  class="view-window display-flex" style="background-image: url(images/genericbg1.png);">
-		<div class=" container display-flex">
-			<div class="introduction-box ">
+		<div class="grid container bottom-padding-lg ">
+			<div class="introduction-box  col-md-6 col-xs-12">
 				<h1>Title here</h1>
 				<p class="body-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus rerum harum atque nulla nihil eaque dolorum, autem dolores nobis fugit!</p>
-				<button class="generic-btn" type="button">Click Me!</button>
+				<button class="generic-btn bottom-margin-md" type="button">Click Me!</button>
 			</div>
-			<div class="image-box ">
+			<div class="col-md-6 col-xs-12 display-flex flex-justify-center" >
 				<img  class="image-cover intro-image" src="images/placeholder1.png" alt="image placeholder" >
 			</div>
 		</div>
@@ -62,66 +62,81 @@
 	<div class="container bottom-margin-md">
 		<h2 class="top-margin-md text-center">CARD STYLES</h2>
 		<hr class="bottom-margin-md">
-		<h2>Cards with image</h2>
-		<div class="">
-			<div class="">
+		<h2>Cards with an image</h2>
+		<div class="grid gap medium">
+			<div class="col-lg-3 col-md-6 col-xs-12">
 				<p class="text-bold text-center" >Card</p>
-				<div class="card">
-					<img class="image-cover" src="images/placeholder1.png" alt="" >
-					<p class="product-name text-bold ">Title</p>
-					<p class="price text-highlight">$00.00</p>
+				<div class="card ">
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder1.png" alt="">
+					</div>
+					<div class="">
+						<p class="product-name text-bold ">Title</p>
+						<p class="price text-highlight">$00.00</p>
+					</div>
 				</div>
 			</div>		
-			<div class="">
+			<div class="col-lg-3 col-md-6  col-xs-12">
 				<p class="text-bold text-center">Card flat</p>
 				<div class="card flat">
-					<img class="image-cover" src="images/placeholder2.png" alt="" >
-					<p class="product-name text-bold ">Title</p>
-					<p class="price text-highlight ">$00.00</p>
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder2.png" alt="">
+					</div>
+					<div class="">
+						<p class="product-name text-bold ">Title</p>
+						<p class="price text-highlight">$00.00</p>
+					</div>
 				</div>
 			</div>		
-			<div class="">
+			<div class="col-lg-3 col-md-6 col-xs-12">
 				<p class="text-bold text-center">Card hard</p>
 				<div class="card hard">
-					<img class="image-cover" src="images/placeholder4.png" alt="" >
-					<p class="product-name text-bold ">Title</p>
-					<p class="price text-highlight">$00.00</p>
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder4.png" alt="">
+					</div>
+					<div class="">
+						<p class="product-name text-bold ">Title</p>
+						<p class="price text-highlight">$00.00</p>
+					</div>
 				</div>
 			</div>		
-			<div class="">
+			<div class="col-lg-3 col-md-6 col-xs-12">
 				<p class="text-bold text-center">Card highlight</p>
 				<div class="card highlight">
-					<img class="image-cover " src="images/placeholder5.png" alt="" >
-					<p class="product-name text-bold ">Title</p>
-					<p class="price text-highlight">$00.00</p>
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder5.png" alt="">
+					</div>
+					<div class="">
+						<p class="product-name text-bold ">Title </p>
+						<p class="price text-highlight">$00.00</p>
+					</div>
 				</div>
 			</div>		
 		</div>
 		
 		<h2 class="top-margin-md">Medium cards</h2>
-		<div class="">
-			<div class=" ">
-				<div class="card flex-col-center" style="min-height: 450px;">
-					<img class="image-cover " src="images/placeholder3.png" alt="" >
-					<p class="text-bold">Title here</p>
-					<p class="text-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia ducimus ipsam ipsum itaque recusandae nulla beatae dicta nobis labore?</p>
+		<div class="grid gap medium vertical-stretch">	
+			<div class="card col-lg-4 col-md-6 col-xs-12" >
+				<div class="display-flex flex-justify-center">
+					<img class="image-cover " src="images/placeholder3.png" alt="">
 				</div>
-			</div>
-			<div class=" ">
-				<div class="card "  style="min-height: 450px;">
-					<p class="text-bold">Title here</p>
-					<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-					<img class="image-cover " src="images/placeholder5.png" alt="" >
+				<p class="text-bold">Title here</p>
+				<p class="text-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia ducimus ipsam ipsum itaque recusandae nulla beatae dicta nobis labore?</p>
+			</div>	
+			<div class="card col-lg-4 col-md-6 col-xs-12"  >
+				<p class="text-bold">Title here</p>
+				<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+				<div class="display-flex flex-justify-center">
+					<img class="image-cover " src="images/placeholder5.png" alt="">
 				</div>
-			</div>
-			<div class=" ">
-				<div class="card "  style="min-height: 450px;">
-					<img class="image-cover " src="images/placeholder4.png" alt="" >
-					<p class="text-bold">Title here</p>
-					<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia ducimus ipsam ipsum itaque recusandae</p>
+			</div>	
+			<div class="card col-lg-4 col-md-6 col-xs-12"  >
+				<div class="display-flex flex-justify-center">
+					<img class="image-cover " src="images/placeholder4.png" alt="">
 				</div>
+				<p class="text-bold">Title here</p>
+				<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ratione beatae soluta exercitationem corrupti suscipit tempora laboriosam odio consectetur officiis cum explicabo ut, impedit quidem eos quia. Quos assumenda, ducimus? Beatae.</p>
 			</div>
-
 		</div>
 		<h2 class="top-margin-md">Large cards</h2>
 		<article id="article1" class="article card">
@@ -157,13 +172,10 @@
 	<div class="container top-margin-lg bottom-margin-lg">
 		<h2 class="bold text-center ">BUTTON STYLES</h2>
 		<hr>
-		<div class=" top-margin-md display-flex">
+		<div class="buttons-box top-margin-md display-flex ">
 			<button class="generic-btn">Solid btn</button>
-			<div class="flex-stretch"></div>
 			<button class="generic-btn disable" >Disable</button>
-			<div class="flex-stretch"></div>
 			<button class="generic-btn outline">Ouline btn</button>
-			<div class="flex-stretch"></div>
 			<button class="generic-btn outline disable" >disable</button>
 		</div>
 	</div>
