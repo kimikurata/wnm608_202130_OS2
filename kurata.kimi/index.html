@@ -29,14 +29,14 @@
 <body>
 	<!-- cmd + / , how to comment-->
 	<header class="navbar">
-		<div class="container flex-row-between">
+		<div class="container display-flex">
 			<div class="">
 				<a class="brand-text" href="#top">KIMIPOD</a>
 			</div>
-			<!-- <div class="flex-stretch"></div> DELETE IF COMMENTED-->
+			<div class="flex-stretch"></div>
 			<!-- nav.nav>ul>li*4>a[href=#article$]{Link $} -->
-			<nav class="nav flex-row-center">
-				<ul class="flex-row-center">
+			<nav class="nav display-flex flex-align-center">
+				<ul class="display-flex">
 					<li><a class="active" href="#article1">Link 1</a></li>
 					<li><a href="#article2">Link 2</a></li>
 					<li><a href="#article3">Link 3</a></li>
@@ -46,27 +46,25 @@
 			</nav>
 		</div>
 	</header>
-	<div id="top"  class="view-window display-flex navbar-spacer" style="background-image: url(images/genericbg1.png);">
-		<div class="flex-row-between container">
-			<div class="introduction-box flex-grow1">
+	<div id="top"  class="view-window display-flex" style="background-image: url(images/genericbg1.png);">
+		<div class=" container display-flex">
+			<div class="introduction-box ">
 				<h1>Title here</h1>
 				<p class="body-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus rerum harum atque nulla nihil eaque dolorum, autem dolores nobis fugit!</p>
 				<button class="generic-btn" type="button">Click Me!</button>
 			</div>
-			<div class="image-box flex-grow1 flex-row-center">
+			<div class="image-box ">
 				<img  class="image-cover intro-image" src="images/placeholder1.png" alt="image placeholder" >
 			</div>
 		</div>
 	</div>
-	<div class="container">
-	</div>
 	<!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*4>lorem40 -->
-	<div class="container">
-		<h2 class="flex-row-center top-margin-m">CARD STYLES</h2>
-		<hr class="bottom-margin-m">
+	<div class="container bottom-margin-md">
+		<h2 class="top-margin-md text-center">CARD STYLES</h2>
+		<hr class="bottom-margin-md">
 		<h2>Cards with image</h2>
-		<div class="flex-row-between">
-			<div class="flex-col-center">
+		<div class="">
+			<div class="">
 				<p class="text-bold text-center" >Card</p>
 				<div class="card">
 					<img class="image-cover" src="images/placeholder1.png" alt="" >
@@ -74,7 +72,7 @@
 					<p class="price text-highlight">$00.00</p>
 				</div>
 			</div>		
-			<div class="flex-col-center">
+			<div class="">
 				<p class="text-bold text-center">Card flat</p>
 				<div class="card flat">
 					<img class="image-cover" src="images/placeholder2.png" alt="" >
@@ -82,7 +80,7 @@
 					<p class="price text-highlight ">$00.00</p>
 				</div>
 			</div>		
-			<div class="flex-col-center">
+			<div class="">
 				<p class="text-bold text-center">Card hard</p>
 				<div class="card hard">
 					<img class="image-cover" src="images/placeholder4.png" alt="" >
@@ -90,7 +88,7 @@
 					<p class="price text-highlight">$00.00</p>
 				</div>
 			</div>		
-			<div class="flex-col-center">
+			<div class="">
 				<p class="text-bold text-center">Card highlight</p>
 				<div class="card highlight">
 					<img class="image-cover " src="images/placeholder5.png" alt="" >
@@ -100,24 +98,24 @@
 			</div>		
 		</div>
 		
-		<h2 class="top-margin-m">Medium cards</h2>
-		<div class="flex-row-stretch">
-			<div class=" flex-grow1 card-des-m">
+		<h2 class="top-margin-md">Medium cards</h2>
+		<div class="">
+			<div class=" ">
 				<div class="card flex-col-center" style="min-height: 450px;">
 					<img class="image-cover " src="images/placeholder3.png" alt="" >
 					<p class="text-bold">Title here</p>
 					<p class="text-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia ducimus ipsam ipsum itaque recusandae nulla beatae dicta nobis labore?</p>
 				</div>
 			</div>
-			<div class=" flex-grow1">
-				<div class="card flex-col-center"  style="min-height: 450px;">
+			<div class=" ">
+				<div class="card "  style="min-height: 450px;">
 					<p class="text-bold">Title here</p>
 					<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
 					<img class="image-cover " src="images/placeholder5.png" alt="" >
 				</div>
 			</div>
-			<div class=" flex-grow1">
-				<div class="card flex-col-center"  style="min-height: 450px;">
+			<div class=" ">
+				<div class="card "  style="min-height: 450px;">
 					<img class="image-cover " src="images/placeholder4.png" alt="" >
 					<p class="text-bold">Title here</p>
 					<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia ducimus ipsam ipsum itaque recusandae</p>
@@ -125,7 +123,7 @@
 			</div>
 
 		</div>
-		<h2 class="top-margin-m">Large cards</h2>
+		<h2 class="top-margin-md">Large cards</h2>
 		<article id="article1" class="article card">
 			<h2>Article 1</h2>
 			<div class="article-body">
@@ -156,20 +154,23 @@
 			</div>
 		</article>
 	</div>
-	<div class="container top-margin-l bottom-margin-l">
-		<h2 class="bold flex-row-center ">BUTTON STYLES</h2>
+	<div class="container top-margin-lg bottom-margin-lg">
+		<h2 class="bold text-center ">BUTTON STYLES</h2>
 		<hr>
-		<div class="flex-row-around top-margin-m">
+		<div class=" top-margin-md display-flex">
 			<button class="generic-btn">Solid btn</button>
+			<div class="flex-stretch"></div>
 			<button class="generic-btn disable" >Disable</button>
+			<div class="flex-stretch"></div>
 			<button class="generic-btn outline">Ouline btn</button>
+			<div class="flex-stretch"></div>
 			<button class="generic-btn outline disable" >disable</button>
 		</div>
 	</div>
-	<div class="container bottom-margin-l">
-		<h2 class="bold flex-row-center top-margin-l">TEXT STYLES</h2>
+	<div class="container bottom-margin-lg">
+		<h2 class="bold  top-margin-lg text-center">TEXT STYLES</h2>
 		<hr>
-		<h1 class="top-margin-m">H1 BIG TITLE GOES HERE</h1>
+		<h1 class="top-margin-md">H1 BIG TITLE GOES HERE</h1>
 		<h1 class="text-highlight"> H1 Title with highlight</h1>
 		<h2 >H2 Subtitle</h2>
 		<h2 class="text-highlight">H2 Subtitle</h2>
@@ -181,8 +182,8 @@
 	
 	<div class="view-window" style="background-image: url(images/genericbg2.jpg);"></div>
 
-	<footer class="flex-row-center">
-		<p>Design by Kimi Kurata 2021</p>
+	<footer class="display-flex flex-justify-center">
+		<p class="text-center">Design by Kimi Kurata 2021</p>
 	</footer>
 
 	<script src="js/javascript.js"></script>
