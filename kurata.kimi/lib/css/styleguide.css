@@ -247,6 +247,11 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
+.image-contain{
+	object-fit: contain;
+	background-repeat: no-repeat;
+}
+
 
 /* http://placehold.jp/500x500.png */
 
@@ -291,12 +296,55 @@ a:hover {
 		background-color: transparent;
 	}
 
+/* CIRCLES */
 
+.circle-xs{
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	background-color: var(--color-neutral-light);
+	margin: 0.5em;
+}
 
+.circle-sm{
+	border-radius: 50%;
+	width: 3em;
+	height: 3em;
+	margin: 0.5em;
+	background-color: var(--color-neutral-light);
+}
 
+.circle-md{
+	border-radius: 50%;
+	width: 5em;
+	height: 5em;
+	margin: 0.5em;
+	background-color: var(--color-neutral-light);
+}
 
+.circle-lg{
+	border-radius: 50%;
+	width: 8em;
+	height: 8em;
+	margin: 0.5em;
+	background-color: var(--color-neutral-light);
+}
 
+.circle-xs.hard,
+.circle-sm.hard,
+.circle-md.hard,
+.circle-lg.hard{
+	border: 1px solid var(--color-neutral-desable-light);
+	background-color: transparent;
+}
 
+.circle-xs.highlight,
+.circle-sm.highlight,
+.circle-md.highlight,
+.circle-lg.highlight{
+	border: 3px solid var(--color-neutral-highlight);
+	background-color: transparent;
+}
 
 
 
