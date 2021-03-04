@@ -62,5 +62,14 @@ a:hover{
   }
 }
 
+.review-image{
+	border-radius: 50%;
+	border: 3px solid var(--color-neutral-light);
+	background-color: var(--color-neutral-light);
+	height: 5em;
+	width: 5em;
+	margin: 1em;
+
+}
 
 
