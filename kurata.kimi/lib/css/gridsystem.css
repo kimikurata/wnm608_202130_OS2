@@ -6,6 +6,9 @@
 .grid.decimal{
 	grid-template-columns: repeat(10, 1fr);
 }
+.grid.septa{
+	grid-template-columns: repeat(7, 1fr);
+}
 
 
 .grid.gap {

@@ -1,5 +1,5 @@
 :root {
-	--color-neutral-highlight: #7572D1;
+	--color-highlight: #7572D1;
 	--font-sans:'Rubik', Tahoma, sans-serif;
 }
 .navbar{
@@ -8,10 +8,10 @@
 	color: var(--color-black);
 }
 .nav a {
-	color:var(--color-neutral-desable);
+	color:var(--color-desable);
 }
 a:hover{
-	color:var(--color-neutral-highlight);
+	color:var(--color-highlight);
 }
 
 .introduction-box{
@@ -45,7 +45,7 @@ a:hover{
 }
 
 .well{ 
-	background-color: var(--color-neutral-highlight); 
+	background-color: var(--color-highlight); 
 	border-radius: 15px;
 	padding: 5px;
 	color: var(--color-white);
@@ -64,7 +64,7 @@ a:hover{
 	height:2em;
 	text-align: center;
 	border-radius: 50%;
-	background-color: var(--color-neutral-highlight);
+	background-color: var(--color-neutral-dark);
 	display: block;
 	line-height: 2em;
 }

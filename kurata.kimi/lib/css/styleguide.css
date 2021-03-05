@@ -7,11 +7,13 @@
 	--color-neutral-light: #f3f3f3;
 	--color-neutral-medium: #3a3a3a;
 	--color-neutral-dark: #262020;
-	--color-neutral-highlight: #3cd3fc;
+	
 
-	--color-neutral-desable: #b2b2b2;
-	--color-neutral-desable-light: #cacaca;
-	--color-neutral-active: #b2affe;
+	--color-desable: #b2b2b2;
+	--color-desable-light: #cacaca;
+
+	--color-highlight: #3cd3fc;
+	--color-highlight-light: #b2affe;
 
 	--color-white: #fafafa;
 	--color-black: #1c1a1a;
@@ -27,7 +29,6 @@
 	--font-sans:"Avant Garde", Tahoma, sans-serif;
 	--font-serif: Cambria, Georgia, "Times New Roman", serif;
 	
-	/* xl doesnot existe anymore*/
 	--font-size-xs: 1em;
 	--font-size-sm: 1.2em;
 	--font-size-md: 1.3em;
@@ -63,7 +64,7 @@ p {
 
 footer{
 	min-height: 2em;
-	background-color: var(--color-neutral-highlight);
+	background-color: var(--color-highlight);
 	
 }
 footer p{
@@ -127,9 +128,41 @@ footer p{
 .bottom-margin-lg{ margin-bottom: var(--space-lg) }
 
 
+/* SIDE BAR */
+.side-var{
+	height: 100vh;  
+	background-color: var(--color-neutral-dark); 
+	color: var(--color-white); position: 
+	fixed; z-index: 9;
+	position: absolute; 
+	top:0px;
+	box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+	padding: 1em;
+	position: fixed; 
+	z-index: 10; 
+	width: 15%; 
+}
+.side-var-spacer{
+	margin-left: 15%;
+}
+.content-table{
+  	display: none;
+  }
+@media screen and (max-width: 1000px) {
+  .side-var {
+    display: none;
+  }
+  .side-var-spacer{
+    margin-left: 0%;
+  }
+  .content-table{
+  	display: block;
+  }
+}
+
 /* TEXT */
 .text-highlight{
-	color: var(--color-neutral-highlight);
+	color: var(--color-highlight);
 }
 
 .text-bold{
@@ -150,7 +183,7 @@ a.text-link {
 /* COMPONENT CLASSES */
 
 .navbar{
-	background-color: var(--color-neutral-highlight);
+	background-color: var(--color-highlight);
 	color: var(--color-white);
 	line-height: var(--header-height);
 }
@@ -173,6 +206,7 @@ a.text-link {
 			color:var(--color-neutral-light);
 			padding: 0.8em 0.8em;
 			font-weight: 200;
+
         }
 
 a:hover {
@@ -222,13 +256,13 @@ a:hover {
 	}
 
 	.card.hard{
-		border: 1px solid var(--color-neutral-desable-light);
+		border: 1px solid var(--color-desable-light);
 		box-shadow: none;
 		background-color: transparent;
 	}
 	
 	.card.highlight{
-		background-color: var(--color-neutral-highlight);
+		background-color: var(--color-highlight);
 		color: var(--color-white);
 	}
 
@@ -263,7 +297,7 @@ a:hover {
 	padding: 0.7em 1.2em;
 	font-size: var(--font-size-sm);
 	font-weight: 800;
-	background-color: var(--color-neutral-highlight);
+	background-color: var(--color-highlight);
 	color: var(--color-white);
 	border: none;
 	min-width: 8em;
@@ -271,28 +305,32 @@ a:hover {
 	margin: 5px;
 }
 
+.generic-btn.full-size{
+	min-width: 100%;
+}
+
 .generic-btn:hover{
-	background-color: var(--color-neutral-active);
+	background-color: var(--color-highlight-light);
 }
 	.generic-btn.disable, .generic-btn.disable:hover{
-		background-color: var(--color-neutral-desable-light);
+		background-color: var(--color-desable-light);
 	}
 
 	.generic-btn.outline{
-		border:1px solid var(--color-neutral-highlight);
+		border:1px solid var(--color-highlight);
 		background-color: transparent;
-		color: var(--color-neutral-highlight);
+		color: var(--color-highlight);
 	}
 
 	.generic-btn.outline:hover{
-	border:1px solid var(--color-neutral-active);
+	border:1px solid var(--color-highlight-light);
 	color: var(--color-white);
-	background-color: var(--color-neutral-active);
+	background-color: var(--color-highlight-light);
 	}
 
 	.generic-btn.outline.disable, .generic-btn.outline.disable:hover{
-		color: var(--color-neutral-desable);
-		border:1px solid var(--color-neutral-desable);
+		color: var(--color-desable);
+		border:1px solid var(--color-desable);
 		background-color: transparent;
 	}
 
@@ -334,7 +372,7 @@ a:hover {
 .circle-sm.hard,
 .circle-md.hard,
 .circle-lg.hard{
-	border: 1px solid var(--color-neutral-desable-light);
+	border: 1px solid var(--color-desable-light);
 	background-color: transparent;
 }
 
@@ -342,7 +380,7 @@ a:hover {
 .circle-sm.highlight,
 .circle-md.highlight,
 .circle-lg.highlight{
-	border: 3px solid var(--color-neutral-highlight);
+	border: 3px solid var(--color-highlight);
 	background-color: transparent;
 }
 
