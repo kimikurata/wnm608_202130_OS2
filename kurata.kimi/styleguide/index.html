@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
-	
+	<!-- SIDE NAVBAR -->
    <header class="navbar side-var">
       <div class="display-flex flex-align-center">
          <div class=" flex-align-center">
@@ -38,12 +38,15 @@
             <li><a href="styleguide/#circles">Circles</a></li>
             <li><a href="styleguide/#windows">Windows</a></li>
             <li><a href="styleguide/#grids">Grids</a></li>
+            <li><a href="styleguide/#navigations">Navigation</a></li>
          </ul>
          </div>            
       </div>
    </header>
+
+   <!-- CONTENT TABLE SHOWN ON MOBILE -->
 	<div class="side-var-spacer">
-	   <div class="view-window display-flex flex-justify-center flex-align-center" style="background-image: url(images/genericbg2.jpg);">
+	   	<div class="view-window display-flex flex-justify-center flex-align-center" style="background-image: url(images/genericbg2.jpg);">
 				<h1 class="text-center">WEBSITE UI ELEMENTS & GUIDELINES</h1>
 		</div>
 		<div class="content-table card container ">
@@ -56,7 +59,8 @@
 	            <li><a href="styleguide/#typography">Typography</a></li>
 	            <li><a href="styleguide/#circles">Circles</a></li>
 	            <li><a href="styleguide/#windows">Windows</a></li>
-	            <li><a href="styleguide/#grid">Grids</a></li>
+	            <li><a href="styleguide/#grids">Grids</a></li>
+	            <li><a href="styleguide/#navigations">Navigation</a></li>
 	         </ul>
          </div>            
       	</div>
@@ -65,7 +69,7 @@
 		<div id="colors" class="container bottom-margin-md">
 			<h2 class="top-margin-md text-center">COLORS</h2>
 			<hr class="bottom-margin-md">
-			<h2>Basic</h2>
+			<h3>Basic</h3>
 			<div class="grid gap medium">
 				<div class="col-lg-4 col-xs-6" >
 					<div class="circle-lg hard" style="background-color: var(--color-neutral-light); margin: 0.5em auto;"></div>
@@ -80,7 +84,7 @@
 					<p class="text-center">Neutral-dark</p>
 				</div>
 			</div>
-			<h2>Highlight</h2>
+			<h3>Highlight</h3>
 
 			<div class="grid gap medium">
 				<div class="col-lg-4 col-xs-6" >
@@ -92,7 +96,7 @@
 					<p class="text-center">Highlight-light</p>
 				</div>
 			</div>
-			<h2>Desable</h2>
+			<h3>Desable</h3>
 			<div class="grid gap medium">
 				<div class="col-lg-4 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-desable); margin: 0.5em auto;"></div>
@@ -103,7 +107,7 @@
 					<p class="text-center">Desable-light</p>
 				</div>
 			</div>
-			<h2>Black and white</h2>
+			<h3>Black and white</h3>
 			<div class="grid gap medium">
 				<div class="col-lg-4 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-black); margin: 0.5em auto;"></div>
@@ -445,13 +449,199 @@
 					<button class="generic-btn bottom-margin-md" type="button">Click Me!</button>
 				</div>
 				<div class="col-md-6 col-xs-12 display-flex flex-justify-center" >
-					<img  class="image-cover intro-image" src="images/placeholder1.png" alt="image placeholder" >
+					<img  class="image-cover intro-image" src="images/placeholder1.png" alt="image placeholder">
 				</div>
 			</div>
 		</div>
-		
 
 
-	</div>
+
+
+
+
+
+		<div id="grids" class="container ">
+			<h2 class="top-margin-md text-center">GRID SYSTEM</h2>
+			<hr class="bottom-margin-md">
+			
+		</div>
+		<div  class="container bottom-margin-md" >
+	      	<h2 class="top-margin-md ">Basic Grid Structure</h2>
+	      	<div class="display-flex flex-align-center">
+	        	<h4>Single 12 Column </h4>
+	        	<p style="margin-left:10px; "> (full width and not responsive) </p>
+	        </div>
+	        <div class="grid">
+	           	<div class="col-xs-12">
+	               	<div class="well">Column 12</div>
+	            </div>
+	        </div>
+
+	        <h4>2 Column Responsive</h4>
+	        <div class="grid">
+	            <div class="col-xs-12 col-md-6">
+	               	<div class="well">col-xs-12 col-md-6</div>
+	            </div>
+	            <div class="col-xs-12 col-md-6">
+	               	<div class="well">col-xs-12 col-md-6</div>
+	            </div>
+	        </div>
+	        <h4>3 Column Responsive</h4>
+	        <div class="grid">
+	            <div class="col-xs-12 col-md-4">
+	               	<div class="well">col-xs-12 col-md-4</div>
+	            </div>
+	            <div class="col-xs-12 col-md-4">
+	               	<div class="well">col-xs-12 col-md-4</div>
+	            </div>
+	            <div class="col-xs-12 col-md-4">
+	               	<div class="well">col-xs-12 col-md-4</div>
+	            </div>
+	        </div>
+
+		    <h4>4 Column Responsive</h4>
+		    <div class="grid">
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		    </div>
+		    <h4>6 Column Responsive</h4>
+	        <div class="grid bottom-margin-md">
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	            <div class="col-xs-12 col-md-2">
+	               	<div class="well">col-xs-12 col-md-2</div>
+	            </div>
+	        </div>
+		    <div class="card hard ">
+		        <p><code>&lt;div class="grid"><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12"><br>&lt;/div>&lt;/div></code></p>
+		        <br>
+		        <p><code>&lt;div class="grid"><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-6>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-6>&lt;/div><br>&lt;/div></code></p>
+		        <br>
+		        <p><code>&lt;div class="grid"><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-4>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-4>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-4>&lt;/div><br>&lt;/div></code></p>
+		        <br>
+		        <p><code>&lt;div class="grid"><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-3>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-3>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-3>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-3>&lt;/div><br>&lt;/div></code></p>
+		        <br>
+		        <p><code>&lt;div class="grid"><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&thinsp;&thinsp;&thinsp;&lt;div class="col-xs-12 col-md-2>&lt;/div><br>&lt;/div></code></p>
+		    </div>
+		    <h2 class="top-margin-md">Gap</h2>
+		    <div class="display-flex flex-align-center">
+	        	<h4>4 Column Responsive with Gap</h4>
+	        	<p style="margin-left:10px; "> (gap is the space between columns) </p>
+	        </div>
+		    <div class="grid gap bottom-margin-md">
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		        <div class="col-xs-12 col-md-3">
+		            <div class="well">col-xs-12 col-md-3</div>
+		        </div>
+		    </div>	
+		    <div class="card hard ">
+		        <p><code>class="gap"</code></p>
+		    </div>	
+	    </div>
+
+
+
+
+	    <div id="navigations" class="container ">
+			<h2 class="top-margin-md text-center">NAVIGATION</h2>
+			<hr class="bottom-margin-md">
+		</div>
+		<div class="container bottom-margin-md">
+			<h2 class="bottom-margin-md">Side navbar</h2>
+			<div class="grid gap">
+            	<div class="col-2">
+               		<nav class="navbar side-var" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
+                  <!-- ul>li*4>a[href=#]>{Link $} -->
+                  		<h3 class="brand-text">Brand</h3>
+                  		<ul class="nav">
+	                     	<li><a href="#">Link 1</a></li>
+	                     	<li><a href="#">Link 2</a></li>
+	                     	<li><a href="#">Link 3</a></li>
+	                     	<li><a href="#">Link 4</a></li>
+	                     	<li><a href="#">Link 5</a></li>
+	                  	</ul>
+	               	</nav>
+	            </div>
+	            <div class="col-8">
+	               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptas, saepe accusamus beatae fugiat assumenda excepturi adipisci, nemo odio doloribus nobis iure architecto earum non aspernatur possimus dolores reprehenderit rerum perspiciatis animi eveniet ea eius omnis. Ratione, omnis, nihil corporis deserunt, deleniti laborum ad vel totam, quisquam quod esse animi.</p>
+	               <p>Eos nemo, reprehenderit reiciendis totam itaque ut officia saepe necessitatibus tempora doloribus nesciunt sequi quos a. Laborum voluptate ducimus labore, unde perspiciatis enim quia animi commodi veritatis praesentium illum, corporis. Id, soluta. Repellendus tenetur, ipsam impedit nihil, quod accusantium. Repellat accusantium dolorum amet itaque quis aut voluptas delectus doloremque pariatur.</p>
+	                <p>Eos nemo, reprehenderit reiciendis totam itaque ut officia saepe necessitatibus tempora doloribus nesciunt sequi quos a. Laborum voluptate ducimus labore, unde perspiciatis enim quia animi commodi veritatis praesentium illum, corporis.</p>
+	            </div>
+         	</div>
+		</div>
+		<div class="container">
+			<div class="card hard">
+				 <p><code>&lt;nav class="navbar side-var"><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;p class="brand-text">Title&lt;/p><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;ul class="nav"><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;/ul><br>&lt;/nav></code></p>
+			</div>
+		</div>
+		<div class="container bottom-margin-md top-margin-md">
+			<h2 class="bottom-margin-md">Top navbar</h2>
+			<div class="grid gap">
+		</div>
+		<div class="container bottom-margin-md">
+			<nav class="navbar display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
+                <h3 class="brand-text">Brand</h3>
+                <div class="flex-stretch"></div>
+                <div class="display-flex flex-align-center">
+	                <ul class="nav display-flex">
+		                <li><a href="#">Link 1</a></li>
+		                <li><a href="#">Link 2</a></li>
+		                <li><a href="#">Link 3</a></li>
+		                <li><a href="#">Link 4</a></li>
+		                <li><a href="#">Link 5</a></li>
+		            </ul>
+		            <img  class="nav-icon image-contain " src="images/shopping-cart.png" alt="image placeholder" >
+		        </div>
+	        </nav>
+		</div>
+		<div class="container">
+			<div class="card hard">
+				 <p><code>&lt;nav class="navbar display-flex"><br>&thinsp;&thinsp;&thinsp;&lt;h3 class="brand-text">Brand&lt;/h3><br>&thinsp;&thinsp;&thinsp;&lt;div class="flex-stretch">&lt;/div><br>&thinsp;&thinsp;&thinsp; &lt;div class="display-flex flex-align-center"><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;ul class="nav display-flex"><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li><br>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&lt;/ul><br>&thinsp;&thinsp;&thinsp;&lt;img  class="nav-icon image-contain " src="images/shopping-cart.png" alt="image placeholder" ><br>&thinsp;&thinsp;&thinsp;&lt;/nav></code></p>
+			</div>
+		</div>
+		<div class="container bottom-margin-md top-margin-md">
+			<h2 class="bottom-margin-md">Flex navbar</h2>
+			<div class="grid gap">
+		</div>
+		<div class="container bottom-margin-md top-margin-md">
+			<h2 class="bottom-margin-md">Stretch navbar</h2>
+			<div class="grid gap">
+		</div>
+
+
+
+    </div>
+
 </body>
 </html>

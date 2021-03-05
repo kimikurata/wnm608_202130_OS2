@@ -193,6 +193,10 @@ a.text-link {
 	font-weight: 200;
 	margin: 0; 
 }
+.navbar a {
+   display:block;
+   padding:0 0.5em;
+}
  
 
 .nav ul, 
@@ -209,9 +213,10 @@ a.text-link {
 
         }
 
-a:hover {
+.nav a:hover {
 	text-decoration: underline;
 	color:var(--color-neutral-dark);
+	background-color: var(--color-neutral-dark);
 }
 
 .nav-icon{
