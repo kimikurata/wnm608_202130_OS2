@@ -1,5 +1,6 @@
 :root {
 	--color-highlight: #7572D1;
+	--color-highlight-light: #b2affe;
 	--font-sans:'Rubik', Tahoma, sans-serif;
 }
 .navbar{
@@ -10,9 +11,13 @@
 .nav a {
 	color:var(--color-desable);
 }
-a:hover{
+.navbar a:hover{
+	color:var(--color-white);
+}
+.navbar a.brand-text:hover{
 	color:var(--color-highlight);
 }
+
 
 .introduction-box{
 	align-self: end;
@@ -44,12 +49,7 @@ a:hover{
 	justify-content: space-around; 
 }
 
-.well{ 
-	background-color: var(--color-highlight); 
-	border-radius: 15px;
-	padding: 5px;
-	color: var(--color-white);
-}
+
 
 .intro-image{
 	height: 30rem;

@@ -13,7 +13,7 @@
 	--color-desable-light: #cacaca;
 
 	--color-highlight: #3cd3fc;
-	--color-highlight-light: #b2affe;
+	--color-highlight-light: #9beaff;
 
 	--color-white: #fafafa;
 	--color-black: #1c1a1a;
@@ -128,10 +128,84 @@ footer p{
 .bottom-margin-lg{ margin-bottom: var(--space-lg) }
 
 
+
+/* TEXT */
+.text-highlight{
+	color: var(--color-highlight);
+}
+
+.text-bold{
+	font-weight: 800;
+}
+
+a.text-link {
+	font-weight: 200;
+	color: var(--color-neutral-dark);
+	font-size: var(--font-size-xs);
+}
+.text-center{
+	text-align: center;
+}
+
+
+
+/* COMPONENT CLASSES */
+/*NAV*/
+.nav ul,
+.navbar ul {
+   list-style-type:none;
+   margin:0;
+   padding-left:0;
+}
+.nav a {
+   display:block;
+   padding:0.2em 0.5em;
+}
+.nav a:hover {
+   background-color:var(--color-highlight-light);
+   color:var(--color-white);
+   text-decoration:none;
+}
+.nav-icon{
+	width: 1em;
+	height: 1em;
+}
+.nav.flex,
+.nav.stretch{
+	background-color: var(--color-white);
+}
+	.nav.flex ul,
+   	.nav.stretch ul {
+      display:flex;
+   	}
+
+   	.nav.stretch li {
+      flex:1 1 auto;
+      text-align:center;
+   	}
+
+/*NAVBAR*/
+
+.navbar{
+	background-color:var(--color-highlight);
+   	color:var(--color-white);
+   	line-height:var(--header-height);
+}
+.navbar a {
+   display:block;
+   padding:0 0.5em;
+}
+.brand-text{
+	font-size: 1.5em;
+	font-weight: 200;
+	margin: 0; 
+}
+
+
+
 /* SIDE BAR */
 .side-var{
 	height: 100vh;  
-	background-color: var(--color-neutral-dark); 
 	color: var(--color-white); position: 
 	fixed; z-index: 9;
 	position: absolute; 
@@ -160,71 +234,6 @@ footer p{
   }
 }
 
-/* TEXT */
-.text-highlight{
-	color: var(--color-highlight);
-}
-
-.text-bold{
-	font-weight: 800;
-}
-
-a.text-link {
-	font-weight: 200;
-	color: var(--color-neutral-dark);
-	font-size: var(--font-size-xs);
-}
-.text-center{
-	text-align: center;
-}
-
-
-
-/* COMPONENT CLASSES */
-
-.navbar{
-	background-color: var(--color-highlight);
-	color: var(--color-white);
-	line-height: var(--header-height);
-}
-
-.brand-text{
-	font-size: 1.5em;
-	font-weight: 200;
-	margin: 0; 
-}
-.navbar a {
-   display:block;
-   padding:0 0.5em;
-}
- 
-
-.nav ul, 
-.navbar ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-} 
-
-		.nav a {
-			color:var(--color-neutral-light);
-			padding: 0.8em 0.8em;
-			font-weight: 200;
-
-        }
-
-.nav a:hover {
-	text-decoration: underline;
-	color:var(--color-neutral-dark);
-	background-color: var(--color-neutral-dark);
-}
-
-.nav-icon{
-	width: 1em;
-	height: 1em;
-}
-
-
 
 /* VIEW WINDOW (PARALEX BACKGROUND)*/
 
@@ -237,6 +246,9 @@ a.text-link {
 	background-attachment: fixed;
 	height: 70vh;
 }
+	.view-window.half{
+		max-width: 50%;
+	}
 
 @media screen and (max-width: 1000px) {
   .view-window {
@@ -275,7 +287,12 @@ a.text-link {
 	width: 25vh;
 	height: 25vh;
 }
-
+.well{ 
+	background-color: var(--color-highlight); 
+	border-radius: 15px;
+	padding: 5px;
+	color: var(--color-white);
+}
 
 
 
@@ -388,7 +405,6 @@ a.text-link {
 	border: 3px solid var(--color-highlight);
 	background-color: transparent;
 }
-
 
 
 
