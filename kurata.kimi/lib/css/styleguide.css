@@ -216,6 +216,7 @@ a.text-link {
 	z-index: 10; 
 	width: 15%; 
 }
+
 .side-var-spacer{
 	margin-left: 15%;
 }
@@ -244,7 +245,7 @@ a.text-link {
 	background-size: cover;
 	background-position: start;
 	background-attachment: fixed;
-	height: 70vh;
+	min-height: 70vh;
 }
 	.view-window.half{
 		max-width: 50%;
@@ -277,6 +278,10 @@ a.text-link {
 		box-shadow: none;
 		background-color: transparent;
 	}
+	.card.hard.flat{
+		background-color: var(--color-white);
+	}
+
 	
 	.card.highlight{
 		background-color: var(--color-highlight);
