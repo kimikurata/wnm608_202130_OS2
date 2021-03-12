@@ -5,7 +5,7 @@
 }
 .navbar{
 	border-bottom: 2px solid var(--color-neutral-light);
-	background-color: white;
+	background-color: #ffffff;
 	color: var(--color-black);
 }
 .nav a {

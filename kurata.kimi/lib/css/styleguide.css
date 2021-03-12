@@ -5,15 +5,14 @@
 
 :root {
 	--color-neutral-light: #f3f3f3;
-	--color-neutral-medium: #3a3a3a;
+	--color-neutral-medium: #a9a9a9;
 	--color-neutral-dark: #262020;
-	
-
-	--color-desable: #b2b2b2;
-	--color-desable-light: #cacaca;
 
 	--color-highlight: #3cd3fc;
 	--color-highlight-light: #9beaff;
+
+	--color-desable: #b2b2b2;
+	--color-desable-light: #cacaca;
 
 	--color-white: #fafafa;
 	--color-black: #1c1a1a;
@@ -40,6 +39,7 @@ body {
 	/* accept font size that the user has set for the browser*/
 	font-size: 100%;  
 	font-family: var(--font-sans);
+	margin-bottom: var(--space-md);
 }
 
 h1,
@@ -80,7 +80,11 @@ footer p{
 	margin-left: auto;
 	margin-right: auto;
 }
-
+@media screen and (max-width: 1200px) {
+	.container{
+		max-width: 800px;
+	}
+}
 @media screen and (max-width: 1000px) {
   .container {
     margin-right: 20px;
@@ -137,16 +141,28 @@ footer p{
 .text-bold{
 	font-weight: 800;
 }
+.text-regular{
+	font-weight: 400;
+}
+.text-light{
+	font-weight: 200;
+}
 
 a.text-link {
 	font-weight: 200;
 	color: var(--color-neutral-dark);
 	font-size: var(--font-size-xs);
 }
+
 .text-center{
 	text-align: center;
 }
-
+.text-right{
+	text-align: right;
+}
+.text-justify{
+	text-align: justify;
+}
 
 
 /* COMPONENT CLASSES */
@@ -206,26 +222,29 @@ a.text-link {
 /* SIDE BAR */
 .side-var{
 	height: 100vh;  
-	color: var(--color-white); position: 
-	fixed; z-index: 9;
-	position: absolute; 
+	background-color: var(--color-white); 
 	top:0px;
 	box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-	padding: 1em;
 	position: fixed; 
 	z-index: 10; 
 	width: 15%; 
 }
+.side-var a{
+	padding-left: 30px;
 
+}
 .side-var-spacer{
 	margin-left: 15%;
 }
 .content-table{
   	display: none;
-  }
+ }
+
+
 @media screen and (max-width: 1000px) {
   .side-var {
     display: none;
+
   }
   .side-var-spacer{
     margin-left: 0%;
