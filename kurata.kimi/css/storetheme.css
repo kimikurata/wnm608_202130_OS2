@@ -56,18 +56,7 @@
 	width: 30rem;
 }
 
-.cart-number::after{
-	content: "0";
-	font-size: 0.5em;
-	color: var(--color-white);
-	width:2em;
-	height:2em;
-	text-align: center;
-	border-radius: 50%;
-	background-color: var(--color-neutral-dark);
-	display: block;
-	line-height: 2em;
-}
+
 
 @media screen and (max-width: 1000px) {
   .introduction-box {

@@ -646,6 +646,26 @@ background-color: var(--color-white);
 			<h2 class="top-margin-md text-center">NAVIGATION</h2>
 			<hr class="bottom-margin-md">
 		</div>
+
+		 <!-- Create a side nav from an array  -->
+		 <script>
+		 const makeSideNav = (classes =' ') => {
+		 	const link = ['Home','Store','About','Cart'];
+		 	document.write(`
+		 		<div class="grid gap">
+					<div class="col-2">
+						<nav class="${classes}" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
+							<a class="brand-text" href="#">Brand</a>
+		 					<ul class="nav">
+		 						${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+		 					</ul>
+		 				</nav>
+		 			</div>
+		 		</div>
+		 		`);
+		 }
+		 </script>
+
 		<div class="container bottom-margin-md">
 			<h2 class="bottom-margin-md">Side navbar</h2>
 			<div class="grid gap">
@@ -672,19 +692,70 @@ background-color: var(--color-white);
 		<div class="container">
 			<div class="card hard flat">			
 				<pre><code>
-&lt;nav class="navbar side-var">
-	&lt;a class="brand-text" href="#">Title&lt;/a>
-	&lt;ul class="nav">
-		&lt;a href="#">Link 1&lt;/a>&lt;/li>
-		&lt;a href="#">Link 2&lt;/a>&lt;/li>
-		&lt;a href="#">Link 3&lt;/a>&lt;/li>
-		&lt;a href="#">Link 4&lt;/a>&lt;/li>
-		&lt;a href="#">Link 5&lt;/a>&lt;/li>
-	&lt;/ul>
-&lt;/nav>
+&lt;div class="grid gap">
+	&lt;div class="col-2">				
+		&lt;nav class="navbar side-var">
+			&lt;a class="brand-text" href="#">Title&lt;/a>
+			&lt;ul class="nav">
+				&lt;a href="#">Link 1&lt;/a>&lt;/li>
+				&lt;a href="#">Link 2&lt;/a>&lt;/li>
+				&lt;a href="#">Link 3&lt;/a>&lt;/li>
+				&lt;a href="#">Link 4&lt;/a>&lt;/li>
+				&lt;a href="#">Link 5&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/nav>
+	&lt;/div>
+&lt;/div>
 				</code></pre>
 			</div>
 		</div>
+
+		<div class="container">
+			<h3>or call the following function function</h3>
+			<div class="card hard flat">			
+				<pre><code>
+&lt;script>
+const makeSideNav = (classes =' ') => {
+ 	const link = ['Link 1','Link 2','Link 3','Link 4','Link 5'];
+ 	document.write(`
+ 		&lt;div class="grid gap">
+			&lt;div class="col-2">
+				&lt;nav class="${classes}">
+					&lt;a class="brand-text" href="#">Brand&lt;/a>
+ 					&lt;ul class="nav">
+ 						${link.reduce((r,o,i,a)=> r+`&lt;li>&lt;a href="#">${o}&lt;/a>&lt;/li>`,'')}
+ 					&lt;/ul>
+ 				&lt;/nav>
+ 			&lt;/div>
+ 		&lt;/div>
+ 	`);
+}
+&lt;/script>
+
+// call the function with the wollwing classes: 
+
+&lt;script>makeSideNav("navbar side-var") &lt;/script>
+
+				</code></pre>
+			</div>
+		</div>
+
+		<!-- Create a nav from an array  -->
+		<script>
+		 const makeNav = (classes =' ') => {
+		 	const link = ['Home','Store','About','Cart'];
+		 	document.write(`
+		 		<div>
+		 			<nav class="${classes}">
+		 				<ul>
+		 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`)}
+		 				</ul>
+		 			</nav>
+		 		</div>
+		 		`);
+		 }
+		 </script>
+
 		<div class="container">
 			<h2 class="top-margin-md bottom-margin-md">Top navbar</h2>
 			<div class="grid gap">
@@ -701,7 +772,10 @@ background-color: var(--color-white);
 							<li><a href="styleguide/#navigations">Link 4</a></li>
 							<li><a href="styleguide/#navigations">Link 5</a></li>
 						</ul>
-						<img  class="nav-icon image-contain " src="images/shopping-cart.png" alt="image placeholder" >
+						<img  class="nav-icon image-contain" src="images/shopping-cart.png" alt="image placeholder" >
+						
+						<div class="cart-number">0</div>
+						
 					</div>
 				</nav>
 			</div>

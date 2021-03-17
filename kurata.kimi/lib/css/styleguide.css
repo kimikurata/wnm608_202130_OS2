@@ -199,6 +199,21 @@ a.text-link {
       flex:1 1 auto;
       text-align:center;
    	}
+.cart-number{
+	/*content: "0";*/
+	font-size: 0.5em;
+	color: var(--color-white);
+	width:2em;
+	height:2em;
+	text-align: center;
+	border-radius: 50%;
+	background-color: var(--color-neutral-dark);
+	display: block;
+	line-height: 2em;
+	position: relative;
+	top:-5px;
+	left: -5px;
+}
 
 /*NAVBAR*/
 
