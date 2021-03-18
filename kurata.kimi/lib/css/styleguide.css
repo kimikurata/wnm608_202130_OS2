@@ -40,7 +40,6 @@ body {
 	/* accept font size that the user has set for the browser*/
 	font-size: 100%;  
 	font-family: var(--font-sans);
-	margin-bottom: var(--space-md);
 }
 
 h1,
