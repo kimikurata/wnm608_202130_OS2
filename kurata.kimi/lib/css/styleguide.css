@@ -500,6 +500,15 @@ a.text-link {
    border: 1px solid var(--color-neutral-medium);
 }
 
+.table tr td:last-child { 
+	color: var(--color-highlight);
+}
+
+.table tr td:nth-last-child(2),
+.table tr td:nth-last-child(3){ 
+	color: var(--color-neutral-medium);
+}
+
 
 /* FORMS */
 .form-control {
