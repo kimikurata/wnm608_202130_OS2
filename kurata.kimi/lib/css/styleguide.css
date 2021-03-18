@@ -4,6 +4,7 @@
 }
 
 :root {
+	--color-neutral-lighter: #eeeff3;
 	--color-neutral-light: #f3f3f3;
 	--color-neutral-medium: #a9a9a9;
 	--color-neutral-dark: #262020;
@@ -478,7 +479,7 @@ a.text-link {
 }
 .table td,
 .table th {
-   padding:0.5em 1em;
+   padding:0.8em 1em;
    text-align:left;
 }
 .table.striped tbody tr:nth-child(odd) {
@@ -500,3 +501,18 @@ a.text-link {
 }
 
 
+/* FORMS */
+.form-control {
+   margin:1em 0;
+}
+.form-input {
+   display:inline-block;
+   width:100%;
+   border-width:0;
+   background-color:var(--color-neutral-lighter);
+   padding:0.5em 1em;
+   border-radius:0.3em;
+   font:inherit;
+   outline:0;
+   -webkit-appearance:none;
+}
