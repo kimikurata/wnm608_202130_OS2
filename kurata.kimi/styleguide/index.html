@@ -81,15 +81,19 @@
 			<hr class="bottom-margin-md">
 			<h3>Basic</h3>
 			<div class="grid gap medium">
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
+					<div class="circle-lg hard" style="background-color: var(--color-neutral-lighter); margin: 0.5em auto;"></div>
+					<p class="text-center">Neutral-lighter #eeeff3</p>
+				</div>
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg hard" style="background-color: var(--color-neutral-light); margin: 0.5em auto;"></div>
 					<p class="text-center">Neutral-light #f3f3f3</p>
 				</div>
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-neutral-medium); margin: 0.5em auto;"></div>
 					<p class="text-center">Neutral-medium #a9a9a9</p>
 				</div>
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-neutral-dark); margin: 0.5em auto;"></div>
 					<p class="text-center">Neutral-dark #262020</p>
 				</div>
@@ -97,33 +101,33 @@
 			<h3>Highlight</h3>
 
 			<div class="grid gap medium">
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-highlight); margin: 0.5em auto;"></div>
 					<p class="text-center">Highlight #3cd3fc</p>
 				</div>
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-highlight-light); margin: 0.5em auto;"></div>
 					<p class="text-center">Highlight-light #9beaff</p>
 				</div>
 			</div>
 			<h3>Desable</h3>
 			<div class="grid gap medium">
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-desable); margin: 0.5em auto;"></div>
 					<p class="text-center">Desable #b2b2b2</p>
 				</div>
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-desable-light); margin: 0.5em auto;"></div>
 					<p class="text-center">Desable-light #cacaca</p>
 				</div>
 			</div>
 			<h3>Black and white</h3>
 			<div class="grid gap medium">
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg" style="background-color: var(--color-black); margin: 0.5em auto;"></div>
 					<p class="text-center">black #1c1a1a</p>
 				</div>
-				<div class="col-lg-4 col-xs-6" >
+				<div class="col-lg-3 col-xs-6" >
 					<div class="circle-lg hard" style="background-color: var(--color-white); margin: 0.5em auto;"></div>
 					<p class="text-center">White #fafafa</p>
 				</div>
@@ -132,6 +136,7 @@
 		<div class="container">
 			<div class="card hard flat">
 				<pre><code>
+background-color: var(--color-neutral-lighter);
 background-color: var(--color-neutral-light);
 background-color: var(--color-neutral-medium);
 background-color: var(--color-neutral-dark);
@@ -245,7 +250,7 @@ background-color: var(--color-white);
 			<h2 class="top-margin-md text-center">CARD STYLES</h2>
 			<hr class="bottom-margin-md">
 			<h2>Cards with an image</h2>
-			<div class="grid gap medium">
+			<div class="grid gap  medium vertical-stretch">
 				<div class="col-lg-3 col-md-6 col-xs-12">
 					<p class="text-bold text-center" >Card</p>
 					<div class="card ">
@@ -262,15 +267,15 @@ background-color: var(--color-white);
 						<p class="text-center"><code>class="card"</code></p>
 					</div>
 				</div>		
-				<div class="col-lg-3 col-md-6  col-xs-12">
+				<div class="col-lg-3 col-md-6  col-xs-12 ">
 					<p class="text-bold text-center">Card flat</p>
 					<div class="card flat">
 						<div class="display-flex flex-justify-center">
 							<img class="image-cover " src="images/placeholder2.png" alt="">
 						</div>
 						<div class="">
-							<p class="product-name text-bold ">Title</p>
 							<p class="price text-highlight">$00.00</p>
+							<p class="product-name text-bold ">Title</p>
 						</div>
 					</div>
 					<div class="card hard flat">
@@ -284,8 +289,8 @@ background-color: var(--color-white);
 							<img class="image-cover " src="images/placeholder4.png" alt="">
 						</div>
 						<div class="">
-							<p class="product-name text-bold ">Title</p>
 							<p class="price text-highlight">$00.00</p>
+							<p class="product-name text-bold ">Title</p>
 						</div>
 					</div>
 					<div class="card hard flat">
@@ -299,14 +304,45 @@ background-color: var(--color-white);
 							<img class="image-cover " src="images/placeholder5.png" alt="">
 						</div>
 						<div class="">
-							<p class="product-name text-bold ">Title </p>
 							<p class="price text-highlight">$00.00</p>
+							<p class="product-name text-bold ">Title</p>
 						</div>
 					</div>
 					<div class="card hard flat">
 						<p class="text-center"><code>class="card dark"</code></p>
 					</div>
 				</div>		
+			</div>
+			<h2 class="top-margin-md">Small card examples</h2>
+			<div class="grid gap medium vertical-stretch">	
+				<div class="card col-lg-3 col-md-6 col-xs-12" >
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder3.png" alt="">
+					</div>
+					<p class="price text-highlight">$00.00</p>
+					<p class="product-name text-bold ">Lorem ipsum dolor sit amet consectetur ?</p>
+				</div>	
+				<div class="card col-lg-3 col-md-6 col-xs-12"  >
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder4.png" alt="">
+					</div>
+					<p class="price text-highlight">$00.00</p>
+					<p class="product-name text-bold">Lorem ipsum dolor sit amet</p>
+				</div>
+				<div class="card col-lg-3 col-md-6 col-xs-12"  >
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder4.png" alt="">
+					</div>
+					<p class="price text-highlight">$00.00</p>
+					<p class="product-name text-bold">Lorem ipsum dolor sit amet</p>
+				</div>
+				<div class="card col-lg-3 col-md-6 col-xs-12"  >
+					<div class="display-flex flex-justify-center">
+						<img class="image-cover " src="images/placeholder4.png" alt="">
+					</div>
+					<p class="price text-highlight">$00.00</p>
+					<p class="product-name text-bold">Lorem ipsum dolor sit amet</p>
+				</div>
 			</div>
 			<h2 class="top-margin-md">Medium card examples</h2>
 			<div class="grid gap medium vertical-stretch">	
@@ -490,7 +526,7 @@ background-color: var(--color-white);
 			</div>
 		</div>
 		<div class="container">
-		<h2 >Example of a window with content</h2>	
+			<h2 >Example of a window with content</h2>	
 		</div>
 		<div id="top"  class="view-window display-flex" style="background-image: url(images/genericbg1.png);">
 			<div class="grid container bottom-padding-lg ">
@@ -589,34 +625,34 @@ background-color: var(--color-white);
 			<div class="card hard flat">
 				<pre><code>
 &lt;div class="grid">
-	&lt;div class="col-xs-12">
+&lt;div class="col-xs-12">
 &lt;/div>&lt;/div>
 
 &lt;div class="grid">
-	&lt;div class="col-xs-12 col-md-6>&lt;/div>
-	&lt;div class="col-xs-12 col-md-6>&lt;/div>
+&lt;div class="col-xs-12 col-md-6>&lt;/div>
+&lt;div class="col-xs-12 col-md-6>&lt;/div>
 &lt;/div>
 
 &lt;div class="grid">
-	&lt;div class="col-xs-12 col-md-4>&lt;/div>
-	&lt;div class="col-xs-12 col-md-4>&lt;/div>
-	&lt;div class="col-xs-12 col-md-4>&lt;/div>
+&lt;div class="col-xs-12 col-md-4>&lt;/div>
+&lt;div class="col-xs-12 col-md-4>&lt;/div>
+&lt;div class="col-xs-12 col-md-4>&lt;/div>
 &lt;/div>
 
 &lt;div class="grid">
-	&lt;div class="col-xs-12 col-md-3>&lt;/div>
-	&lt;div class="col-xs-12 col-md-3>&lt;/div>
-	&lt;div class="col-xs-12 col-md-3>&lt;/div>
-	&lt;div class="col-xs-12 col-md-3>&lt;/div>
+&lt;div class="col-xs-12 col-md-3>&lt;/div>
+&lt;div class="col-xs-12 col-md-3>&lt;/div>
+&lt;div class="col-xs-12 col-md-3>&lt;/div>
+&lt;div class="col-xs-12 col-md-3>&lt;/div>
 &lt;/div>
 
 &lt;div class="grid">
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
-	&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
+&lt;div class="col-xs-12 col-md-2>&lt;/div>
 &lt;/div>
 				</code></pre>
 			</div>
@@ -652,24 +688,24 @@ background-color: var(--color-white);
 			<hr class="bottom-margin-md">
 		</div>
 
-		 <!-- Create a side nav from an array  -->
-		 <script>
-		 const makeSideNav = (classes =' ', brandName=' ') => {
-		 	const link = ['Home','Store','About','Cart'];
-		 	document.write(`
-		 		<div class="grid gap">
+		<!-- Create a side nav from an array  -->
+		<script>
+			const makeSideNav = (classes =' ', brandName=' ') => {
+				const link = ['Home','Store','About','Cart'];
+				document.write(`
+					<div class="grid gap">
 					<div class="col-2">
-						<nav class="${classes}" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
-							<a class="brand-text" href="#">${brandName}</a>
-		 					<ul class="nav">
-		 						${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
-		 					</ul>
-		 				</nav>
-		 			</div>
-		 		</div>
-		 		`);
-		 }
-		 </script>
+					<nav class="${classes}" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
+					<a class="brand-text" href="#">${brandName}</a>
+					<ul class="nav">
+					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+					</ul>
+					</nav>
+					</div>
+					</div>
+					`);
+			}
+		</script>
 
 		<div class="container bottom-margin-md">
 			<h2 class="bottom-margin-md">Side navbar</h2>
@@ -721,106 +757,106 @@ background-color: var(--color-white);
 				<pre><code>
 &lt;script>
 const makeSideNav = (classes =' ', brandName=' ') => {
- 	const link = ['Link 1','Link 2','Link 3','Link 4','Link 5'];
- 	document.write(`
- 		&lt;div class="grid gap">
+const link = ['Link 1','Link 2','Link 3','Link 4','Link 5'];
+document.write(`
+	&lt;div class="grid gap">
 			&lt;div class="col-2">
 				&lt;nav class="${classes}">
 					&lt;a class="brand-text" href="#">${brandName}&lt;/a>
- 					&lt;ul class="nav">
- 						${link.reduce((r,o,i,a)=> r+`&lt;li>&lt;a href="#">${o}&lt;/a>&lt;/li>`,'')}
- 					&lt;/ul>
- 				&lt;/nav>
- 			&lt;/div>
- 		&lt;/div>
- 	`);
-}
+					&lt;ul class="nav">
+					${link.reduce((r,o,i,a)=> r+`&lt;li>&lt;a href="#">${o}&lt;/a>&lt;/li>`,'')}
+					&lt;/ul>
+				&lt;/nav>
+			&lt;/div>
+	&lt;/div>
+`);
+	}
 &lt;/script>
 
 // call the function with the wollwing classes: 
 
 &lt;script>makeSideNav("navbar side-var", "Brand Name") &lt;/script>
 
-				</code></pre>
-			</div>
+			</code></pre>
 		</div>
+	</div>
 
-		
-		 <!-- Create a nav from an array  TAKE A BRAND NAME-->
-		 <script>
-		 const makeNavBrand = (classes =' ', brandName=' ',linkList=' ') => {
+
+	<!-- Create a nav from an array  TAKE A BRAND NAME-->
+	<script>
+		const makeNavBrand = (classes =' ', brandName=' ',linkList=' ') => {
 			const link = linkList.split(',');
-		 	document.write(`
-		 		<div>
-		 			<nav class="${classes}">
-			 			<a class="brand-text display-flex"   href="#">${brandName}</a>
-			 			<div class="flex-stretch"></div>
-			 			<div class="display-flex flex-align-center">
-			 				<ul class="nav display-flex">
-			 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
-			 				</ul>
-			 				<a class="cart-link" href="#" style="display:flex;">
-			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
-			 					<div class="cart-number">0</div>
-			 				</a>
-							
-						</div>
-		 			</nav>
-		 		</div>
-		 		`);
-		 }
-		</script>
+			document.write(`
+				<div>
+				<nav class="${classes}">
+				<a class="brand-text display-flex"   href="#">${brandName}</a>
+				<div class="flex-stretch"></div>
+				<div class="display-flex flex-align-center">
+				<ul class="nav display-flex">
+				${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+				</ul>
+				<a class="cart-link" href="#" style="display:flex;">
+				<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
+				<div class="cart-number">0</div>
+				</a>
 
-		<!-- Create a nav from an array TAKES AN IMAGE LOGO -->
-		<script>
-		 const makeNavLogo = (classes =' ', logoUrl=' ', linkList=' ') => {
-		 	const link = linkList.split(',');
-		 	document.write(`
-		 		<div>
-		 			<nav class="${classes}">
-			 			<a class="brand-text display-inline-block"   href="#"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
-			 			<div class="flex-stretch"></div>
-			 			<div class="display-flex flex-align-center">
-			 				<ul class="nav display-flex">
-			 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
-			 				</ul>
-			 				<a class="cart-link" href="#" style="display:flex;">
-			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
-			 					<div class="cart-number">0</div>
-			 				</a>
-							
-						</div>
-		 			</nav>
-		 		</div>
-		 		`);
-		 }
-		 </script>
-
-		<div class="container">
-			<h2 class="top-margin-md bottom-margin-sm">Top navbar </h2>
-			<h3 class=" bottom-margin-md">HTML Structure</h3>
-			<div>
-				<nav class="bottom-margin-md navbar exception display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
-					<a class="brand-text"  href="#">Brand</a>
-					<div class="flex-stretch"></div>
-					<div class="display-flex flex-align-center">
-						<ul class="nav display-flex">
-							<li><a href="styleguide/#navigations">Link 1</a></li>
-							<li><a href="styleguide/#navigations">Link 2</a></li>
-							<li><a href="styleguide/#navigations">Link 3</a></li>
-							<li><a href="styleguide/#navigations">Link 4</a></li>
-							<li><a href="styleguide/#navigations">Link 5</a></li>
-						</ul>
-						<a class="cart-link" href="#" style="display:flex;">
-			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
-			 					<div class="cart-number">0</div>
-			 			</a>
-					</div>
+				</div>
 				</nav>
-			</div>
-			<div class=" bottom-margin-lg">
-				<div class="card hard flat ">
-					<pre><code>
+				</div>
+				`);
+		}
+	</script>
+
+	<!-- Create a nav from an array TAKES AN IMAGE LOGO -->
+	<script>
+		const makeNavLogo = (classes =' ', logoUrl=' ', linkList=' ') => {
+			const link = linkList.split(',');
+			document.write(`
+				<div>
+				<nav class="${classes}">
+				<a class="brand-text display-inline-block"   href="#"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
+				<div class="flex-stretch"></div>
+				<div class="display-flex flex-align-center">
+				<ul class="nav display-flex">
+				${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+				</ul>
+				<a class="cart-link" href="#" style="display:flex;">
+				<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
+				<div class="cart-number">0</div>
+				</a>
+
+				</div>
+				</nav>
+				</div>
+				`);
+		}
+	</script>
+
+	<div class="container">
+		<h2 class="top-margin-md bottom-margin-sm">Top navbar </h2>
+		<h3 class=" bottom-margin-md">HTML Structure</h3>
+		<div>
+			<nav class="bottom-margin-md navbar exception display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
+				<a class="brand-text"  href="#">Brand</a>
+				<div class="flex-stretch"></div>
+				<div class="display-flex flex-align-center">
+					<ul class="nav display-flex">
+						<li><a href="styleguide/#navigations">Link 1</a></li>
+						<li><a href="styleguide/#navigations">Link 2</a></li>
+						<li><a href="styleguide/#navigations">Link 3</a></li>
+						<li><a href="styleguide/#navigations">Link 4</a></li>
+						<li><a href="styleguide/#navigations">Link 5</a></li>
+					</ul>
+					<a class="cart-link" href="#" style="display:flex;">
+						<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
+						<div class="cart-number">0</div>
+					</a>
+				</div>
+			</nav>
+		</div>
+		<div class=" bottom-margin-lg">
+			<div class="card hard flat">
+				<pre><code>
 &lt;nav class="navbar display-flex" >
 	&lt;a class="brand-text" href="#">Brand&lt;/a>
 	&lt;div class="flex-stretch">&lt;/div>
@@ -838,63 +874,63 @@ const makeSideNav = (classes =' ', brandName=' ') => {
 		&lt;/a>
 	&lt;/div>
 &lt;/nav>
-					</code></pre>
-				</div>
+				</code></pre>
 			</div>
 		</div>
-		<div class="container">
-			<h2 class="top-margin-md bottom-margin-md">Navbar with custom brand name:</h2>
-			<script>makeNavBrand("navbar exception display-flex","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
-			<div class="top-margin-sm"></div>
-			<div class="card hard flat ">
-				<pre><code>
+	</div>
+	<div class="container">
+		<h2 class="top-margin-md bottom-margin-md">Navbar with custom brand name:</h2>
+		<script>makeNavBrand("navbar exception display-flex","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+		<div class="top-margin-sm"></div>
+		<div class="card hard flat ">
+			<pre><code>
 
 // Call fuction("classes", "name of your brand", "link list") 
 
 &lt;script>makeNavBrand("navbar display-flex", "Brand", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
-				</code></pre>
-			</div>		
-			<h2 class="top-margin-lg bottom-margin-md">Navbar with brand logo:</h2>	
+			</code></pre>
+		</div>		
+		<h2 class="top-margin-lg bottom-margin-md">Navbar with brand logo:</h2>	
 
-			<script>makeNavLogo("navbar exception display-flex","https://via.placeholder.com/150x30?text=logo-here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
-			<div class="top-margin-sm"></div>
+		<script>makeNavLogo("navbar exception display-flex","https://via.placeholder.com/150x30?text=logo-here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+		<div class="top-margin-sm"></div>
 
-			<div class="card hard flat">
-				<pre><code>
+		<div class="card hard flat">
+			<pre class="overscroll-x"><code>
 // Call fuction("classes", "image-url", "Link 1,Link 2,Link 3,Link 4,Link 5"links)
 
 &lt;script>makeNavLogo("navbar display-flex", "https://via.placeholder.com/150x30?text=logo-here", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
-					</code></pre>
-			</div>
+			</code></pre>
 		</div>
-		<script>
-			const makeNav = (classes='', linkList='') => {
-			   const links = linkList.split(',');
-			   document.write(`
-			   <div>
-			   <nav class="${classes}">
-			      <ul>
-			         ${links.reduce((r,o,i,a)=>r+`<li><a href="#">${o}</a></li>`,'')}
-			      </ul>
-			   </nav>
-			   </div>
-			   `);
-			}
-		</script>
-		<div class="container">
-			<h2 class=" top-margin-md bottom-margin-md">Flex navbar</h2>
-			<nav class="nav flex exception">
+	</div>
+	<script>
+		const makeNav = (classes='', linkList='') => {
+			const links = linkList.split(',');
+			document.write(`
+				<div>
+				<nav class="${classes}">
 				<ul>
-					<li><a href="styleguide/#navigations">Link 1</a></li>
-					<li><a href="styleguide/#navigations">Link 2</a></li>
-					<li><a href="styleguide/#navigations">Link 3</a></li>
-					<li><a href="styleguide/#navigations">Link 4</a></li>
+				${links.reduce((r,o,i,a)=>r+`<li><a href="#">${o}</a></li>`,'')}
 				</ul>
-			</nav>
-		</div>
-		<div class="container">
-			<div class="card hard flat bottom-margin-lg">			
-				<pre><code>
+				</nav>
+				</div>
+				`);
+		}
+	</script>
+	<div class="container">
+		<h2 class=" top-margin-md bottom-margin-md">Flex navbar</h2>
+		<nav class="nav flex exception">
+			<ul>
+				<li><a href="styleguide/#navigations">Link 1</a></li>
+				<li><a href="styleguide/#navigations">Link 2</a></li>
+				<li><a href="styleguide/#navigations">Link 3</a></li>
+				<li><a href="styleguide/#navigations">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<div class="card hard flat bottom-margin-lg">			
+			<pre><code>
 &lt;nav class="nav flex">
 	&lt;ul>
 		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
@@ -903,31 +939,31 @@ const makeSideNav = (classes =' ', brandName=' ') => {
 		&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
 	&lt;/ul>
 &lt;/nav>
-				</code></pre>
-			</div>
+			</code></pre>
 		</div>
-		<p class="container">Or call the following function</p>
-		<div class="container">
-			<div class="card hard flat bottom-margin-lg">			
-				<pre><code>
+	</div>
+	<p class="container">Or call the following function</p>
+	<div class="container">
+		<div class="card hard flat bottom-margin-lg">			
+			<pre><code>
 &lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
-				</code></pre>
-			</div>
+			</code></pre>
 		</div>
-		<div class="container">
-			<h2 class="top-margin-md bottom-margin-md">Stretch navbar</h2>
-			<nav class="nav stretch exception">
-				<ul>
-					<li><a href="styleguide/#navigations">Link 1</a></li>
-					<li><a href="styleguide/#navigations">Link 2</a></li>
-					<li><a href="styleguide/#navigations">Link 3</a></li>
-					<li><a href="styleguide/#navigations">Link 4</a></li>
-				</ul>
-			</nav>  
-		</div>
-		<div class="container">
-			<div class="card hard flat bottom-margin-lg">			
-				<pre><code>
+	</div>
+	<div class="container">
+		<h2 class="top-margin-md bottom-margin-md">Stretch navbar</h2>
+		<nav class="nav stretch exception">
+			<ul>
+				<li><a href="styleguide/#navigations">Link 1</a></li>
+				<li><a href="styleguide/#navigations">Link 2</a></li>
+				<li><a href="styleguide/#navigations">Link 3</a></li>
+				<li><a href="styleguide/#navigations">Link 4</a></li>
+			</ul>
+		</nav>  
+	</div>
+	<div class="container">
+		<div class="card hard flat bottom-margin-lg">			
+			<pre><code>
 &lt;nav class="nav stretch">
 	&lt;ul>
 		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
@@ -936,30 +972,30 @@ const makeSideNav = (classes =' ', brandName=' ') => {
 		&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
 	&lt;/ul>
 &lt;/nav>
-				</code></pre>
-			</div>
+			</code></pre>
 		</div>
-		<p class="container">Or call the following function</p>
-		<div class="container">
-			<div class="card hard flat bottom-margin-lg">			
-				<pre><code>
-&lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
-				</code></pre>
-			</div>
+	</div>
+	<p class="container">Or call the following function</p>
+	<div class="container">
+		<div class="card hard flat bottom-margin-lg">			
+			<pre><code>
+&lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>
+			</code></pre>
 		</div>
-		<div class="container">
-			<h2 class="top-margin-md bottom-margin-md">Breadcrumb</h2>
-			<div>
-				<script>makeNav("crumbs","Link 1,Link 2,Link 3,Link 4")</script>
-			</div>  
+	</div>
+	<div class="container">
+		<h2 class="top-margin-md bottom-margin-md">Breadcrumb</h2>
+		<div>
+			<script>makeNav("crumbs","Link 1,Link 2,Link 3,Link 4")</script>
+		</div>  
+	</div>
+	<div class="container">
+		<div class="card hard flat ">			
+			<pre><code>
+&lt;script>makeNav("crumbs","Link 1,Link 2,Link 3,Link 4")&lt;/script>
+			</code></pre>
 		</div>
-		<div class="container">
-			<div class="card hard flat ">			
-				<pre><code>
-&lt;script>makeNav("crumbs","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
-				</code></pre>
-			</div>
-		</div>
+	</div>
 
 
 
@@ -967,25 +1003,25 @@ const makeSideNav = (classes =' ', brandName=' ') => {
 
 
 
-		<div id="spacers"></div>
-		<div class="container">
-			<h2 class=" top-padding-md text-center">VERTICAL SPACERS</h2>
-			<hr class="bottom-margin-md">
-			<p><b>Space between vertical elements (xs, sm, md and lg).  </b> Top and bottom consisten margins and paddings.</p>
-			<hr class="" style="width: 50%; ">
-			<p class="text-center bottom-margin-xs">Extra small vertical space</p>
-			<hr class="" style="width: 50%; ">
-			<p class="text-center bottom-margin-sm">Small vertical space</p>
-			<hr class="" style="width: 50%; ">
-			<p class="text-center bottom-margin-md">Medium vertical space</p>
-			<hr class="" style="width: 50%; ">
-			<p class="text-center bottom-margin-lg">Large vertical space</p>
-			<hr class="bottom-margin-md" style="width: 50%; ">
+	<div id="spacers"></div>
+	<div class="container">
+		<h2 class=" top-padding-md text-center">VERTICAL SPACERS</h2>
+		<hr class="bottom-margin-md">
+		<p><b>Space between vertical elements (xs, sm, md and lg).  </b> Top and bottom consisten margins and paddings.</p>
+		<hr class="" style="width: 50%; ">
+		<p class="text-center bottom-margin-xs">Extra small vertical space</p>
+		<hr class="" style="width: 50%; ">
+		<p class="text-center bottom-margin-sm">Small vertical space</p>
+		<hr class="" style="width: 50%; ">
+		<p class="text-center bottom-margin-md">Medium vertical space</p>
+		<hr class="" style="width: 50%; ">
+		<p class="text-center bottom-margin-lg">Large vertical space</p>
+		<hr class="bottom-margin-md" style="width: 50%; ">
 
-		</div>
-		<div class="container">
-			<div class="card hard flat">
-				<pre><code>
+	</div>
+	<div class="container">
+		<div class="card hard flat">
+			<pre><code>
 class="top-margin-xs"
 class="top-margin-sm"
 class="top-margin-md"
@@ -1005,122 +1041,228 @@ class="bottom-padding-xs"
 class="bottom-padding-sm"
 class="bottom-padding-md"
 class="bottom-padding-lg"
-				</pre></code>
-			</div>
+			</pre></code>
 		</div>
+	</div>
 
-		<script>
-			const makeTable = (classes='') => {
-			   const head = ['ID','Image','Product name','Description','SDK','Price'];
-			   const body = [
-			      ['<img class="image-cover" src="images/placeholder1.png" width="80px" height="80px">',"Echeveria",'Flower shape plant','5534','$10.20'],
-			      ['<img class="image-cover" src="images/placeholder2.png" width="80px" height="80px">',"Sempervivum",'Small twisted triangle plant','5554','$4.30' ],
-			      ['<img class="image-cover" src="images/placeholder4.png" width="80px" height="80px">',"Stonecrop",'Velvety textured leaf plant','5245','$8.40' ],
-			      ['<img class="image-cover" src="images/placeholder5.png" width="80px" height="80px">',"Baby Neclace",'Tittle cubed shape leaf','5087','$13.20'],
-			      ['<img class="image-cover" src="images/placeholder1.png" width="80px" height="80px">',"Ivlory Towers",'Short cilinder towers','5794','$12.00'],
-			   ];
-			   document.write(`
-			   <table class="${classes}">
-			      <thead><tr>${head.reduce((r,o,i,a)=>r+`<th>${o}</th>`,'')}</tr></thead>
-			      <tbody>
-			         ${body.reduce((r,o,i,a)=>r+
-			            `<tr>${[i+1,...o].reduce((r,o,i,a)=>r+`<td>${o}</td>`,'')}</tr>`
-			         ,'')}
-			      </tbody>
-			   </table>
-			   `)
-			}
-		</script>
+	<script>
+		const makeTable = (classes='') => {
+			const head = ['ID','Image','Product name','Description','SDK','Price'];
+			const body = [
+			['<img class="image-cover" src="images/placeholder1.png" width="80px" height="80px">',"Echeveria",'Flower shape plant','5534','$10.20'],
+			['<img class="image-cover" src="images/placeholder2.png" width="80px" height="80px">',"Sempervivum",'Small twisted triangle plant','5554','$4.30' ],
+			['<img class="image-cover" src="images/placeholder4.png" width="80px" height="80px">',"Stonecrop",'Velvety textured leaf plant','5245','$8.40' ],
+			['<img class="image-cover" src="images/placeholder5.png" width="80px" height="80px">',"Baby Neclace",'Little cubed shape leaf','5087','$13.20'],
+			['<img class="image-cover" src="images/placeholder1.png" width="80px" height="80px">',"Ivlory Towers",'Short cilinder towers','5794','$12.00'],
+			];
+			document.write(`
+				<table class="${classes}">
+				<thead><tr>${head.reduce((r,o,i,a)=>r+`<th>${o}</th>`,'')}</tr></thead>
+				<tbody>
+				${body.reduce((r,o,i,a)=>r+
+					`<tr>${[i+1,...o].reduce((r,o,i,a)=>r+`<td>${o}</td>`,'')}</tr>`
+					,'')}
+				</tbody>
+				</table>
+				`)
+		}
+	</script>
 
 
-		<div id="tables"></div>
-		<div class="container">
-			<h2 class="top-margin-md text-center">TABLES</h2>
-			<hr class="bottom-margin-md">
-			<h3 class="bottom-margin-sm top-margin-md">Standard Table</h3>
-			<script>makeTable("table")</script>
-			<div class="card hard flat">
-				<pre><code>
+
+
+
+
+
+	<div id="tables"></div>
+	<div class="container">
+		<h2 class="top-margin-md text-center">TABLES</h2>
+		<hr class="bottom-margin-md">
+		<h3 class="bottom-margin-sm top-margin-md">Standard Table</h3>
+		<script>makeTable("table")</script>
+		<div class="card hard flat">
+			<pre><code>
 class="card hard flat"
-				</pre></code>
-			</div>
-			<h3 class="bottom-margin-sm top-margin-md">Striped Table</h3>
-			<script>makeTable("table striped")</script>
-			<div class="card hard flat">
-				<pre><code>
+			</pre></code>
+		</div>
+		<h3 class="bottom-margin-sm top-margin-md">Striped Table</h3>
+		<script>makeTable("table striped")</script>
+		<div class="card hard flat">
+			<pre><code>
 class="table striped"
-				</pre></code>
-			</div>
-			<h3 class="bottom-margin-sm top-margin-md">Lined Hoizontal Table</h3>
-			<script>makeTable("table lined horizontal")</script>
-			<div class="card hard flat">
-				<pre><code>
+			</pre></code>
+		</div>
+		<h3 class="bottom-margin-sm top-margin-md">Lined Hoizontal Table</h3>
+		<script>makeTable("table lined horizontal")</script>
+		<div class="card hard flat">
+			<pre><code>
 class="table lined horizontal"
-				</pre></code>
-			</div>
-			<h3 class="bottom-margin-sm top-margin-md">Lined Vertical Table</h3>
-			<script>makeTable("table lined vertical")</script>
-			<div class="card hard flat">
-				<pre><code>
+			</pre></code>
+		</div>
+		<h3 class="bottom-margin-sm top-margin-md">Lined Vertical Table</h3>
+		<script>makeTable("table lined vertical")</script>
+		<div class="card hard flat">
+			<pre><code>
 class="table lined vertical"
-				</pre></code>
-			</div>
-
-			<h3 class="bottom-margin-sm top-margin-md">Lined both Table</h3>
-			<script>makeTable("table lined horizontal vertical")</script>
-			<div class="card hard flat">
-				<pre><code>
-class="table lined horizontal vertical"
-				</pre></code>
-			</div>
-
-			<h3 class="bottom-margin-sm top-margin-md">Lined outline Table</h3>
-			<script>makeTable("table lined outline")</script>
-			<div class="card hard flat">
-				<pre><code>
-class="table lined outline"
-				</pre></code>
-			</div>
-
-			<h3 class="bottom-margin-sm top-margin-md">Lined outline striped Table</h3>
-			<script>makeTable("table lined outline striped")</script>
-			<div class="card hard flat">
-				<pre><code>
-class="table lined outline striped"
-				</pre></code>
-			</div>
-
-			<h3 class="bottom-margin-sm top-margin-md">Lined all Table</h3>
-			<div class="overscroll-x">
-			<script>makeTable("table lined all")</script>
-			</div>
-			<div class="card hard flat">
-				<pre><code>
-class="table lined all"
-				</pre></code>
-			</div>
+			</pre></code>
 		</div>
 
+		<h3 class="bottom-margin-sm top-margin-md">Lined both Table</h3>
+		<script>makeTable("table lined horizontal vertical")</script>
+		<div class="card hard flat">
+			<pre><code>
+class="table lined horizontal vertical"
+			</pre></code>
+		</div>
+
+		<h3 class="bottom-margin-sm top-margin-md">Lined outline Table</h3>
+		<script>makeTable("table lined outline")</script>
+		<div class="card hard flat">
+			<pre><code>
+class="table lined outline"
+			</pre></code>
+		</div>
+
+		<h3 class="bottom-margin-sm top-margin-md">Lined outline striped Table</h3>
+		<script>makeTable("table lined outline striped")</script>
+		<div class="card hard flat">
+			<pre><code>
+class="table lined outline striped"
+			</pre></code>
+		</div>
+
+		<h3 class="bottom-margin-sm top-margin-md">Lined all Table</h3>
+		<div class="overscroll-x">
+			<script>makeTable("table lined all")</script>
+		</div>
+		<div class="card hard flat">
+			<pre><code>
+class="table lined all"
+			</pre></code>
+		</div>
+	</div>
 
 
 
 
-		<div id="forms"></div>
-		<div class="container">
-			<h2 class="top-margin-md text-center">FORMS</h2>
-			<hr class="bottom-margin-md">
-			<h3>Basic Input</h3>
+
+	<div id="forms"></div>
+	<div class="container">
+		<h2 class="top-margin-md text-center">FORMS</h2>
+		<hr class="bottom-margin-md">
+		<h3>Basic Input</h3>
+		<div>
 			<form>
 				<input class="form-input" type="text" placeholder="Text" >
 				<input class="form-input" type="number" placeholder="Number" >
 				<input class="form-input" type="search" placeholder="Search" >
 				<input class="form-input" type="password" placeholder="Password" >
+				<div class="form-select">
+					<select>
+						<option value="" selected disabled hidden class="red">Select an option</option>
+						<option value="bird">bird</option>
+						<option value="dog">dog</option>
+						<option value="cat">cat</option>
+						<option value="horse">horse</option>
+					</select>
+				</div>
 			</form>
+
 		</div>
+		<h3>Form Label &amp; Control</h3>
+		<div class="form-control">
+			<label for="example1" class="form-label">Name</label>
+			<input id="example1" type="text" placeholder="Name" class="form-input">
+		</div>
+		<div class="form-control">
+			<label for="example2" class="form-label">Name</label>
+			<input id="example2" type="text" placeholder="Name" class="form-input">
+		</div>
+		<div class="form-control">
+			<label for="example3" class="form-label">Name</label>
+			<input id="example3" type="text" placeholder="Name" class="form-input">
+		</div>
+
+		<div class="form-control display-flex flex-align-center">
+			<div class="flex-none"><label for="example4" class="form-label">Name</label></div>
+			<div class="flex-stretch"></div>
+			<div class="flex-none"><input id="example4" type="text" placeholder="Name" class="form-input"></div>
+		</div>
+
+		<h3>Lined Input</h3>
+		<div class="form-control">
+			<label for="example5" class="form-label">Name</label>
+			<input id="example5" type="text" placeholder="Name" class="form-input-lined">
+		</div>
+		<div class="form-control">
+			<label for="example6" class="form-label">Name</label>
+			<input id="example6" type="text" placeholder="Name" class="form-input-lined">
+		</div>
+
 		
 
+		<h2 class="top-margin-md text-center">FORM BUTTONS</h2>
+		<hr class="bottom-margin-md">
+		<input type="button" class="form-button" value="Input Button">
+		<input type="submit" class="form-button" value="Input Submit">
+		<button type="button" class="form-button">Button</button>
+		<a href="#" class="form-button">Anchor</a>
 
+		<h3 >Other Buttons</h3>
+		<button type="button" class="form-button sell">Button</button>
+
+		<h3>Other Layouts</h3>
+
+		<div class="display-flex">
+			<div class="flex-stretch"></div>
+			<div class="flex-none">
+				<button type="button" class="form-button sell">Button</button>
+			</div>
+			<div class="flex-none" style="margin-left:0.2em">
+				<button type="button" class="form-button sell">Button</button>
+			</div>
+		</div>
+
+	
+		<h2 class="top-margin-md text-center">HOTDOG FORMS</h2>
+		<hr class="bottom-margin-md">
+
+		<h3>Hotdog Input</h3>
+
+		<form>
+			<input type="search" class="hotdog" placeholder="Search">
+		</form>
+
+		<h3>Hotdog Form</h3>
+
+		<form class="hotdog">
+			<div class="flex-stretch">
+				<input type="search" placeholder="Search">
+			</div>
+			<div class="flex-none">
+				<img src="images/icon/search.svg" alt="" class="icon">
+			</div>
+		</form>
+
+		<hr>
+
+		<h3>Form Select</h3>
+		<div class="form-select-hotdog">
+			<select>
+				<option value="" selected disabled hidden>Select an option</option>
+				<option value="bird">bird</option>
+				<option value="dog">dog</option>
+				<option value="cat">cat</option>
+				<option value="horse">horse</option>
+			</select>
+		</div>
 	</div>
-	<script src="lib/js/thumbnails.js"></script>
+</div>
+
+
+
+
+</div>
+<script src="lib/js/thumbnails.js"></script>
 </body>
 </html>
