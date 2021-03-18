@@ -50,6 +50,9 @@ h5,
 h6,{
 	font-family: var(--font-sans);
 }
+h3{
+	font-weight: 200;
+}
 
 a{
 	color: inherit;
@@ -107,6 +110,10 @@ footer p{
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
+
+.overscroll { overflow:auto; }
+.overscroll-x { overflow-x:auto; }
+.overscroll-y { overflow-y:auto; }
 
 
 .navbar-spacer{ padding-top: var(--header-height); }
@@ -200,7 +207,6 @@ a.text-link {
       text-align:center;
    	}
 .cart-number{
-	/*content: "0";*/
 	font-size: 0.5em;
 	color: var(--color-white);
 	width:2em;
@@ -213,6 +219,9 @@ a.text-link {
 	position: relative;
 	top:-5px;
 	left: -5px;
+}
+.cart-number:hover{
+	background-color: var(--color-highlight);
 }
 
 /*NAVBAR*/

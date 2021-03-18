@@ -25,10 +25,11 @@
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
+	<link rel="stylesheet" href="styleguide/css/styleguide-exceptions.css">
 </head>
 <body>
 	<!-- SIDE NAVBAR -->
-	<header class="navbar side-var">
+	<header class="navbar side-var overscroll-y" >
 		<div class="display-flex">
 			<div class="" style="width: 100%;">
 				<a class="brand-text" href="styleguide/#tops">Styleguide</a>
@@ -649,13 +650,13 @@ background-color: var(--color-white);
 
 		 <!-- Create a side nav from an array  -->
 		 <script>
-		 const makeSideNav = (classes =' ') => {
+		 const makeSideNav = (classes =' ', brandName=' ') => {
 		 	const link = ['Home','Store','About','Cart'];
 		 	document.write(`
 		 		<div class="grid gap">
 					<div class="col-2">
 						<nav class="${classes}" style="position:inherit; height: auto; z-index: inherit; width: inherit; ">
-							<a class="brand-text" href="#">Brand</a>
+							<a class="brand-text" href="#">${brandName}</a>
 		 					<ul class="nav">
 		 						${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
 		 					</ul>
@@ -715,13 +716,13 @@ background-color: var(--color-white);
 			<div class="card hard flat">			
 				<pre><code>
 &lt;script>
-const makeSideNav = (classes =' ') => {
+const makeSideNav = (classes =' ', brandName=' ') => {
  	const link = ['Link 1','Link 2','Link 3','Link 4','Link 5'];
  	document.write(`
  		&lt;div class="grid gap">
 			&lt;div class="col-2">
 				&lt;nav class="${classes}">
-					&lt;a class="brand-text" href="#">Brand&lt;/a>
+					&lt;a class="brand-text" href="#">${brandName}&lt;/a>
  					&lt;ul class="nav">
  						${link.reduce((r,o,i,a)=> r+`&lt;li>&lt;a href="#">${o}&lt;/a>&lt;/li>`,'')}
  					&lt;/ul>
@@ -734,22 +735,57 @@ const makeSideNav = (classes =' ') => {
 
 // call the function with the wollwing classes: 
 
-&lt;script>makeSideNav("navbar side-var") &lt;/script>
+&lt;script>makeSideNav("navbar side-var", "Brand Name") &lt;/script>
 
 				</code></pre>
 			</div>
 		</div>
 
-		<!-- Create a nav from an array  -->
-		<script>
-		 const makeNav = (classes =' ') => {
-		 	const link = ['Home','Store','About','Cart'];
+		
+		 <!-- Create a nav from an array  TAKE A BRAND NAME-->
+		 <script>
+		 const makeNavBrand = (classes =' ', brandName=' ',linkList=' ') => {
+			const link = linkList.split(',');
 		 	document.write(`
 		 		<div>
 		 			<nav class="${classes}">
-		 				<ul>
-		 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`)}
-		 				</ul>
+			 			<a class="brand-text display-flex"   href="#">${brandName}</a>
+			 			<div class="flex-stretch"></div>
+			 			<div class="display-flex flex-align-center">
+			 				<ul class="nav display-flex">
+			 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+			 				</ul>
+			 				<a class="cart-link" href="#" style="display:flex;">
+			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
+			 					<div class="cart-number">0</div>
+			 				</a>
+							
+						</div>
+		 			</nav>
+		 		</div>
+		 		`);
+		 }
+		</script>
+
+		<!-- Create a nav from an array TAKES AN IMAGE LOGO -->
+		<script>
+		 const makeNavLogo = (classes =' ', logoUrl=' ', linkList=' ') => {
+		 	const link = linkList.split(',');
+		 	document.write(`
+		 		<div>
+		 			<nav class="${classes}">
+			 			<a class="brand-text display-inline-block"   href="#"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
+			 			<div class="flex-stretch"></div>
+			 			<div class="display-flex flex-align-center">
+			 				<ul class="nav display-flex">
+			 					${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+			 				</ul>
+			 				<a class="cart-link" href="#" style="display:flex;">
+			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
+			 					<div class="cart-number">0</div>
+			 				</a>
+							
+						</div>
 		 			</nav>
 		 		</div>
 		 		`);
@@ -757,11 +793,10 @@ const makeSideNav = (classes =' ') => {
 		 </script>
 
 		<div class="container">
-			<h2 class="top-margin-md bottom-margin-md">Top navbar</h2>
-			<div class="grid gap">
-			</div>
-			<div class="container">
-				<nav class=" bottom-margin-md navbar display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em; background-color: var(--color-neutral-light);">
+			<h2 class="top-margin-md bottom-margin-sm">Top navbar </h2>
+			<h3 class=" bottom-margin-md">HTML Structure</h3>
+			<div>
+				<nav class="bottom-margin-md navbar exception display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
 					<a class="brand-text"  href="#">Brand</a>
 					<div class="flex-stretch"></div>
 					<div class="display-flex flex-align-center">
@@ -772,38 +807,79 @@ const makeSideNav = (classes =' ') => {
 							<li><a href="styleguide/#navigations">Link 4</a></li>
 							<li><a href="styleguide/#navigations">Link 5</a></li>
 						</ul>
-						<img  class="nav-icon image-contain" src="images/shopping-cart.png" alt="image placeholder" >
-						
-						<div class="cart-number">0</div>
-						
+						<a class="cart-link" href="#" style="display:flex;">
+			 					<img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
+			 					<div class="cart-number">0</div>
+			 			</a>
 					</div>
 				</nav>
 			</div>
-			<div class="container">
-				<div class="card hard flat">
+			<div class=" bottom-margin-lg">
+				<div class="card hard flat ">
 					<pre><code>
 &lt;nav class="navbar display-flex" >
 	&lt;a class="brand-text" href="#">Brand&lt;/a>
 	&lt;div class="flex-stretch">&lt;/div>
 	&lt;div class="display-flex flex-align-center">
-	&lt;ul class="nav display-flex">
-		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
-	&lt;/ul>
-	&lt;img  class="nav-icon image-contain " src="images/shopping-cart.png" alt="image placeholder" >
+		&lt;ul class="nav display-flex">
+			&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
+		&lt;/ul>
+		&lt;a class="cart-link" href="#" style="display:flex;">
+			&lt;img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
+			&lt;div class="cart-number">0&lt;/div>
+		&lt;/a>
 	&lt;/div>
 &lt;/nav>
 					</code></pre>
 				</div>
 			</div>
-
 		</div>
 		<div class="container">
+			<h2 class="top-margin-md bottom-margin-md">Navbar with custom brand name:</h2>
+			<script>makeNavBrand("navbar exception display-flex","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+			<div class="top-margin-sm"></div>
+			<div class="card hard flat ">
+				<pre><code>
+
+// Call fuction("classes", "name of your brand", "link list") 
+
+&lt;script>makeNavBrand("navbar display-flex", "Brand", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
+				</code></pre>
+			</div>		
+			<h2 class="top-margin-lg bottom-margin-md">Navbar with brand logo:</h2>	
+
+			<script>makeNavLogo("navbar exception display-flex","https://via.placeholder.com/150x30?text=logo-here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+			<div class="top-margin-sm"></div>
+
+			<div class="card hard flat">
+				<pre><code>
+// Call fuction("classes", "image-url", "Link 1,Link 2,Link 3,Link 4,Link 5"links)
+
+&lt;script>makeNavLogo("navbar display-flex", "https://via.placeholder.com/150x30?text=logo-here", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
+					</code></pre>
+			</div>
+		</div>
+		<script>
+			const makeNav = (classes='', linkList='') => {
+			   const links = linkList.split(',');
+			   document.write(`
+			   <div>
+			   <nav class="${classes}">
+			      <ul>
+			         ${links.reduce((r,o,i,a)=>r+`<li><a href="#">${o}</a></li>`,'')}
+			      </ul>
+			   </nav>
+			   </div>
+			   `);
+			}
+		</script>
+		<div class="container">
 			<h2 class=" top-margin-md bottom-margin-md">Flex navbar</h2>
-			<nav class="nav flex">
+			<nav class="nav flex exception">
 				<ul>
 					<li><a href="styleguide/#navigations">Link 1</a></li>
 					<li><a href="styleguide/#navigations">Link 2</a></li>
@@ -812,10 +888,31 @@ const makeSideNav = (classes =' ') => {
 				</ul>
 			</nav>
 		</div>
-		
+		<div class="container">
+			<div class="card hard flat bottom-margin-lg">			
+				<pre><code>
+&lt;nav class="nav flex">
+	&lt;ul>
+		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/nav>
+				</code></pre>
+			</div>
+		</div>
+		<p class="container">Or call the following function</p>
+		<div class="container">
+			<div class="card hard flat bottom-margin-lg">			
+				<pre><code>
+&lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
+				</code></pre>
+			</div>
+		</div>
 		<div class="container">
 			<h2 class="top-margin-md bottom-margin-md">Stretch navbar</h2>
-			<nav class="nav stretch">
+			<nav class="nav stretch exception">
 				<ul>
 					<li><a href="styleguide/#navigations">Link 1</a></li>
 					<li><a href="styleguide/#navigations">Link 2</a></li>
@@ -838,6 +935,17 @@ const makeSideNav = (classes =' ') => {
 				</code></pre>
 			</div>
 		</div>
+		<p class="container">Or call the following function</p>
+		<div class="container">
+			<div class="card hard flat bottom-margin-lg">			
+				<pre><code>
+&lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
+				</code></pre>
+			</div>
+		</div>
+
+
+
 
 
 
