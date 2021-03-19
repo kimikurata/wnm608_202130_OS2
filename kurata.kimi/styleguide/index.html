@@ -45,6 +45,7 @@
 					<li><a href="styleguide/#spacers">Vertical spacers</a></li>
 					<li><a href="styleguide/#tables">Tables</a></li>
 					<li><a href="styleguide/#forms">Forms</a></li>
+					<li><a href="styleguide/#figures">Figures</a></li>
 				</ul>
 			</div>            
 		</div>
@@ -70,6 +71,7 @@
 					<li><a href="styleguide/#spacers">Vertical spacers</a></li>
 					<li><a href="styleguide/#tables">Tables</a></li>
 					<li><a href="styleguide/#forms">Forms</a></li>
+					<li><a href="styleguide/#figures">Figures</a></li>
 				</ul>
 			</div>            
 		</div>
@@ -115,6 +117,10 @@
 					<div class="circle-lg" style="background-color: var(--color-highlight-light); margin: 0.5em auto;"></div>
 					<p class="text-center">Highlight-light #9beaff</p>
 				</div>
+				<div class="col-lg-3 col-xs-6" >
+					<div class="circle-lg" style="background-color: var(--color-highlight-alfa); margin: 0.5em auto;"></div>
+					<p class="text-center">Highlight-alfa60% #3cd3fc</p>
+				</div>
 			</div>
 			<h3>Desable</h3>
 			<div class="grid gap medium">
@@ -138,6 +144,13 @@
 					<p class="text-center">White #fafafa</p>
 				</div>
 			</div>
+			<h3>Gradients</h3>
+			<div class="grid gap medium">
+				<div class="col-lg-3 col-xs-6" >
+					<div class="circle-lg" style="background: var(--color-gradient-medium); margin: 0.5em auto;"></div>
+					<p class="text-center">Graduiet medum -45deg, #ddd8e1 to #F6F6F6</p>
+				</div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="card hard flat">
@@ -149,12 +162,15 @@ background-color: var(--color-neutral-dark);
 
 background-color: var(--color-highlight);
 background-color: var(--color-highlight-light);
+background-color: var(--color-highlight-alfa);
 
 background-color: var(--color-desable);
 background-color: var(--color-desable-light);
 
 background-color: var(--color-black);
 background-color: var(--color-white);
+
+background: var(--color-gradient-medium);
 				</code></pre>
 			</div>
 		</div>
@@ -421,8 +437,8 @@ background-color: var(--color-white);
 
 
 		<div id="buttons"></div>
-		<div class="container top-margin-md bottom-margin-md">
-			<h2 class="bold text-center ">BUTTON STYLES</h2>
+		<div class="container ">
+			<h2 class="bold text-center top-margin-md">BUTTON STYLES</h2>
 			<hr>
 			<h2 class="top-margin-md">Small buttons</h2>
 			<div class="buttons-box top-margin-md display-flex ">
@@ -461,6 +477,18 @@ background-color: var(--color-white);
 				</code></pre>
 			</div>
 		</div>
+		<div class="container ">
+			<h2 class="top-margin-md">Chips</h2>
+			<div class="buttons-box top-margin-md display-flex ">
+				<button class="chip-btn">Solid btn</button>
+				<button class="chip-btn disable" >Disable</button>
+				<button class="chip-btn outline">Ouline btn</button>
+				<button class="chip-btn outline disable" >Disable</button>
+			</div>
+		</div>
+
+
+
 
 
 
@@ -1046,7 +1074,6 @@ document.write(`
 		<hr class="" style="width: 50%; ">
 		<p class="text-center bottom-margin-lg">Large vertical space</p>
 		<hr class="bottom-margin-md" style="width: 50%; ">
-
 	</div>
 	<div class="container">
 		<div class="card hard flat">
@@ -1226,6 +1253,7 @@ class="form-select"
 class="textarea-input"
 			</pre></code>
 		</div>
+
 		<h2 class="top-margin-md">Form Label &amp; Control</h2>
 		<h3 class="top-margin-md">Input tag</h3>
 		<div class="form-control">
@@ -1301,7 +1329,7 @@ class="textarea-input"
 &lt;/div>
 			</pre></code>
 		</div>
-		<h3 class="top-margin-md">Iput with inline lable </h3>
+		<h3 class="top-margin-md">Inline lable forms</h3>
 		<div class="form-control display-flex flex-align-center top-padding-sm">
 			<div class="flex-none" ><label class="form-label" for="example8" >Name</label></div>
 			<input class="form-input" id="example8" type="text" placeholder="Name" >
@@ -1315,14 +1343,38 @@ class="textarea-input"
 &lt;/div>
 			</code></pre>
 		</div>
-		<h3 class="top-margin-md">Email input with button</h3>
+		<div class="form-control display-flex flex-align-center top-padding-sm">
+			<div class="flex-none" ><label class="text-only-label" for="example8" >Sort by:</label></div>
+			<div class="form-select onlytext">
+				<select>
+					<option value="All">Display all</option>
+					<option value="Lower price">Lower price</option>
+					<option value="Most recent">Most recent</option>
+				</select>
+			</div>
+		</div>
+		<div class="card hard flat ">			
+			<pre class="overscroll-x"><code>
+&lt;div class="form-control display-flex flex-align-center">
+	&lt;div class="flex-none" >&lt;label class="text-only-label" for="example8" >Sort by:&lt;/label>&lt;/div>
+	&lt;div class="form-select onlytext">
+		&lt;select>
+			&lt;option value="All">Display all&lt;/option>
+			&lt;option value="Lower price">Lower price&lt;/option>
+			&lt;option value="Most recent">Most recent&lt;/option>
+		&lt;/select>
+	&lt;/div>
+&lt;/div>
+			</code></pre>
+		</div>
+		<h3 class="top-margin-md">Email input with icon button</h3>
 		<div class="form-control " >
 			<div class="">
-				<label for="example9" class="form-label">Subscribe to our newsletter</label>
+				<label class="form-label " for="example" >Subscribe to our newsletter</label>
 			</div>
 			<div class="display-flex">
-				<input class="form-input half-left" id="example9" style="flex-grow: 4" type="email" placeholder="suculentina@gmail.com" >
-				<input  class="form-button half-right" type="submit" value="Send">
+				<input class="form-input half-left" id="example" style="flex-grow: 4" type="email" placeholder="suculentina@gmail.com" >
+				<input  class="form-button half-right" type="submit" value="" >
 			</div>
 		</div>
 		<div class="card hard flat">
@@ -1496,6 +1548,7 @@ class="hotdog"
 			</pre></code>
 		</div>
 		<h3 class="top-margin-md">Animated hotdog input with icon</h3>
+		<!--Animated search bar from https://www.w3schools.com/css/css_form.asp-->
 		<input class="hotdog search-bar-animated" type="text" name="search" placeholder="Search..">
 		<div class="card hard flat">
 			<pre class="overscroll-x"><code>
@@ -1505,7 +1558,17 @@ class="hotdog"
 
 
 	</div>
-</div>
+	<div id="figures"></div>
+	<div class="container">
+		<h2 class=" top-padding-md text-center">Figures</h2>
+		<hr class="bottom-margin-md">
+
+	</div>
+
+
+
+
+
 
 </div>
 <script src="lib/js/thumbnails.js"></script>
