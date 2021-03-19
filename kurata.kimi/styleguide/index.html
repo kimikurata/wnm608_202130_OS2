@@ -787,8 +787,8 @@ document.write(`
 		const makeNavBrand = (classes =' ', brandName=' ',linkList=' ') => {
 			const link = linkList.split(',');
 			document.write(`
-				<div>
-					<nav class="${classes}">
+				<div class="${classes}">
+					<nav class="display-flex display-flex-wrap">
 						<a class="brand-text display-flex"   href="#">${brandName}</a>
 						<div class="flex-stretch"></div>
 						<div class="display-flex flex-align-center nav-links-box">
@@ -812,8 +812,8 @@ document.write(`
 		const makeNavLogo = (classes =' ', logoUrl=' ', linkList=' ') => {
 			const link = linkList.split(',');
 			document.write(`
-				<div>
-				<nav class="${classes}">
+				<div class="${classes}">
+				<nav class="display-flex display-flex-wrap">
 				<a class="brand-text display-inline-block"   href="#"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
 				<div class="flex-stretch"></div>
 				<div class="display-flex flex-align-center nav-links-box">
@@ -834,8 +834,8 @@ document.write(`
 
 	<div class="container">
 		<h2 class="top-margin-md bottom-margin-md">Top navbar </h2>
-		<div>
-			<nav class="bottom-margin-md navbar exception display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
+		<div class="navbar exception" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
+			<nav class="display-flex display-flex-wrap" >
 				<a class="brand-text"  href="#">Brand</a>
 				<div class="flex-stretch"></div>
 				<div class="display-flex flex-align-center nav-links-box">
@@ -857,23 +857,25 @@ document.write(`
 		<div class=" bottom-margin-lg">
 			<div class="card hard flat">
 				<pre class="overscroll-x"><code>
-&lt;nav class="navbar display-flex" >
-	&lt;a class="brand-text" href="#">Brand&lt;/a>
-	&lt;div class="flex-stretch">&lt;/div>
-	&lt;div class="display-flex flex-align-center">
-		&lt;ul class="nav display-flex">
-			&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
-			&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
-		&lt;/ul>
-		&lt;a class="cart-link" href="#" style="display:flex;">
-			&lt;img  class="nav-icon image-contain" src="images/shopping-cart.svg" alt="image placeholder">
-			&lt;div class="cart-number">0&lt;/div>
-		&lt;/a>
-	&lt;/div>
-&lt;/nav>
+&lt;div class="navbar">
+	&lt;nav class="container display-flex display-flex-wrap" >
+		&lt;a class="brand-text" href="#">Brand&lt;/a>
+		&lt;div class="flex-stretch">&lt;/div>
+		&lt;div class="display-flex flex-align-center nav-links-box">
+			&lt;ul class="nav display-flex">
+				&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
+			&lt;/ul>
+			&lt;a class="cart-link" href="#" style="display:flex;">
+				&lt;img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
+				&lt;div class="cart-number">0&lt;/div>
+			&lt;/a>
+		&lt;/div>
+	&lt;/nav>
+&lt;/div>
 				</code></pre>
 			</div>
 		</div>

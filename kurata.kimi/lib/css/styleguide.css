@@ -103,9 +103,11 @@ pre{
 .display-flex{ display: flex; }
 .display-inline-flex{ display: inline-flex; }
 .display-inline-block{ display: inline-block; }
+.display-flex-wrap{ flex-wrap: wrap; }
 
 .flex-stretch{ flex: 1 1 auto; }
 .flex-none{ flex:none; }
+
 
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
@@ -248,7 +250,7 @@ a.text-link {
 	background-color:var(--color-highlight);
 	color:var(--color-white);
 	line-height:var(--header-height);
-	flex-wrap: wrap;
+	
 }
 .navbar a {
 	display:block;
@@ -265,7 +267,7 @@ a.text-link {
 	.brand-text {
 		text-align: center;
 	}
-	.navbar .flex-stretch{
+	nav .flex-stretch{
 		flex:none;
 	}
 	.nav-links-box{
