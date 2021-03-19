@@ -406,7 +406,7 @@ background-color: var(--color-white);
 		<div class="container top-margin-lg bottom-margin-md">
 			<h2 class="bold text-center ">BUTTON STYLES</h2>
 			<hr>
-			<h2>Small buttons</h2>
+			<h2 class="top-margin-md">Small buttons</h2>
 			<div class="buttons-box top-margin-md display-flex ">
 				<button class="generic-btn">Solid btn</button>
 				<button class="generic-btn disable" >Disable</button>
@@ -788,7 +788,7 @@ document.write(`
 			const link = linkList.split(',');
 			document.write(`
 				<div class="${classes}">
-					<nav class="display-flex display-flex-wrap">
+					<nav class="container display-flex display-flex-wrap">
 						<a class="brand-text display-flex"   href="#">${brandName}</a>
 						<div class="flex-stretch"></div>
 						<div class="display-flex flex-align-center nav-links-box">
@@ -882,26 +882,26 @@ document.write(`
 	</div>
 	<div class="container">
 		<h2 class="top-margin-md bottom-margin-md">Navbar with custom brand name:</h2>
-		<script>makeNavBrand("navbar exception display-flex","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+		<script>makeNavBrand("navbar exception","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
 		<div class="top-margin-sm"></div>
 		<div class="card hard flat ">
 			<pre class="overscroll-x"><code>
 
 // Call fuction("classes", "name of your brand", "link list") 
 
-&lt;script>makeNavBrand("navbar display-flex", "Brand", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
+&lt;script>makeNavBrand("navbar", "Brand", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
 			</code></pre>
 		</div>		
 		<h2 class="top-margin-lg bottom-margin-md">Navbar with brand logo:</h2>	
 
-		<script>makeNavLogo("navbar exception display-flex","https://via.placeholder.com/150x30?text=logo-here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
+		<script>makeNavLogo("navbar exception","https://via.placeholder.com/150x30?text=logo-here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
 		<div class="top-margin-sm"></div>
 
 		<div class="card hard flat">
 			<pre class="overscroll-x"><code>
 // Call fuction("classes", "image-url", "Link 1,Link 2,Link 3,Link 4,Link 5"links)
 
-&lt;script>makeNavLogo("navbar display-flex", "https://via.placeholder.com/150x30?text=logo-here", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
+&lt;script>makeNavLogo("navbar", "https://via.placeholder.com/150x30?text=logo-here", "Link 1,Link 2,Link 3,Link 4,Link 5");&lt;/script>
 			</code></pre>
 		</div>
 	</div>
@@ -1080,7 +1080,7 @@ class="bottom-padding-lg"
 	<div class="container">
 		<h2 class="top-margin-md text-center">TABLES</h2>
 		<hr class="bottom-margin-md">
-		<h3 class="bottom-margin-sm top-margin-md">Standard Table</h3>
+		<h2 class="bottom-margin-sm top-margin-md">Standard Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table")</script>
 		</div>
@@ -1089,7 +1089,7 @@ class="bottom-padding-lg"
 class="card hard flat"
 			</pre></code>
 		</div>
-		<h3 class="bottom-margin-sm top-margin-md">Striped Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Striped Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table striped")</script>
 		</div>
@@ -1098,7 +1098,7 @@ class="card hard flat"
 class="table striped"
 			</pre></code>
 		</div>
-		<h3 class="bottom-margin-sm top-margin-md">Lined Hoizontal Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined Hoizontal Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table lined horizontal")</script>
 		</div>
@@ -1107,7 +1107,7 @@ class="table striped"
 class="table lined horizontal"
 			</pre></code>
 		</div>
-		<h3 class="bottom-margin-sm top-margin-md">Lined Vertical Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined Vertical Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table lined vertical")</script>
 		</div>
@@ -1117,7 +1117,7 @@ class="table lined vertical"
 			</pre></code>
 		</div>
 
-		<h3 class="bottom-margin-sm top-margin-md">Lined both Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined both Table</h2>
 		<div class="overscroll-x">	
 			<script>makeTable("table lined horizontal vertical")</script>
 		</div>
@@ -1127,7 +1127,7 @@ class="table lined horizontal vertical"
 			</pre></code>
 		</div>
 
-		<h3 class="bottom-margin-sm top-margin-md">Lined outline Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined outline Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table lined outline")</script>
 		</div>
@@ -1137,7 +1137,7 @@ class="table lined outline"
 			</pre></code>
 		</div>
 
-		<h3 class="bottom-margin-sm top-margin-md">Lined outline striped Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined outline striped Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table lined outline striped")</script>
 		</div>
@@ -1147,7 +1147,7 @@ class="table lined outline striped"
 			</pre></code>
 		</div>
 
-		<h3 class="bottom-margin-sm top-margin-md">Lined all Table</h3>
+		<h2 class="bottom-margin-sm top-margin-lg">Lined all Table</h2>
 		<div class="overscroll-x">
 			<script>makeTable("table lined all")</script>
 		</div>
@@ -1172,6 +1172,7 @@ class="table lined all"
 				<input class="form-input" type="text" placeholder="Text" >
 				<input class="form-input" type="number" placeholder="Number" >
 				<input class="form-input" type="search" placeholder="Search" >
+				<input class="form-input" type="email" placeholder="Email" >
 				<input class="form-input" type="password" placeholder="Password" >
 				<div class="form-select">
 					<select>
@@ -1182,21 +1183,46 @@ class="table lined all"
 						<option value="horse">horse</option>
 					</select>
 				</div>
+				<textarea class="textarea-input" placeholder="Text area" name="description" id="" cols="30" rows="5"></textarea>
 			</form>
 
 		</div>
-		<h3>Form Label &amp; Control</h3>
+		<h3 class="top-margin-md">Form Label &amp; Control</h3>
 		<div class="form-control">
 			<label for="example1" class="form-label">Name</label>
-			<input id="example1" type="text" placeholder="Name" class="form-input">
+			<input id="example1" type="text" placeholder="John" class="form-input">
 		</div>
 		<div class="form-control">
-			<label for="example2" class="form-label">Name</label>
-			<input id="example2" type="text" placeholder="Name" class="form-input">
+			<label for="example2" class="form-label">Quantity</label>
+			<input id="example2" type="number" placeholder="0" class="form-input">
 		</div>
 		<div class="form-control">
-			<label for="example3" class="form-label">Name</label>
-			<input id="example3" type="text" placeholder="Name" class="form-input">
+			<label for="example3" class="form-label">Search</label>
+			<input id="example3" type="search" placeholder="Search.." class="form-input">
+		</div>
+		<div class="form-control flex-layout">
+				<label for="example3" class="form-label">Subscribe to our newsletter</label>
+				<input id="example3" type="email" placeholder="suculentina@gmail.com" class="form-input">		
+		</div>
+		<div class="form-control">
+			<label for="example3" class="form-label">Password</label>
+			<input id="example3" type="password" placeholder="********" class="form-input">
+		</div>
+		<div class="form-control">
+			<label for="example3" class="form-label">Country</label>
+			<div class="form-select">
+				<select>
+					<option value="" selected disabled hidden class="red">Select an option</option>
+					<option value="Canada">Canada</option>
+					<option value="Japan">Japan</option>
+					<option value="Mexico">Mexico</option>
+					<option value="United States">United States</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-control">
+			<label for="example3" class="form-label">Description</label>
+			<textarea class="textarea-input"  id="" placeholder="Write a short product description here" name="description" cols="30" rows="5"></textarea>
 		</div>
 
 		<div class="form-control display-flex flex-align-center">
@@ -1205,7 +1231,27 @@ class="table lined all"
 			<div class="flex-none"><input id="example4" type="text" placeholder="Name" class="form-input"></div>
 		</div>
 
-		<h3>Lined Input</h3>
+
+
+
+
+
+<div class="form-control flex-layout">
+			<div class="flex-none">
+				<label for="example3" class="form-label">Subscribe to our newsletter</label>
+				<input id="example3" type="email" placeholder="suculentina@gmail.com" class="form-input">
+			</div>
+			<div class="flex-none">
+				<input  class="form-button outlined " type="submit" value="Send">
+			</div>
+		</div>
+
+
+
+
+
+
+		<h3 class="top-margin-md">Lined Input</h3>
 		<div class="form-control">
 			<label for="example5" class="form-label">Name</label>
 			<input id="example5" type="text" placeholder="Name" class="form-input-lined">
@@ -1219,24 +1265,35 @@ class="table lined all"
 
 		<h2 class="top-margin-md text-center">FORM BUTTONS</h2>
 		<hr class="bottom-margin-md">
-		<input type="button" class="form-button" value="Input Button">
-		<input type="submit" class="form-button" value="Input Submit">
-		<button type="button" class="form-button">Button</button>
-		<a href="#" class="form-button">Anchor</a>
+		<h3 class="top-margin-md" >Solid buttons</h3>
+		<input  class="form-button " type="button" value="Input Button">
+		<input  class="form-button " type="submit" value="Input Submit">
+		<button  class="form-button " type="button">Button</button>
+		<a href="#" class="form-button ">Anchor</a>
 
-		<h3 >Other Buttons</h3>
+		<h3 class="top-margin-md" >Outlined buttons</h3>
+		<input  class="form-button outlined " type="button" value="Input Button">
+		<input  class="form-button outlined " type="submit" value="Input Submit">
+		<button  class="form-button outlined " type="button">Button</button>
+		<a href="#" class="form-button outlined ">Anchor</a>
+
+		<h3 class="top-margin-md" >Highlited button</h3>
 		<button type="button" class="form-button sell">Button</button>
 
-		<h3>Other Layouts</h3>
+		<h3 class="top-margin-md">Other Layouts</h3>
 
 		<div class="display-flex">
 			<div class="flex-stretch"></div>
 			<div class="flex-none">
-				<button type="button" class="form-button sell">Button</button>
+				<button class="form-button outlined " type="button" >Cancel</button>
 			</div>
 			<div class="flex-none" style="margin-left:0.2em">
-				<button type="button" class="form-button sell">Button</button>
+				<button class="form-button sell " type="button" >Submit</button>
 			</div>
+		</div>
+		<div class="display-flex">
+				<button class="form-button outlined " type="button" >Cancel</button>
+				<button class="form-button sell" type="button" style="margin-left:0.2em" >Submit</button>
 		</div>
 
 	
@@ -1246,23 +1303,12 @@ class="table lined all"
 		<h3>Hotdog Input</h3>
 
 		<form>
-			<input type="search" class="hotdog" placeholder="Search">
+			<input class="hotdog" type="search"  placeholder="Search">
+			<input class="hotdog" type="number"  placeholder="Quantity">
+			<input class="hotdog" type="text"  placeholder="Type here">
 		</form>
 
-		<h3>Hotdog Form</h3>
-
-		<form class="hotdog">
-			<div class="flex-stretch">
-				<input type="search" placeholder="Search">
-			</div>
-			<div class="flex-none">
-				<img src="images/icon/search.svg" alt="" class="icon">
-			</div>
-		</form>
-
-		<hr>
-
-		<h3>Form Select</h3>
+		<h3 class="top-margin-md">Hotdog select</h3>
 		<div class="form-select-hotdog bottom-margin-md">
 			<select>
 				<option value="" selected disabled hidden>Select an option</option>
@@ -1272,6 +1318,22 @@ class="table lined all"
 				<option value="horse">horse</option>
 			</select>
 		</div>
+		
+		<h2 class="top-margin-md text-center">SEARCH BAR WITH ICON</h2>
+		<hr class="bottom-margin-md">
+		<h3 class="top-margin-md">Hotdog Form</h3>
+		<form class="hotdog">
+			<div class="flex-stretch">
+				<input type="search" placeholder="Search..">
+			</div>
+			<div class="flex-none">
+				<img src="images/icon/search.svg" alt="" class="icon">
+			</div>
+		</form>
+		<h3 class="top-margin-md">Animated hotdog input with icon</h3>
+		<input class="hotdog search-bar-animated" type="text" name="search" placeholder="Search..">
+
+
 	</div>
 </div>
 

@@ -197,6 +197,7 @@ a.text-link {
 .nav-icon{
 	width: 1em;
 	height: 1em;
+	vertical-align: middle;
 }
 .nav.flex,
 .nav.stretch{
@@ -243,6 +244,8 @@ a.text-link {
 	text-decoration: underline;
 	color:var(--color-highlight);
 }
+
+
 
 /*NAVBAR*/
 
@@ -525,21 +528,30 @@ a.text-link {
 form{
 	width: 100%;
 }
-
+textarea{
+	max-width: 100%;
+	max-height: 40%;
+}
 .form-control {
 	margin:1em 0;
 }
-.form-input {
+
+.form-input, 
+.textarea-input {
 	display:inline-block;
 	width:100%;
 	border-width:0;
 	background-color:var(--color-neutral-lighter);
 	padding:0.5em 1em;
-	border-radius:0.3em;
+	border-radius:0.5em;
 	font:inherit;
 	outline:0;
 	-webkit-appearance:none;
+	position: relative;
+	border-left: 5px solid var(--color-highlight-light);
+
 }
+
 .form-button+.form-button,
 .form-input+.form-input {
 	margin-top:0.2em;
@@ -574,7 +586,7 @@ form{
 	color:var(--color-white);
 	background-color:var(--color-highlight-light);
 	padding:0.5em 1em;
-	border-radius:0.3em;
+	border-radius:0.5em;
 	font:inherit;
 	outline:0;
 	text-align:center;
@@ -585,18 +597,28 @@ form{
 }
 .form-button:hover {
 	text-decoration:none;
-	box-shadow:0 0 5px var(--color-neutral-medium);
+	box-shadow:0 0 5px var(--color-neutral-medium)
+	border:2px solid var(--color-highlight);;
 	background-color: var(--color-highlight);
 }
 .form-button:active {
 	background-color:var(--color-highlight-light);
+	border:2px solid var(--color-highlight-light);
 }
 .form-button.sell {
 	background-color:var(--color-highlight);
 	color:var(--color-white);
+	border:2px solid var(--color-highlight);
 }
 .form-button.sell:active {
 	background-color:var(--color-highlight-light);
+	border:2px solid var(--color-highlight-light);
+
+}
+.form-button.outlined {
+	background-color: transparent;
+	color:var(--color-highlight);
+	border:2px solid var(--color-highlight);
 }
 .hotdog {
 	display:inline-flex;
@@ -629,18 +651,20 @@ form{
 	border-width:0;
 	background-color:var(--color-neutral-lighter);
 	padding:0.5em 2em 0.5em 1em;
-	border-radius:0.3em;
+	border-radius:0.5em;
 	font:inherit;
 	outline:0;
 	position:relative;
 	overflow:hidden;
 	-webkit-appearance:none;
 	margin: .3em 0;
+	border-left: 5px solid var(--color-highlight-light);
+
 }
 .form-select::after {
 	position:absolute;
 	top:50%;
-	right:0.5em;
+	right:1em;
 	content:'\25BE';
 	font-family:arial;
 	font-size:0.9em;
@@ -648,10 +672,12 @@ form{
 	pointer-events:none;
 	transform: translateY(-50%);
 }
-
-
 .form-select-hotdog {
 	position: relative;
+}
+.form-select-hotdog+.form-select-hotdog,
+.hotdog+.hotdog {
+	margin-top:0.2em;
 }
 .form-select-hotdog>select {
 	display:inline-block;
@@ -677,6 +703,34 @@ form{
 	color:var(--color-neutral-dark);
 	pointer-events:none;
 	transform: translateY(-50%);
+}
+.form-input:focus,
+.hotdog:focus,
+.form-select-hotdog >select:focus,
+.textarea-input:focus,
+.form-select>select:focus{
+	border: 2px solid var(--color-highlight);
+}
+
+/* Animated search bar from https://www.w3schools.com/css/css_form.asp  */
+
+input[type=text].search-bar-animated {
+  width: 300px;
+  box-sizing: border-box;
+  border-radius: 2em;
+  font-size: 16px;
+  background-color:var(--color-neutral-lighter);
+  background-image: url("../../images/icon/search.svg");
+  background-position: 10px center; 
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  padding:0.5em 2em 0.5em 2.5em;
+  transition: width 0.4s ease-in-out;
+
+}
+
+input[type=text].search-bar-animated:focus {
+  width: 100%;
 }
 
 
