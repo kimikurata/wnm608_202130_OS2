@@ -140,6 +140,8 @@ pre{
 
 
 
+
+
 /* TEXT */
 .text-highlight{
 	color: var(--color-highlight);
@@ -246,6 +248,7 @@ a.text-link {
 	background-color:var(--color-highlight);
 	color:var(--color-white);
 	line-height:var(--header-height);
+	flex-wrap: wrap;
 }
 .navbar a {
 	display:block;
@@ -254,8 +257,24 @@ a.text-link {
 .brand-text{
 	font-size: 1.5em;
 	font-weight: 200;
-	margin: 0; 
+	margin: 0;
+	min-width: 300px;
+	flex-grow: 1;
 }
+@media screen and (max-width: 800px) {
+	.brand-text {
+		text-align: center;
+	}
+	.navbar .flex-stretch{
+		flex:none;
+	}
+	.nav-links-box{
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+	}
+}
+
 
 
 
@@ -284,7 +303,6 @@ a.text-link {
 @media screen and (max-width: 1000px) {
 	.side-var {
 		display: none;
-
 	}
 	.side-var-spacer{
 		margin-left: 0%;

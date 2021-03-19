@@ -135,7 +135,7 @@
 		</div>
 		<div class="container">
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 background-color: var(--color-neutral-lighter);
 background-color: var(--color-neutral-light);
 background-color: var(--color-neutral-medium);
@@ -220,7 +220,7 @@ background-color: var(--color-white);
 			</div>
 		</div>
 		<div class="container">
-			<h2 class=" top-margin-md">Text with highlight color</h2>
+			<h2 class=" top-margin-md">Text alignments</h2>
 			<p class="text-center">This is a <span style="background-color: var(--color-highlight-light);padding: 0 5px;">centered</span> paragraph</p>
 			<p class="text-right">This is a <span style="background-color: var(--color-highlight-light);padding: 0 5px;">right aligned</span> paragraph</p>
 			<p class="text-justify" >This is a <span style="background-color: var(--color-highlight-light);padding: 0 5px;">justified</span> paragraph: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit modi consequatur nesciunt itaque ab? Veniam labore fugit consequuntur magni ipsam vel temporibus? Impedit totam voluptatibus odio illum repellendus architecto enim! Quaerat fugiat in voluptate sunt molestias libero labore enim totam vel, quis amet, eius quas blanditiis natus nesciunt deleniti. Vitae.</p>
@@ -411,12 +411,12 @@ background-color: var(--color-white);
 				<button class="generic-btn">Solid btn</button>
 				<button class="generic-btn disable" >Disable</button>
 				<button class="generic-btn outline">Ouline btn</button>
-				<button class="generic-btn outline disable" >disable</button>
+				<button class="generic-btn outline disable" >Disable</button>
 			</div>
 		</div>
 		<div class="container ">
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;button class="generic-btn">Solid btn&lt;/button>
 &lt;button class="generic-btn disable">Solid btn&lt;/button>
 &lt;button class="generic-btn outline">Solid btn&lt;/button>
@@ -430,12 +430,12 @@ background-color: var(--color-white);
 				<button class="generic-btn full-size">Solid btn</button>
 				<button class="generic-btn  full-size disable" >Disable</button>
 				<button class="generic-btn  full-size outline">Ouline btn</button>
-				<button class="generic-btn  full-size outline disable" >disable</button>
+				<button class="generic-btn  full-size outline disable" >Disable</button>
 			</div>
 		</div>
 		<div class="container ">
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;button class="generic-btn full-size">Solid btn&lt;/button>
 &lt;button class="generic-btn full-size disable">Solid btn&lt;/button>
 &lt;button class="generic-btn full-size outline">Solid btn&lt;/button>
@@ -490,7 +490,7 @@ background-color: var(--color-white);
 		</div>
 		<div class="container">
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;div class="circle-xs">&lt;/div>
 &lt;div class="circle-sm">&lt;/div>
 &lt;div class="circle-md">&lt;/div>
@@ -623,7 +623,7 @@ background-color: var(--color-white);
 				</div>
 			</div>
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;div class="grid">
 &lt;div class="col-xs-12">
 &lt;/div>&lt;/div>
@@ -732,7 +732,7 @@ background-color: var(--color-white);
 		</div>
 		<div class="container">
 			<div class="card hard flat">			
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;div class="grid gap">
 	&lt;div class="col-2">				
 		&lt;nav class="navbar side-var">
@@ -752,9 +752,9 @@ background-color: var(--color-white);
 		</div>
 
 		<div class="container">
-			<h3>or call the following function function</h3>
+			<p>or call the following function</p>
 			<div class="card hard flat">			
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;script>
 const makeSideNav = (classes =' ', brandName=' ') => {
 const link = ['Link 1','Link 2','Link 3','Link 4','Link 5'];
@@ -788,20 +788,20 @@ document.write(`
 			const link = linkList.split(',');
 			document.write(`
 				<div>
-				<nav class="${classes}">
-				<a class="brand-text display-flex"   href="#">${brandName}</a>
-				<div class="flex-stretch"></div>
-				<div class="display-flex flex-align-center">
-				<ul class="nav display-flex">
-				${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
-				</ul>
-				<a class="cart-link" href="#" style="display:flex;">
-				<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
-				<div class="cart-number">0</div>
-				</a>
+					<nav class="${classes}">
+						<a class="brand-text display-flex"   href="#">${brandName}</a>
+						<div class="flex-stretch"></div>
+						<div class="display-flex flex-align-center nav-links-box">
+							<ul class="nav display-flex">
+								${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
+							</ul>
+							<a class="cart-link" href="#" style="display:flex;">
+								<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
+								<div class="cart-number">0</div>
+							</a>
 
-				</div>
-				</nav>
+						</div>
+					</nav>
 				</div>
 				`);
 		}
@@ -816,7 +816,7 @@ document.write(`
 				<nav class="${classes}">
 				<a class="brand-text display-inline-block"   href="#"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
 				<div class="flex-stretch"></div>
-				<div class="display-flex flex-align-center">
+				<div class="display-flex flex-align-center nav-links-box">
 				<ul class="nav display-flex">
 				${link.reduce((r,o,i,a)=> r+`<li><a href="#">${o}</a></li>`,'')}
 				</ul>
@@ -833,13 +833,12 @@ document.write(`
 	</script>
 
 	<div class="container">
-		<h2 class="top-margin-md bottom-margin-sm">Top navbar </h2>
-		<h3 class=" bottom-margin-md">HTML Structure</h3>
+		<h2 class="top-margin-md bottom-margin-md">Top navbar </h2>
 		<div>
 			<nav class="bottom-margin-md navbar exception display-flex" style="position:inherit; height: auto; z-index: inherit; width: inherit; padding: 0 3em;">
 				<a class="brand-text"  href="#">Brand</a>
 				<div class="flex-stretch"></div>
-				<div class="display-flex flex-align-center">
+				<div class="display-flex flex-align-center nav-links-box">
 					<ul class="nav display-flex">
 						<li><a href="styleguide/#navigations">Link 1</a></li>
 						<li><a href="styleguide/#navigations">Link 2</a></li>
@@ -854,9 +853,10 @@ document.write(`
 				</div>
 			</nav>
 		</div>
+		<p class="">HTML Structure</p>
 		<div class=" bottom-margin-lg">
 			<div class="card hard flat">
-				<pre><code>
+				<pre class="overscroll-x"><code>
 &lt;nav class="navbar display-flex" >
 	&lt;a class="brand-text" href="#">Brand&lt;/a>
 	&lt;div class="flex-stretch">&lt;/div>
@@ -883,7 +883,7 @@ document.write(`
 		<script>makeNavBrand("navbar exception display-flex","Brand Name Here","Link 1,Link 2,Link 3,Link 4,Link 5");</script>
 		<div class="top-margin-sm"></div>
 		<div class="card hard flat ">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 
 // Call fuction("classes", "name of your brand", "link list") 
 
@@ -930,7 +930,7 @@ document.write(`
 	</div>
 	<div class="container">
 		<div class="card hard flat bottom-margin-lg">			
-			<pre><code>
+			<pre class="overscroll-x"><code>
 &lt;nav class="nav flex">
 	&lt;ul>
 		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
@@ -945,8 +945,8 @@ document.write(`
 	<p class="container">Or call the following function</p>
 	<div class="container">
 		<div class="card hard flat bottom-margin-lg">			
-			<pre><code>
-&lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
+			<pre class="overscroll-x"><code>
+&lt;script>makeNav("nav flex","Link 1,Link 2,Link 3,Link 4")&lt;/script>						
 			</code></pre>
 		</div>
 	</div>
@@ -963,7 +963,7 @@ document.write(`
 	</div>
 	<div class="container">
 		<div class="card hard flat bottom-margin-lg">			
-			<pre><code>
+			<pre class="overscroll-x"><code>
 &lt;nav class="nav stretch">
 	&lt;ul>
 		&lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
@@ -978,7 +978,7 @@ document.write(`
 	<p class="container">Or call the following function</p>
 	<div class="container">
 		<div class="card hard flat bottom-margin-lg">			
-			<pre><code>
+			<pre class="overscroll-x"><code>
 &lt;script>makeNav("nav stretch","Link 1,Link 2,Link 3,Link 4")&lt;/script>
 			</code></pre>
 		</div>
@@ -991,7 +991,7 @@ document.write(`
 	</div>
 	<div class="container">
 		<div class="card hard flat ">			
-			<pre><code>
+			<pre class="overscroll-x"><code>
 &lt;script>makeNav("crumbs","Link 1,Link 2,Link 3,Link 4")&lt;/script>
 			</code></pre>
 		</div>
@@ -1021,7 +1021,7 @@ document.write(`
 	</div>
 	<div class="container">
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="top-margin-xs"
 class="top-margin-sm"
 class="top-margin-md"
@@ -1079,54 +1079,68 @@ class="bottom-padding-lg"
 		<h2 class="top-margin-md text-center">TABLES</h2>
 		<hr class="bottom-margin-md">
 		<h3 class="bottom-margin-sm top-margin-md">Standard Table</h3>
-		<script>makeTable("table")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="card hard flat"
 			</pre></code>
 		</div>
 		<h3 class="bottom-margin-sm top-margin-md">Striped Table</h3>
-		<script>makeTable("table striped")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table striped")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table striped"
 			</pre></code>
 		</div>
 		<h3 class="bottom-margin-sm top-margin-md">Lined Hoizontal Table</h3>
-		<script>makeTable("table lined horizontal")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table lined horizontal")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined horizontal"
 			</pre></code>
 		</div>
 		<h3 class="bottom-margin-sm top-margin-md">Lined Vertical Table</h3>
-		<script>makeTable("table lined vertical")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table lined vertical")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined vertical"
 			</pre></code>
 		</div>
 
 		<h3 class="bottom-margin-sm top-margin-md">Lined both Table</h3>
-		<script>makeTable("table lined horizontal vertical")</script>
+		<div class="overscroll-x">	
+			<script>makeTable("table lined horizontal vertical")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined horizontal vertical"
 			</pre></code>
 		</div>
 
 		<h3 class="bottom-margin-sm top-margin-md">Lined outline Table</h3>
-		<script>makeTable("table lined outline")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table lined outline")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined outline"
 			</pre></code>
 		</div>
 
 		<h3 class="bottom-margin-sm top-margin-md">Lined outline striped Table</h3>
-		<script>makeTable("table lined outline striped")</script>
+		<div class="overscroll-x">
+			<script>makeTable("table lined outline striped")</script>
+		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined outline striped"
 			</pre></code>
 		</div>
@@ -1136,7 +1150,7 @@ class="table lined outline striped"
 			<script>makeTable("table lined all")</script>
 		</div>
 		<div class="card hard flat">
-			<pre><code>
+			<pre class="overscroll-x"><code>
 class="table lined all"
 			</pre></code>
 		</div>
