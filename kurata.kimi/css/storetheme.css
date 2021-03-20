@@ -33,10 +33,10 @@
 .card.hard{
 	color: var(--color-neutral-medium);
 }
-.price{
+.product-price{
 	font-size: var(--font-size-sm);
 	}
-.highlight .price{
+.highlight .product-price{
 	color: var(--color-white)
 }
 .product-name{
@@ -83,4 +83,15 @@
 .table tr td:nth-last-child(3){ 
 	color: var(--color-neutral-medium);
 }
+
+@media screen and (max-width: 1000px) {
+  .best-seller-order2 {
+    order: 2;
+  }
+}
+.grid>.card{
+  	margin-top:0;
+  	margin-bottom:0;
+  }
+
 

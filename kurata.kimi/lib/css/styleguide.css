@@ -183,6 +183,9 @@ a.text-link {
 }
 
 
+
+
+
 /* COMPONENT CLASSES */
 /*NAV*/
 .crumbs ul,
@@ -254,6 +257,8 @@ a.text-link {
 
 
 
+
+
 /*NAVBAR*/
 
 .navbar{
@@ -290,6 +295,7 @@ a.text-link {
 
 
 
+
 /* SIDE BAR */
 .side-var{
 	height: 100vh;  
@@ -311,7 +317,6 @@ a.text-link {
 	display: none;
 }
 
-
 @media screen and (max-width: 1000px) {
 	.side-var {
 		display: none;
@@ -323,6 +328,9 @@ a.text-link {
 		display: block;
 	}
 }
+
+
+
 
 
 /* VIEW WINDOW (PARALEX BACKGROUND)*/
@@ -346,8 +354,11 @@ a.text-link {
 	}
 }
 
-/* CARDS */
 
+
+
+
+/* CARDS */
 .card {
 	background-color: var(--color-white);
 	padding: 1em;
@@ -377,6 +388,14 @@ a.text-link {
 	color: var(--color-white);
 }
 
+.card.white{
+	background-color: #fff;
+}
+
+.card.neutral-light{
+	background-color: var(--color-neutral-light);
+}
+
 .card .image-cover {
 	width: 25vh;
 	height: 25vh;
@@ -390,20 +409,6 @@ a.text-link {
 
 
 
-/* IMAGES */
-
-.image-cover{
-	object-fit: cover;
-	background-repeat: no-repeat;
-}
-
-.image-contain{
-	object-fit: contain;
-	background-repeat: no-repeat;
-}
-
-
-/* http://placehold.jp/500x500.png */
 
 
 
@@ -420,6 +425,7 @@ a.text-link {
 	outline: none;
 	margin: 5px;
 }
+
 .chip-btn {
 	padding: 0.5em 1.2em;
 	font-size: 16px;
@@ -432,33 +438,41 @@ a.text-link {
 	margin: 5px;
 	border-radius: 2em;
 }
+
 .generic-btn.full-size{
 	min-width: 100%;
 }
+
 .chip-btn:hover{
 	background-color: var(--color-highlight);
 }
+
 .generic-btn:hover{
 	background-color: var(--color-highlight-light);
 }
+
 .chip-btn.disable, .generic-btn.disable, .generic-btn.disable:hover{
 	background-color: var(--color-desable-light);
 }
+
 .chip-btn.outline{
 	border:1px solid var(--color-highlight-light);
 	background-color: transparent;
 	color: var(--color-highlight-light);
 }
+
 .generic-btn.outline{
 	border:1px solid var(--color-highlight);
 	background-color: transparent;
 	color: var(--color-highlight);
 }
+
 .chip-btn.outline:hover{
 	border:1px solid var(--color-highlight);
 	color: var(--color-white);
 	background-color: var(--color-highlight);
 }
+
 .generic-btn.outline:hover{
 	border:1px solid var(--color-highlight-light);
 	color: var(--color-white);
@@ -523,33 +537,43 @@ a.text-link {
 	background-color: transparent;
 }
 
+
+
+
+
 /* TABLES */
 .table {
 	width:100%;
 	border-collapse:collapse;
 }
+
 .table td,
 .table th {
 	padding:0.8em 1em;
 	text-align:left;
 }
+
 .table.striped tbody tr:nth-child(odd) {
 	background-color:var(--color-neutral-light);
 }
+
 .table.lined.all tbody tr,
 .table.lined.horizontal tbody tr {
 	border-top: 1px solid var(--color-neutral-medium);
 }
+
 .table.lined.all td:not(:first-child),
 .table.lined.all th:not(:first-child),
 .table.lined.vertical td:not(:first-child),
 .table.lined.vertical th:not(:first-child) {
 	border-left: 1px solid var(--color-neutral-medium);
 }
+
 .table.lined.all,
 .table.lined.outline {
 	border: 1px solid var(--color-neutral-medium);
 }
+
 
 
 
@@ -562,6 +586,7 @@ textarea{
 	max-width: 100%;
 	max-height: 40%;
 }
+
 .form-control {
 	margin:1em 0;
 }
@@ -615,6 +640,7 @@ textarea{
 	color:var(--color-highlight); 
 
 }
+
 .form-button {
 	display:inline-block;
 	width:100%;
@@ -660,8 +686,7 @@ textarea{
 	-webkit-box-shadow: inset 0px 0px 0px 1px var(--color-highlight);
 	box-shadow:inset 0px 0px 0px 1px var(--color-highlight);
 	background-color: transparent;
-	color:var(--color-highlight);
-	
+	color:var(--color-highlight);	
 }
 
 .form-button.outlined:hover{
@@ -675,6 +700,11 @@ textarea{
 }
 
 .half-right{
+	border-radius: 0 0.5em 0.5em 0;
+	width: auto;
+}
+
+.half-right-icon{
 	border-radius: 0 0.5em 0.5em 0;
 	width: auto;
 	background-image: url("../../images/icon/send.svg");
@@ -701,7 +731,6 @@ textarea{
 	outline:0;
 	-webkit-appearance:none;
 	font-weight: 200;
-
 }
 
 .hotdog input {
@@ -720,7 +749,6 @@ textarea{
 }
 
 .form-select>select {
-	
 	display:inline-block;
 	width:100%;
 	border-width:0;
@@ -735,9 +763,11 @@ textarea{
 	margin: .3em 0;
 	border-left: 5px solid var(--color-highlight-light);
 }
+
 .form-select.onlytext{
 	color: var(--color-highlight);
 }
+
 .form-select.onlytext>select{
 	display:inline-block;
 	background-color:transparent;
@@ -757,13 +787,14 @@ textarea{
 	pointer-events:none;
 	transform: translateY(-50%);
 }
+
 .form-select.onlytext::after {
 	color:var(--color-highlight);
 }
+
 .form-select-hotdog {
 	position: relative;
 	font-weight: 200;
-
 }
 
 .form-select-hotdog+.form-select-hotdog,
@@ -805,9 +836,7 @@ textarea{
 .form-select>select:focus{
 	border: 2px solid var(--color-highlight);
 }
-
 /* Animated search bar from https://www.w3schools.com/css/css_form.asp  */
-
 input[type=text].search-bar-animated {
   width: 300px;
   box-sizing: border-box;
@@ -828,9 +857,97 @@ input[type=text].search-bar-animated:focus {
 }
 
 
+
+
+
 /* ICON */
 .icon {
 	width:1em;
 	height:1em;
 	vertical-align: middle;
 }
+
+
+
+
+
+/* PRODUCT IN LIST */
+.product {
+   transition:all 0.3s;
+   text-decoration:none;
+}
+
+.product:hover {
+   text-decoration:none;
+   box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.vertical-figure{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	min-height: 350px;
+}
+.best-seller-box>.card:hover{
+	box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+/* FIGURES */
+.figure{
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+/* IMAGES */
+
+.image-cover{
+	object-fit: cover;
+	background-repeat: no-repeat;
+}
+
+.image-contain{
+	object-fit: contain;
+	background-repeat: no-repeat;
+}
+/* http://placehold.jp/500x500.png */
+
+
+.image-cover.img600x600{
+	width: 600px;
+	height: 600px;
+}
+
+.image-cover.img300x300{
+	width: 300px;
+	height: 300px;
+}
+
+.image-cover.img200x200{
+	width: 200px;
+	height: 200px;
+}
+
+.image-cover.img120x120{
+	width: 120px;
+	height: 120px;
+}
+
+.image-cover.img96x96{
+	width: 96px;
+	height: 96px;
+}
+
+.image-cover.img64x64{
+	width: 64px;
+	height: 64px;
+}
+
+.image-cover.img34x34{
+	width: 34px;
+	height: 34px;
+}
+
+/**/
