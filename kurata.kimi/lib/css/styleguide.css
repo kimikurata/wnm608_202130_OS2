@@ -588,7 +588,7 @@ textarea{
 }
 
 .form-control {
-	margin:1em 0;
+	margin:1em 0 0 0;
 }
 
 .form-input, 
@@ -894,8 +894,8 @@ input[type=text].search-bar-animated:focus {
 
 /* FIGURES */
 .figure{
-	margin-block-start: 0em;
-    margin-block-end: 0em;
+	margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
@@ -950,4 +950,10 @@ input[type=text].search-bar-animated:focus {
 	height: 34px;
 }
 
+@media screen and (max-width: 1000px) {
+	.image-cover.img600x600{
+	width: 100%;
+	height: 100%;
+	}	
+}
 /**/

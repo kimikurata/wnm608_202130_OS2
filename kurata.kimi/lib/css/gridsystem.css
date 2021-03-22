@@ -19,6 +19,12 @@
    .gap.small { --grid-gap:0.5em; }
    .gap.large { --grid-gap:2em; }
 
+.grid.gap-column{
+	column-gap:1em;
+}
+.grid.gap-row{
+	grid-row-gap:1em;
+}
 
 .grid.vertical-stretch{
 	align-items: stretch;
