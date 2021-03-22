@@ -315,7 +315,7 @@ a.text-link {
 /* SIDE BAR */
 .side-var{
 	height: 100vh;  
-	background-color: var(--color-white); 
+	background-color: var(--color-pure-white); 
 	top:0px;
 	box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 	position: fixed; 
