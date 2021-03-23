@@ -109,6 +109,7 @@ pre{
 .flex-align-center { align-items:center; }
 .flex-align-end { align-items:flex-end; }
 .flex-justify-center { justify-content:center; }
+.flex-justify-end { justify-content:flex-end; }
 
 .flex-grow-1{flex-grow: 1}
 .flex-grow-2{flex-grow: 2}
@@ -285,6 +286,11 @@ a.text-link {
 .navbar a.brand-text:hover{
 	color:var(--color-highlight);
 }
+.nav-logo{
+	/*height: 30px;*/
+	width: 180px;
+
+}
 
 @media screen and (max-width: 800px) {
 	.brand-text {
@@ -297,6 +303,9 @@ a.text-link {
 		justify-content: center;
 		align-items: center;
 		flex-grow: 1;
+	}
+	.nav-logo{
+		margin: auto;
 	}
 }
 
