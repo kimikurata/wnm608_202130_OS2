@@ -254,9 +254,10 @@ footer a:hover{
 
 /* HOME PAGE */
 
-.home-top-box{
+.home-top-box,
+.event-info-box{
 	min-height: 70vh;
-	background-image: url("../images/home_bg_desktop.png");
+	background-image: url("../images/home_bg_desktop.png"); /* https://unsplash.com/photos/3BlVILvh9hM  */
 	background-repeat: no-repeat;
 	background-position: right;
 	background-size: cover;
@@ -292,9 +293,33 @@ footer a:hover{
 	width: 100%;
 }
 
+.event-info-box{
+	background-image: url("../images/home_bg_2.png");  /* https://unsplash.com/photos/EMQlhm12OfI  */	
+}
+
+.giant-date{
+	font-size: 7em;
+	font-weight: 200;
+}
+.event-subtitle{
+	text-align: right;
+	font-size: 1.5em;
+
+}
+
+.arrival-content-box{
+	margin-top: var(--space-lg);
+}
+.arrival-content-box.left{
+	text-align: right;
+}
+.arrival-btn{
+	margin-top: var(--space-lg);
+}
+
 @media screen and (max-width: 1000px) {
 	.home-top-box{
-	background-image: url("../images/home_bg_mobile.png");
+	background-image: url("../images/home_bg_mobile.png");  /* https://unsplash.com/photos/EMQlhm12OfI  */
 	}
 	.announce-box{
 	width: 100%;
@@ -308,8 +333,69 @@ footer a:hover{
 	width: 100%;
 	align-self: flex-end;
 	margin-bottom: 0;
+	}
+	.event-subtitle{
+		text-align: center;
+	}
+	.arrival-content-box, .arrival-content-box.left{
+	margin-top: var(--space-sm);
+	text-align: center;
+
+	}
+	.arrival-b{
+		flex:none;
+	}
+	.arrival-btn{
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-sm);
+	width: 100%;
+	}
+	
 }
+
+/*Photo by Artsy Vibes on Unsplash*/
+
+/* ABOUT PAGE */
+
+.about-info-box{
+	min-height: 70vh;
+	background-image: url("../images/about_bg_1.jpg"); /* https://unsplash.com/photos/1O9TIyCJN_E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink  */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+}
+
+.about-logo{
+	width: 500px;
+}
+
+.client-review-text:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: var(--color-white);
+  font-size: 3em;
+}
+.client-review-text::after {
+  content: close-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 35px;
+  color: var(--color-white);
+  font-size: 3em;
 }
 
 
-
+@media screen and (max-width: 1000px) {
+	.about-logo{
+	width: 250px;
+	}
+}
