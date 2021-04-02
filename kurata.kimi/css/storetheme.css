@@ -98,6 +98,9 @@ h4.code-spam {
 .cart-number{
 	letter-spacing: -1px;
 }
+.nav a:hover{
+	background-color:var(--color-highlight);
+}
 
 
 /* FORMS */
@@ -304,7 +307,6 @@ footer a:hover{
 .event-subtitle{
 	text-align: right;
 	font-size: 1.5em;
-
 }
 
 .arrival-content-box{
@@ -314,7 +316,13 @@ footer a:hover{
 	text-align: right;
 }
 .arrival-btn{
-	margin-top: var(--space-lg);
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-xs);
+
+}
+.sale_btn{
+	margin-top: var(--space-sm);
+	margin-bottom: var(--space-md);
 }
 
 @media screen and (max-width: 1000px) {
@@ -326,7 +334,7 @@ footer a:hover{
 	margin-top: var(--space-sm);
 	}
 	.home-top-title{
-	padding-top: var(--space-md);
+	padding-top: var(--space-sm);
 	text-align: center;
 	}
 	.top-more-link-box{
@@ -345,12 +353,15 @@ footer a:hover{
 	.arrival-b{
 		flex:none;
 	}
-	.arrival-btn{
+	.arrival-btn {
 	margin-top: var(--space-md);
 	margin-bottom: var(--space-sm);
 	width: 100%;
 	}
-	
+	.sale_btn{
+	margin-top: var(--space-sm);
+	width: 100%;
+	}
 }
 
 /*Photo by Artsy Vibes on Unsplash*/
