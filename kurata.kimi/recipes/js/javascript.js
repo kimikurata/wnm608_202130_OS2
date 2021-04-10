@@ -34,6 +34,8 @@ $(document).ready(function(){
    			 menuItems
      .parent().removeClass("active")
      .end().filter("[href='#"+id+"']").parent().addClass("active");
+           console.log(cur);
+
    });
 
 // display recipe steps 
