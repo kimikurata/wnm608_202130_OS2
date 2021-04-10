@@ -25,21 +25,20 @@
 
         $current_data=file_get_contents("$file_name");
         $array_data=json_decode($current_data, true);
-                               
+        $user_id = $_POST['user_id'];
+
+
+
 	    $extra=array(
 	        'name' => $_POST['name'],
 	        'type' => $_POST['type'],
 	        'email' => $_POST['email'],
 	        'classes' => $classes_explode,
 	    );
-
-	    pretty_dump($array_data);
-
-	    pretty_dump($classes_explode);
-
-	    $array_data[]=$extra;
+	    $extra_object = '['.$user_id.']=>';
+		echo $extra_object;
+	    $array_data[$user_id]= $extra;
 	    echo "file exist<br/>";
-	    pretty_dump($extra);
 
 
 	    $newjson = json_encode($array_data);
@@ -48,6 +47,8 @@
 
 		file_put_contents($file_name, $newjson);
 		echo "json sent";
+
+		pretty_dump($_POST);
 
 
     }else{

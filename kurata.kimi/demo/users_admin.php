@@ -22,10 +22,8 @@ echo <<<HTML
          <h2 class="text-highlight bottom-margin-sm">$user->name</h2>  
          <h3>Personal information</h3>
 
-
-
-
          <form method="post" class="grid gap-column" action="demo/update_user.php" >
+             <input id="user_id" name="user_id" type="hidden" value="$user_id">   
             <div class="col-md-12 col-xs-12">
                <div class="form-control">
                   <label for="name" class="form-label">Name</label>

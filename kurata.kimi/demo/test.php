@@ -18,11 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = $_POST['name'];
         $file_name='users'. '.json';
 
-        
+
    
         if(file_exists("$file_name")) { 
             $current_data=file_get_contents("$file_name");
             $array_data=json_decode($current_data, true);
+
+            <>
                                
             $extra=array(
                 'name' => $_POST['name'],
@@ -30,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'email' => $_POST['email'],
                 'classes' => $_POST['classes'],
             );
+
             $array_data[]=$extra;
             echo "file exist<br/>";
             pretty_dump($extra);
