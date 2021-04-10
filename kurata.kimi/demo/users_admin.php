@@ -12,9 +12,10 @@ function showUserPage($user) {
 
 $classes = implode(", ", $user->classes);
 pretty_dump($user);
+pretty_dump($_GET);
 
-$newjson = json_encode($user);
-pretty_dump($newjson);
+$user_id = $_GET["id"];
+echo $user_id ; 
 
 echo <<<HTML
 <div class="card flat">
