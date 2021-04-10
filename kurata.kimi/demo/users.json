@@ -1,0 +1,87 @@
+[
+	{
+		"name":"Kimi Kurata",
+		"type":"Student",
+		"email":"kkuratah2@art.edu",
+		"classes":[608,635]
+	},
+	{
+		"name":"AJ Patshkowski",
+		"type":"Student",
+		"email":"apatshko2@art.edu",
+		"classes":[605,608,613]
+	},
+	{
+      "name":"Hamilton Cline",
+      "type":"Teacher",
+      "email":"hcline@academyart.edu",
+      "classes":[608,617,820]
+    },
+    {
+		"name":"Vivienne Youn",
+		"type":"Student",
+		"email":"vivienneyounvv@gmail.com",
+		"classes":[622,606,608]
+	},
+	{
+   		"name":"Lucille Huang",
+   		"type":"Customers",
+   		"email":"yhuang38@art.edu",
+   		"classes":[608,617,820]
+    },
+    {
+		"name":"Seungwoo Kim",
+		"type":"Student",
+		"email":"kim.seungwoo126@gmail.com",
+		"classes":[608,613,635]
+	},
+	{
+        "name":"Yun Yao",
+        "type": "Student",
+        "email": "yaoyun0831@gmail.com",
+        "classes":["608"]
+    },
+   	{
+		"name":"Mia Jin",
+		"type":"Student",
+		"email":"miajin@gmail.com",
+		"classes":[605,613,608]
+	},
+	{
+      "name":"Justin Choi",
+      "type":"Student",
+      "email":"d.justin.choi@gmail.com",
+      "classes":[608,613,623,700]
+	},
+	{
+      "name":"Cindy Chan",
+      "type":"Student",
+      "email":"cindy850825@gmail.com",
+      "classes":[605,613,608]
+   	},
+	{
+		"name":"Tina Chen",
+		"type": "Student",
+		"email":"xchen79@art.edu",
+		"class":[608]
+	},
+	{
+		"name":"You Wen",
+		"type":"Student",
+		"email":"598250105@qq.com",
+		"classes":[608,605,613]
+	},
+	{
+		"name":"Elaine Lumanauw",
+		"type":"Student",
+		"email":"elainelumanauw@gmail.com",
+		"classes":[608,606,605]
+	},
+	{
+      "name":"Erica Gao",
+      "type":"Student",
+      "email":"erica.gao1103@gmail.com",
+      "classes":[605,608,613]
+   }
+
+]

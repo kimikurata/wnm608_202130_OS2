@@ -10,6 +10,8 @@
 	
 	<div class="container">
 		<h1>thi is checkout </h1>
+		<a href="cart_confirmation.php"><button class="generic-btn">Checkout</button></a>
+
 	</div>	
 </body>
 </html>

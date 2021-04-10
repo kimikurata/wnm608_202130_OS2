@@ -10,6 +10,7 @@
 	<?php include "parts/navbar.php"?>
 	<div class="container">
 		<h1>thi is cart </h1>
+		<a href="checkout.php"><button class="generic-btn">Checkout</button></a>
 
 	</div>
 

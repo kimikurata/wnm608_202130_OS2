@@ -9,7 +9,9 @@
 <body>
 	<?php include "parts/navbar.php"?>
 	<div class="container">
-		<h1>thi is cart confirmation</h1>
+		<h1>Your order has been placed</h1>
+		<a href="product_list.php"><button class="generic-btn">Continue shopping</button></a>
+
 
 	</div>
 

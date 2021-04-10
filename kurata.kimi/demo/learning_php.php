@@ -27,6 +27,10 @@ $b = 10;
 $name = "Yerdude";
 $name = 'kimi';
 
+// string lenth 
+$numberOfCharacters = strlen($name);
+
+
 // Boolean true or false 
 $isOn = true;
 
@@ -40,6 +44,8 @@ $isOn = true;
 echo 5 +2 -3;
 echo 5 +2 *3;
 echo (5 +2) *3;
+//not equal  "!="" 
+
 
 // Concatenation
 echo "<div>b + a = c </div>\n";
