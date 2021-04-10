@@ -23,7 +23,7 @@ echo <<<HTML
          <h3>Personal information</h3>
 
          <form method="post" class="grid gap-column" action="demo/update_user.php" >
-             <input id="user_id" name="user_id" type="hidden" value="$user_id">   
+            <input id="user_id" name="user_id" type="hidden" value="$user_id">   
             <div class="col-md-12 col-xs-12">
                <div class="form-control">
                   <label for="name" class="form-label">Name</label>
@@ -45,10 +45,15 @@ echo <<<HTML
             <div class="col-md-12 col-xs-12 bottom-margin-sm">
                <div class="form-control flex-layout">
                   <label for="useremail" class="form-label">Email</label>
-                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="$user->email">     
+                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="$user->email"> 
                </div>
             </div>
+
             <input   class="form-button highlighted  col-md-12 col-xs-12" type="submit" value="Submit"  >
+         </form>
+         <form method="post" class="grid gap-column" action="demo/delete_user.php" >
+            <input id="user_id_remove" name="user_id_remove" type="hidden" value="$user_id">   
+            <input   class="form-button highlighted col-md-1 col-xs-4" type="submit" value="Remove"  >
          </form>
       </div>
 HTML;
@@ -104,7 +109,17 @@ HTML;
          <?php
          }
          ?>
+         
       </div>
+      <div class="display-flex">
+         <div class="flex-stretch"></div>
+         <a href="demo/add_new_user.php">
+            <div class="circle-sm">
+               <h2 class="text-highlight text-center">+</h2 class="text-highlight">
+            </div>
+         </a>
+      </div>
+      
    </div>
 </body>
 </html>

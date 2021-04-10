@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $current_data=file_get_contents("$file_name");
             $array_data=json_decode($current_data, true);
 
-            <>
+        
                                
             $extra=array(
                 'name' => $_POST['name'],
