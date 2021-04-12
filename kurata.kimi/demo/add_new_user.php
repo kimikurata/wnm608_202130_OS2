@@ -42,13 +42,25 @@
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
-                  <input id="type" name="type" type="text" placeholder="Teacher, Student, etc" class="form-input" value="" required>
+                  <div class="form-select">
+                     <select id="type" name="type" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Student">Student</option>
+                     </select>
+                  </div>
                </div>
             </div>
+            <!-- <div class="col-md-6 col-xs-12">
+               <div class="form-control">
+                  <label for="type" class="form-label">Type</label>
+                  <input id="type" name="type" type="text" placeholder="Teacher, Student, etc" class="form-input" value="" required>
+               </div>
+            </div> -->
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="classes" class="form-label">Classes</label>
-                  <input id="classes" name="classes" type="number" placeholder="add class number" class="form-input" value="" required>
+                  <input id="classes" name="classes" type="text" placeholder="add class number" class="form-input" value="" required>
                </div>
             </div>
             <div class="lex-layout col-md-12 col-xs-12 bottom-margin-sm">

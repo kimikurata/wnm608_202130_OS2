@@ -45,13 +45,18 @@ echo <<<HTML
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
-                  <input id="type" name="type" type="text" placeholder="Teacher, student, etc" class="form-input" value="$user->type" required>
+                  <div class="form-select">
+                     <select id="type" name="type" required>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Student">Student</option>
+                     </select>
+                  </div>
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="classes" class="form-label">Classes</label>
-                  <input id="classes" name="classes" type="number" placeholder="Type the classes number" class="form-input" value="$classes" required>
+                  <input id="classes" name="classes" type="text" placeholder="Type the classes number" class="form-input" value="$classes" required>
                </div>
             </div>
             <div class="col-md-12 col-xs-12 bottom-margin-sm">
