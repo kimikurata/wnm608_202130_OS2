@@ -36,25 +36,25 @@
             <div class="col-md-12 col-xs-12">
                <div class="form-control">
                   <label for="name" class="form-label">Name</label>
-                  <input id="name" name="name" type="text" placeholder="John" class="form-input" value="">
+                  <input id="name" name="name" type="text" placeholder="John" class="form-input" value="" required>
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
-                  <input id="type" name="type" type="text" placeholder="Teacher, Student, etc" class="form-input" value="">
+                  <input id="type" name="type" type="text" placeholder="Teacher, Student, etc" class="form-input" value="" required>
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="classes" class="form-label">Classes</label>
-                  <input id="classes" name="classes" type="text" placeholder="add class number" class="form-input" value="">
+                  <input id="classes" name="classes" type="number" placeholder="add class number" class="form-input" value="" required>
                </div>
             </div>
             <div class="lex-layout col-md-12 col-xs-12 bottom-margin-sm">
                <div class="form-control f">
                   <label for="useremail" class="form-label">Email</label>
-                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="">     
+                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="" required>     
                </div>
             </div>
             <input   class="form-button highlighted  col-md-12 col-xs-12" type="submit" value="Submit"  >

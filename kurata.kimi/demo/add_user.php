@@ -5,7 +5,13 @@
     <title>new user added</title>
 </head>
 <body>
-    
+    <div class="container ">
+        <div class="card display-flex">
+            <h2 class="container text-bold text-highlight bottom-padding-sm">User successfully added</h2>
+            <div class="flex-stretch"></div>
+            <a class="generic-btn outline" href="demo/users_admin.php">Back to list</a>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -18,15 +24,12 @@
         $file_name='users'. '.json';
 
         $classes = $_POST['classes'];
-
         $classes_explode = explode(", ", $classes);
 
 
         $current_data=file_get_contents("$file_name");
         $array_data=json_decode($current_data, true);
-        $user_id = $_POST['user_id'];
-
-
+        
 
         $extra=array(
             'name' => $_POST['name'],
@@ -36,7 +39,6 @@
         );
         
         $array_data[]= $extra;
-        echo "file exist<br/>";
 
 
         $newjson = json_encode($array_data);
@@ -52,10 +54,5 @@
     }else{
         echo "not a post method";
     }
-
-    echo <<<HTML
-            <p class="text-bold text-highlight bottom-padding-sm">success</p>
-            <a class="generic-btn outline" href="demo/users_admin.php">Back to list</a>
-        HTML;
 
 ?>

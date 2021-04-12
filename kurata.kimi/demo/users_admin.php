@@ -39,29 +39,29 @@ echo <<<HTML
             <div class="col-md-12 col-xs-12">
                <div class="form-control">
                   <label for="name" class="form-label">Name</label>
-                  <input id="name" name="name" type="text" placeholder="John" class="form-input" value="$user->name">
+                  <input id="name" name="name" type="text" placeholder="John" class="form-input" value="$user->name" required>
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
-                  <input id="type" name="type" type="text" placeholder="John" class="form-input" value="$user->type">
+                  <input id="type" name="type" type="text" placeholder="Teacher, student, etc" class="form-input" value="$user->type" required>
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="classes" class="form-label">Classes</label>
-                  <input id="classes" name="classes" type="text" placeholder="Doe" class="form-input" value="$classes">
+                  <input id="classes" name="classes" type="number" placeholder="Type the classes number" class="form-input" value="$classes" required>
                </div>
             </div>
             <div class="col-md-12 col-xs-12 bottom-margin-sm">
                <div class="form-control flex-layout">
                   <label for="useremail" class="form-label">Email</label>
-                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="$user->email"> 
+                  <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="$user->email" required> 
                </div>
             </div>
           
-            <input   class="form-button highlighted  col-md-12 col-xs-12" type="submit" value="Submit"  >
+            <input   class="form-button highlighted  col-md-12 col-xs-12" type="submit" value="Save"  >
          </form>
          
       </div>
@@ -80,9 +80,6 @@ HTML;
 
    <style>
       .user-link:hover{ text-decoration: underline; text-decoration-color: var(--color-highlight); font-weight: 400; }
-
-
-      
    </style>
 </head>
 <body>
@@ -133,10 +130,20 @@ HTML;
          <?php
          }
          ?>
-         
-         
       </div>
-      
+      <!-- Documentation -->
+         <!-- How to get data from forms and make a $_POST -->
+            <!-- https://www.geeksforgeeks.org/how-to-append-data-in-json-file-through-html-form-using-php/ -->
+            <!-- https://www.php.net/manual/en/reserved.variables.post.php -->
+         <!-- How to use file_put_content -->
+            <!-- https://www.php.net/manual/en/function.file-put-contents -->
+         <!-- How to decode and encode JSON  -->
+            <!-- https://phppot.com/php/json-handling-with-php-how-to-encode-write-parse-decode-and-convert/ -->
+         <!-- How to use unset() \array_splice()  -->
+            <!-- https://stackoverflow.com/questions/369602/deleting-an-element-from-an-array-in-php -->
+            <!-- https://www.php.net/manual/en/function.array-splice.php -->
+         <!-- How to make a input required -->
+            <!-- https://www.w3schools.com/html/html_form_attributes.asp -->
       
    </div>
 </body>

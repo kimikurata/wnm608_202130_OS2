@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container ">
+        <div class="card display-flex">
+            <h2 class="container text-bold text-highlight bottom-padding-sm">User successfully updated</h2>
+            <div class="flex-stretch"></div>
+            <a class="generic-btn outline" href="demo/users_admin.php">Back to list</a>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -38,7 +44,6 @@
 	    $extra_object = '['.$user_id.']=>';
 		echo $extra_object;
 	    $array_data[$user_id]= $extra;
-	    echo "file exist<br/>";
 
 
 	    $newjson = json_encode($array_data);
@@ -54,12 +59,5 @@
     }else{
     	echo "not a post method";
     }
-
-    echo <<<HTML
-            <p class="text-bold text-highlight bottom-padding-sm">success</p>
-            <a class="generic-btn outline" href="demo/users_admin.php">Back to list</a>
-        HTML;
                    
-
-
 ?>

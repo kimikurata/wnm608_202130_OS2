@@ -44,8 +44,5 @@
  }else{
  	echo "not a post method";
  }
-  echo <<<HTML
-        
-    HTML;
 
 ?>

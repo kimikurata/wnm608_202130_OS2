@@ -469,6 +469,7 @@ a.text-link {
 	color: var(--color-white);
 	border: none;
 	min-width: 8em;
+	max-height: 47px;
 	outline: none;
 	margin: 5px 0;
 	border-radius: 0em 1em 0em 1em;
