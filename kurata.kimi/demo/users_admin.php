@@ -5,21 +5,33 @@ include "../lib/php/functions.php";
 $users = file_get_json("users.json");
 
 // pretty_dump($_SERVER);
-pretty_dump($_GET);
+// pretty_dump($_GET);
 
 
 function showUserPage($user) {
 
 $classes = implode(", ", $user->classes);
-pretty_dump($user);
-pretty_dump($_GET);
+// pretty_dump($user);
+// pretty_dump($_GET);
 
 $user_id = $_GET["id"];
-echo $user_id ; 
+// echo $user_id ; 
 
 echo <<<HTML
-<div class="card flat">
-         <h2 class="text-highlight bottom-margin-sm">$user->name</h2>  
+<nav class="crumbs">
+   <ul>
+      <li><a href="{$_SERVER['PHP_SELF']}" >Back</a></li>
+   </ul>
+</nav>
+<div class=" ">
+         <div class="display-flex">
+            <h2 class="text-highlight bottom-margin-sm">$user->name</h2> 
+            <div class="flex-stretch"></div>
+            <form method="post" style="margin-right: 1.5em" class=" icon" action="demo/delete_user.php" >
+               <input id="user_id_remove" name="user_id_remove" type="hidden" value="$user_id">   
+               <input   class="form-button form-icon " type="submit" value="">
+            </form>
+         </div>  
          <h3>Personal information</h3>
 
          <form method="post" class="grid gap-column" action="demo/update_user.php" >
@@ -48,13 +60,10 @@ echo <<<HTML
                   <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="$user->email"> 
                </div>
             </div>
-
+          
             <input   class="form-button highlighted  col-md-12 col-xs-12" type="submit" value="Submit"  >
          </form>
-         <form method="post" class="grid gap-column" action="demo/delete_user.php" >
-            <input id="user_id_remove" name="user_id_remove" type="hidden" value="$user_id">   
-            <input   class="form-button highlighted col-md-1 col-xs-4" type="submit" value="Remove"  >
-         </form>
+         
       </div>
 HTML;
 }
@@ -68,17 +77,24 @@ HTML;
 <head>
    <title>User Administrator</title>
    <?php include "../parts/meta.php" ?>
+
+   <style>
+      .user-link:hover{ text-decoration: underline; text-decoration-color: var(--color-highlight); font-weight: 400; }
+
+
+      
+   </style>
 </head>
 <body>
    <header class="navbar">
       <div class="container display-flex flex-align-center">
          <div class="flex-none">
-            <h1>User Admin</h1>
+            <h3 class="brand-text">User Admin</h3 class="brand-text">
          </div>
          <div class="flex-stretch"></div>
          <nav class="flex-none nav flex">
             <ul>
-               <li><a href="<?= $_SERVER['PHP_SELF'] ?>">List</a></li>
+               <li><a  href="<?= $_SERVER['PHP_SELF'] ?>">List</a></li>
             </ul>
          </nav>
       </div>
@@ -93,32 +109,34 @@ HTML;
          } else {
          ?>
 
-         <h2>User List</h2>
+         <h4 class="text-bold text-hight" >User List</h4>
 
          <ul>
          <?php
 
          for($i=0; $i<count($users); $i++) {
             echo "<li>
-            <a href='{$_SERVER['PHP_SELF']}?id=$i'>{$users[$i]->name}</a>
+            <a class='user-link' style='color:var(--color-black);' href='{$_SERVER['PHP_SELF']}?id=$i'>{$users[$i]->name}</a>
             </li>";
          }
 
          ?>
          </ul>
+         <div class="display-flex">
+            <div class="flex-stretch"></div>
+            <a href="demo/add_new_user.php">
+               <div class="circle-sm">
+                  <h2 class="text-highlight text-center">+</h2 class="text-highlight">
+               </div>
+            </a>
+         </div>
          <?php
          }
          ?>
          
+         
       </div>
-      <div class="display-flex">
-         <div class="flex-stretch"></div>
-         <a href="demo/add_new_user.php">
-            <div class="circle-sm">
-               <h2 class="text-highlight text-center">+</h2 class="text-highlight">
-            </div>
-         </a>
-      </div>
+      
       
    </div>
 </body>

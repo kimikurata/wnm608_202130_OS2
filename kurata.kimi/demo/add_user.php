@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <title>new user added</title>
 </head>
 <body>
-    hello
+    
 </body>
 </html>
 

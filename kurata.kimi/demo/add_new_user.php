@@ -8,12 +8,12 @@
 		<header class="navbar">
 	      <div class="container display-flex flex-align-center">
 	         <div class="flex-none">
-	            <h1>User Admin</h1>
+	            <h3 class="brand-text">User Admin</h3>
 	         </div>
 	         <div class="flex-stretch"></div>
 	         <nav class="flex-none nav flex">
 	            <ul>
-	               <li><a href="<?= $_SERVER['PHP_SELF'] ?>">List</a></li>
+	               <li><a href="demo/users_admin.php">List</a></li>
 	            </ul>
 	         </nav>
 	      </div>
@@ -22,7 +22,12 @@
 
 	<div class="container">
       <div class="card soft">
-      	<h2>Add new user</h2>
+         <nav class="crumbs">
+            <ul>
+               <li><a href="demo/users_admin.php" >Back</a></li>
+            </ul>
+         </nav>
+      	<h2 class="text-highlight bottom-margin-sm">Add new user</h2 >
 
       	<h3>Personal information</h3>
 
@@ -37,17 +42,17 @@
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
-                  <input id="type" name="type" type="text" placeholder="John" class="form-input" value="">
+                  <input id="type" name="type" type="text" placeholder="Teacher, Student, etc" class="form-input" value="">
                </div>
             </div>
             <div class="col-md-6 col-xs-12">
                <div class="form-control">
                   <label for="classes" class="form-label">Classes</label>
-                  <input id="classes" name="classes" type="text" placeholder="Doe" class="form-input" value="">
+                  <input id="classes" name="classes" type="text" placeholder="add class number" class="form-input" value="">
                </div>
             </div>
-            <div class="col-md-12 col-xs-12 bottom-margin-sm">
-               <div class="form-control flex-layout">
+            <div class="lex-layout col-md-12 col-xs-12 bottom-margin-sm">
+               <div class="form-control f">
                   <label for="useremail" class="form-label">Email</label>
                   <input id="user-email" name="email" type="email" placeholder="suculentina@gmail.com" class="form-input" value="">     
                </div>

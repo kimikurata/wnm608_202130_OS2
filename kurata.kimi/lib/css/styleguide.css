@@ -648,6 +648,10 @@ a.text-link {
 form{
 	width: 100%;
 }
+
+form.icon {
+	max-width: 1em;
+}
 textarea{
 	max-width: 100%;
 	max-height: 40%;
@@ -772,7 +776,7 @@ textarea{
 .half-right-icon{
 	border-radius: 0 0.5em 0.5em 0;
 	width: auto;
-	background-image: url("../../images/icon/send.svg");
+	background-image: url("../../images/icon/save.svg");
 	box-sizing: border-box;
 	background-position: center center; 
 	background-repeat: no-repeat;
@@ -780,6 +784,18 @@ textarea{
 	padding:0.5em 1.3em;
 	max-width: 1em;
 
+}
+
+.form-icon{
+	border-radius: 0.5em 0.5em;
+	width: auto;
+	background-image: url("../../images/icon/trash.svg");
+	box-sizing: border-box;
+	background-position: center center; 
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	padding:0.5em 1.3em;
+	max-width: 1em;
 }
 
 .half-left{
