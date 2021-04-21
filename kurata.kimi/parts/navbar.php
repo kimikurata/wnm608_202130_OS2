@@ -3,7 +3,7 @@
 			
 
 			document.write(`
-				<div class="${classes}">
+				<div class="${classes}" style="position: fixed; z-index: 11; width:100%;">
 					<nav class=" container display-flex display-flex-wrap">
 						<a class="nav-logo display-inline-block"   href="index.php"><img  class="image-contain" style="display:inline-block; vertical-align: middle;" src="${logoUrl}" alt="image placeholder"></a>
 						<div class="flex-stretch"></div>

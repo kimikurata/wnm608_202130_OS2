@@ -4,12 +4,21 @@
 	
 	<title>Suculentina Home</title>
 	<?php include "parts/meta.php"?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHBL80BTSN"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-QHBL80BTSN');
+	</script>
 
 
 </head>
 <body>
    <?php include "parts/navbar.php" ?>
-   <div class="home-top-box">
+   <div class="home-top-box navbar-spacer">
 		<div class="container" style="width: 90%;">
 			<h2 class="text-white home-top-title">Summer is here for you!</h2>	
 			<div class="announce-box">
@@ -73,38 +82,38 @@
 			<h2 class="top-padding-md bottom-padding-md">Best seller</h2>
 			<div class="grid gap medium vertical-stretch best-seller-box bottom-padding-md">	
 				<a class="card flat col-lg-3 col-md-12 col-xs-6 vertical-figure neutral-light layout-order2" href="styleguide/#figures">
-					<p class="text-body text-center ">Lorem ipsum dolor enim ad minim veniam</p>
+					<p class="text-body text-center ">Venus Flower</p>
 					<div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/best_seller_1.png" alt="">
 					</div>
-					<p class="product-price text-highlight text-center">$00.00</p>
+					<p class="product-price text-highlight text-center">$25.99</p>
 				</a>	
-				<a class="card flat col-lg-6 col-md-12 col-xs-12 white display-flex flex-align-center" href="styleguide/#figures ">
+				<a class="card flat col-lg-6 col-md-12 col-xs-12 white display-flex flex-align-center display-flex-wrap" href="styleguide/#figures ">
 					
-						<div class="display-flex flex-justify-center flex-grow-2">
+						<div class="display-flex flex-justify-center flex-grow-1">
 							<img class="image-contain img200x200 " src="images/moon_terrarium_3.png" alt="">
 						</div>
-						<div class="flex-grow-1" style="max-width: 50%; margin-left: 10px;">
-							<p class="text-bold">Title here</p>
-							<p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+						<div class="flex-grow-2 best_seller_bigbox" >
+							<p class="text-bold ">Terrariums</p>
+							<p class="text-body">Get the most suitable succulent combinations</p>
 							<button class="generic-btn outline">Solid btn</button>
 						</div>		
 				</a>
 				<a class="card flat col-lg-3 col-md-12 col-xs-6 vertical-figure neutral-light" href="styleguide/#figures layout-order2">
-					<p class="text-body text-center">Lorem ipsum dolor enim</p>
+					<p class="text-body text-center">Lion Mane</p>
 					<div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/best_seller_2.png" alt="">
 					</div>
-					<p class="product-price text-highlight text-center">$00.00</p>
+					<p class="product-price text-highlight text-center">$15.99</p>
 				</a>
 				<a class="card flat col-lg-3 col-md-6 col-xs-6 vertical-figure white layout-order2" href="styleguide/#figures">
-					<p class="text-body text-center">Lorem ipsum dolor enim ad minim veniam</p>
+					<p class="text-body text-center">Looking for a special succulent?</p>
 					<div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/best_seller_3.png" alt="">
 					</div>
 				</a>
 				<a class="card flat col-lg-3 col-md-6 col-xs-6 vertical-figure highlight layout-order2" href="styleguide/#figures">	
-					<p class="text-body text-center">Lorem ipsum dolor enim ad minim veniam</p><div class="display-flex flex-justify-center" >
+					<p class="text-body text-center">Take a look to the best Senecio succulents</p><div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/p1.png" alt="">
 					</div>
 				</a>
@@ -112,10 +121,10 @@
 					<div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/best_seller_4.png" alt="">
 					</div>
-					<p class="text-body text-center">Lorem ipsum dolor enim ad minim veniam</p>
+					<p class="text-body text-center">Take a look to the best Echeveria succulents</p>
 				</a>
 				<a class="card flat white col-lg-3 col-md-6 col-xs-6 vertical-figure layout-order2" href="styleguide/#figures">	
-					<p class="text-body text-center">Lorem ipsum dolor enim ad minim veniam</p>
+					<p class="text-body text-center">Search for your succulents here!</p>
 					<div class="display-flex flex-justify-center" >
 						<img class="image-contain img200x200 " src="images/best_seller_5.png" alt="">
 					</div>

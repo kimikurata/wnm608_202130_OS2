@@ -29,7 +29,7 @@ echo <<<HTML
             <div class="flex-stretch"></div>
             <form method="post" style="margin-right: 1.5em" class=" icon" action="demo/delete_user.php" >
                <input id="user_id_remove" name="user_id_remove" type="hidden" value="$user_id">   
-               <input   class="form-button form-icon " type="submit" value="">
+               <input   class="form-button form-icon-trash " type="submit" value="">
             </form>
          </div>  
          <h3>Personal information</h3>
@@ -46,9 +46,9 @@ echo <<<HTML
                <div class="form-control">
                   <label for="type" class="form-label">Type</label>
                   <div class="form-select">
-                     <select id="type" name="type" required>
-                        <option value="Teacher">Teacher</option>
-                        <option value="Student">Student</option>
+                     <select id="type" name="type" required  >
+                        <option value="Teacher"  >Teacher</option>
+                        <option value="Student" >Student</option>
                      </select>
                   </div>
                </div>

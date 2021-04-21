@@ -110,6 +110,8 @@ pre{
 .flex-align-end { align-items:flex-end; }
 .flex-justify-center { justify-content:center; }
 .flex-justify-end { justify-content:flex-end; }
+.flex-justify-around{justify-content: space-around;} 
+
 
 .flex-grow-1{flex-grow: 1}
 .flex-grow-2{flex-grow: 2}
@@ -119,8 +121,11 @@ pre{
 .overscroll-x { overflow-x:auto; }
 .overscroll-y { overflow-y:auto; }
 
-
 .navbar-spacer{ padding-top: var(--header-height); }
+
+@media screen and (max-width: 800px) {
+	.navbar-spacer{ padding-top: 175px; }
+}
 
 .top-padding-xs{ padding-top: var(--space-xs) }
 .top-padding-sm{ padding-top: var(--space-sm) }
@@ -679,7 +684,10 @@ textarea{
 }
 
 .form-button+.form-button,
-.form-input+.form-input {
+.form-input+.form-input, 
+.form-input+.form-select, 
+.form-select+.textarea-input,
+.form-input+.textarea-input{
 	margin-top:0.2em;
 }
 
@@ -777,7 +785,7 @@ textarea{
 .half-right-icon{
 	border-radius: 0 0.5em 0.5em 0;
 	width: auto;
-	background-image: url("../../images/icon/save.svg");
+	background-image: url("../../images/icon/send.svg");
 	box-sizing: border-box;
 	background-position: center center; 
 	background-repeat: no-repeat;
@@ -787,7 +795,7 @@ textarea{
 
 }
 
-.form-icon{
+.form-icon-trash{
 	border-radius: 0.5em 0.5em;
 	width: auto;
 	background-image: url("../../images/icon/trash.svg");
