@@ -13,7 +13,6 @@
 
 	  gtag('config', 'G-VQ67WZXEYG');
 	</script>
-
 </head>
 <body>
 	<?php include "parts/navbar.php"?>

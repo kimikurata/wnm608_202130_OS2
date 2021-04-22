@@ -32,8 +32,7 @@
 				<div class="col-lg-9 col-xs-12">
 					<h3 class="text-body text-highlight">Suculentina is a online store dedicated to sell unique live succulent plants for your home decoration. Suculentina plants are carefully grown to look healthy and beautiful indoors or outdoors.</h3>
 					<br>
-					<h3 class="text-body text-highlight">Our primary mission is to bring the natural green color to your home and create a cozy and warm environment for a better lifestyle. Plans have the power to improve the visual view in your home and provide a more relaxing space.
-</h3>
+					<h3 class="text-body text-highlight">Our primary mission is to bring the natural green color to your home and create a cozy and warm environment for a better lifestyle. Plans have the power to improve the visual view in your home and provide a more relaxing space.</h3>
 				</div>
 			</div>
 		</div>

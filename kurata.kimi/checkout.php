@@ -16,7 +16,6 @@
 
 	</head>
 	<body>
-	
 	<div class="container">
 		<h1>thi is checkout </h1>
 		<a href="cart_confirmation.php"><button class="generic-btn">Pay now</button></a>

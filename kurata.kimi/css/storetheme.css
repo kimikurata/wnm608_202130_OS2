@@ -141,6 +141,38 @@ h4.code-spam {
 	background-color: var(--color-neutral-light);
 }
 
+.sale_price{
+	color: var(--color-desable);
+	text-decoration:line-through;
+	font-size: var(--font-size-xs);
+	padding-left: 10px;
+}
+
+.onsale::before{
+	content:"Sale";
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color:var(--color-white);
+	background-color: var(--color-highlight);
+	border-radius: 50%;
+	padding: 22px 15px 22px 15px;
+}
+
+.onsale2::after{
+	content:"50%";
+	position: relative;
+	font-size: 0.8em;
+	top: -3px;
+	left:  10px;
+	color:var(--color-white);
+	background-color: var(--color-highlight-light);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+
+
 .product-main-info-box.card.flat{
 	background-color: var(--color-pure-white-alfa50);
 	border-radius: 0 0 1em 1em ;

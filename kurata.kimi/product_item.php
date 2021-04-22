@@ -11,11 +11,15 @@
 	<div class="product-box navbar-spacer">
 		<div class="grid container">
 			<div class="col-md-8 col-xs-12 display-flex flex-align-end " >
-				<img  class="main-product-image image-contain"  src="images/moon_terrarium_1.png" alt="product image" >
+				<img  class=" main-product-image image-contain"  src="images/moon_terrarium_1.png" alt="product image" >
 			</div>
 			<div class="col-md-4 col-xs-12 product-main-info-box card flat display-flex flex-justify-end" style="flex-direction: column;">
-				<h2 class="top-margin-md">Moon Terrarium</h2>
-				<h4 class="bottom-margin-lg">$ 00.00</h4>
+				<h2 class="top-margin-md ">Moon Terrarium</h2>
+				<div class="display-flex flex-align-center bottom-margin-lg">
+					<h4 class="">$00.00</h4>
+					<h3 class="sale_price ">$00.00</h3>
+					<div class="onsale2"></div>
+				</div>
 				<p class="p-title bottom-margin-xs">Description</p>
 				<p class="body-text text-highlight bottom-margin-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem voluptas asperiores harum perferendis temporibus itaque.</p>
 				<p class="p-title bottom-margin-sm">Quantity</p>
@@ -101,6 +105,7 @@
 				</div>
 				<h4 class="product-price text-highlight">$00.00</h4>
 				<p class="product-name text-bold ">Lorem ipsum dolor</p>
+
 			</a>
 			<a class="product card hard col-lg-4 col-md-6 col-xs-12" href="styleguide/#figures">
 				<div class="display-flex flex-justify-center">
@@ -119,7 +124,7 @@
 		</div>	
 	</div>
 
-
+	<?php include "parts/recommended_items.php" ?>
 
 	<?php include "parts/footer.php"?>
 	

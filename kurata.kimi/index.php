@@ -13,8 +13,6 @@
 
 	  gtag('config', 'G-QHBL80BTSN');
 	</script>
-
-
 </head>
 <body>
    <?php include "parts/navbar.php" ?>
