@@ -437,7 +437,7 @@ a.text-link {
 }
 
 .card.white{
-	background-color: #fff;
+	background-color: var(--color-pure-white);
 }
 
 .card.neutral-light{

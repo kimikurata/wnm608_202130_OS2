@@ -34,6 +34,11 @@
 	align-items: center;
 }
 
+/* child classes*/
+.place_center{
+	place-self: center center;
+}
+
 
 .col-1{ grid-column: span 1; }
 .col-2{ grid-column: span 2; }
