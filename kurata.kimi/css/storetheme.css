@@ -159,16 +159,13 @@ h4.code-spam {
 	padding: 22px 15px 22px 15px;
 }
 
-.onsale2::after{
-	content:"50%";
-	position: relative;
+.onsale2{
 	font-size: 0.8em;
-	top: -3px;
-	left:  10px;
 	color:var(--color-white);
 	background-color: var(--color-highlight-light);
 	border-radius: 5px;
 	padding: 5px;
+	margin-left: 10px;
 }
 
 
@@ -239,6 +236,12 @@ h4.code-spam {
 
 .dot-list .circle-xs:first-child {
 	margin: 0.5em 0.5em 0.5em 0em;
+}
+
+.filter_box{
+	width: 100%;
+	background-color: var(--color-neutral-light);
+	padding: 1em;
 }
 
 

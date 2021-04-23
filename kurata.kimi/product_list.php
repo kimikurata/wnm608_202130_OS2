@@ -1,3 +1,9 @@
+<?php 
+include "lib/php/functions.php";
+include "parts/templates.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,23 +25,65 @@
 </head>
 <body>
    <?php include "parts/navbar.php" ?>
-   <div class="container navbar-spacer">
-      <div class="card soft">
-         <h2>Product List</h2>
-         <ul>
-            <!-- li*10>a[href='?id=$]'>{Product $} -->
-            <li><a href="product_item.php?id=1">Product 1</a></li>
-            <li><a href="product_item.php?id=2">Product 2</a></li>
-            <li><a href="product_item.php?id=3">Product 3</a></li>
-            <li><a href="product_item.php?id=4">Product 4</a></li>
-            <li><a href="product_item.php?id=5">Product 5</a></li>
-            <li><a href="product_item.php?id=6">Product 6</a></li>
-            <li><a href="product_item.php?id=7">Product 7</a></li>
-            <li><a href="product_item.php?id=8">Product 8</a></li>
-            <li><a href="product_item.php?id=9">Product 9</a></li>
-            <li><a href="product_item.php?id=10">Product 10</a></li>
-         </ul>
+   <div class="container navbar-spacer ">
+      <div class="grid gap top-margin-md">
+        <h1 class="col-lg-4  col-xs-12 bottom-padding-sm">Live succulents</h1>
+        <div class="col-lg-8  col-xs-12">
+          <form class="hotdog">
+            <div class="flex-stretch">
+              <input type="search" placeholder="Search..">
+            </div>
+            <div class="flex-none">
+              <img src="images/icon/search.svg" alt="" class="icon">
+            </div>
+          </form>
+        </div>
+  
       </div>
+    </div>
+    <div class="filter_box">
+      <div class="container">
+        <div class="display-flex flex-align-center">
+          <p class="text-highlight">Filters</p>
+          <button class="chip-btn">Solid btn</button>
+        </div>
+        
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-control display-flex flex-align-center">
+        <div class="flex-stretch"></div>
+        <div class="flex-none" ><label class="text-only-label" for="example8" >Sort by:</label></div>
+        <div class="form-select onlytext">
+          <select>
+            <option value="All">Display all</option>
+            <option value="Lower price">Lower price</option>
+            <option value="Most recent">Most recent</option>
+          </select>
+        </div>
+      </div>
+  
+    </div>
+    <div class="container">    
+        <div class="grid gap medium vertical-stretch top-padding-md bottom-padding-md">
+        <?
+
+         $products = MYSQLIQuery("
+           SELECT *
+           FROM `products`
+           ORDER BY `date_create` DESC
+           LIMIT 12
+        ");
+
+         echo array_reduce($products,'makeProductList');
+
+        // pretty_dump($products);
+
+
+        ?>
+        </div>
+
+
    	</div>
 	<?php include "parts/footer.php" ?>
 

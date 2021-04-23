@@ -92,9 +92,9 @@
 							<img class="image-contain img200x200 " src="images/moon_terrarium_3.png" alt="">
 						</div>
 						<div class="flex-grow-2 best_seller_bigbox" >
-							<p class="text-bold ">Terrariums</p>
-							<p class="text-body">Get the most suitable succulent combinations</p>
-							<button class="generic-btn outline">Solid btn</button>
+							<p class="text-bold bottom-padding-sm">Terrariums</p>
+							<p class="text-body bottom-padding-sm">Get the most suitable succulent combinations</p>
+							<button class="generic-btn outline">Explore</button>
 						</div>		
 				</a>
 				<a class="card flat col-lg-3 col-md-12 col-xs-6 vertical-figure neutral-light" href="styleguide/#figures layout-order2">

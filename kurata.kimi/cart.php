@@ -1,3 +1,20 @@
+<?php
+
+
+include "lib/php/functions.php";
+include "parts/templates.php";
+
+$cart = MYSQLIQuery("
+   SELECT *
+   FROM `products`
+   WHERE `id` IN (3,9,1)
+");
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,189 +58,14 @@
 					
 				</div>
 				<hr>
-				<div class="item_in_list grid">
-					<div class="display-flex flex-align-center col-xs-12 col-md-6">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-					</div>
-					<div class="display-flex flex-align-center flex-justify-around col-xs-12 col-md-6" style="">
-						<div class="cart_item_quantity">
-							<form calss="">
-								<input class="form-input" type="number" placeholder="1">
-							</form>
-						</div>
-						<!-- <div class="flex-stretch"></div> -->
-						<p class="text-highlight">$00.00</p>
-						<!-- <div class="flex-stretch"></div> -->
-						<div class="icon-form-container">
-							<form method="post" style="margin-right: 1.5em" class="" action="" >
-				            	<input id="remove_cart_item" name="remove_cart_item" type="hidden" value="">   
-				               	<input   class="form-button_with-icon form-delete " type="submit" value="">
-				            </form>
-			            </div>
-
-			        </div>
-				</div>
 
 
 
+				<?php
 
+		         echo array_reduce($cart,'makeCartList');
 
-
-
-
-				<hr class="list_separator">
-				<div class="item_in_list grid">
-					<div class="display-flex flex-align-center col-xs-12 col-md-6">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-					</div>
-					<div class="display-flex flex-align-center flex-justify-around col-xs-12 col-md-6" style="">
-						<div class="cart_item_quantity">
-							<form calss="">
-								<input class="form-input" type="number" placeholder="1">
-							</form>
-						</div>
-						<!-- <div class="flex-stretch"></div> -->
-						<p class="text-highlight">$00.00</p>
-						<!-- <div class="flex-stretch"></div> -->
-						<div class="icon-form-container">
-							<form method="post" style="margin-right: 1.5em" class="" action="" >
-				            	<input id="remove_cart_item" name="remove_cart_item" type="hidden" value="">   
-				               	<input   class="form-button_with-icon form-delete " type="submit" value="">
-				            </form>
-			            </div>
-			        </div>
-				</div>
-
-
-
-
-
-
-
-
-				<hr class="list_separator">
-				<div class="item_in_list grid">
-					<div class="display-flex flex-align-center col-xs-12 col-md-6">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-					</div>
-					<div class="display-flex flex-align-center flex-justify-around col-xs-12 col-md-6" style="">
-						<div class="cart_item_quantity">
-							<form calss="">
-								<input class="form-input" type="number" placeholder="1">
-							</form>
-						</div>
-						<!-- <div class="flex-stretch"></div> -->
-						<p class="text-highlight">$00.00</p>
-						<!-- <div class="flex-stretch"></div> -->
-						<div class="icon-form-container">
-							<form method="post" style="margin-right: 1.5em" class="" action="" >
-				            	<input id="remove_cart_item" name="remove_cart_item" type="hidden" value="">   
-				               	<input   class="form-button_with-icon form-delete " type="submit" value="">
-				            </form>
-			            </div>
-			        </div>
-				</div>
-
-
-
-
-
-
-
-
-
-
-				<hr class="list_separator">
-				<div class="item_in_list grid">
-					<div class="display-flex flex-align-center col-xs-12 col-md-6">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-					</div>
-					<div class="display-flex flex-align-center flex-justify-around col-xs-12 col-md-6" style="">
-						<div class="cart_item_quantity">
-							<form calss="">
-								<input class="form-input" type="number" placeholder="1">
-							</form>
-						</div>
-						<!-- <div class="flex-stretch"></div> -->
-						<p class="text-highlight">$00.00</p>
-						<!-- <div class="flex-stretch"></div> -->
-						<div class="icon-form-container">
-							<form method="post" style="margin-right: 1.5em" class="" action="" >
-				            	<input id="remove_cart_item" name="remove_cart_item" type="hidden" value="">   
-				               	<input   class="form-button_with-icon form-delete " type="submit" value="">
-				            </form>
-			            </div>
-			        </div>
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<hr class="list_separator">
-				<div class="item_in_list grid">
-					<div class="display-flex flex-align-center col-xs-12 col-md-6">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-					</div>
-					<div class="display-flex flex-align-center flex-justify-around col-xs-12 col-md-6" style="">
-						<div class="cart_item_quantity">
-							<form calss="">
-								<input class="form-input" type="number" placeholder="1">
-							</form>
-						</div>
-						<!-- <div class="flex-stretch"></div> -->
-						<p class="text-highlight">$00.00</p>
-						<!-- <div class="flex-stretch"></div> -->
-						<div class="icon-form-container">
-							<form method="post" style="margin-right: 1.5em" class="" action="" >
-				            	<input id="remove_cart_item" name="remove_cart_item" type="hidden" value="">   
-				               	<input   class="form-button_with-icon form-delete " type="submit" value="">
-				            </form>
-			            </div>
-			        </div>
-				</div>
-
-
-
-
-
-
-
-
-
+		         ?>
 
 
 
