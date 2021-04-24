@@ -121,10 +121,11 @@ pre{
 .overscroll-x { overflow-x:auto; }
 .overscroll-y { overflow-y:auto; }
 
-.navbar-spacer{ padding-top: var(--header-height); }
-
+.navbar-spacer, .navbar-spacer-sm{ padding-top: var(--header-height); }
+/*.navbar-spacer-sm{ padding-top: var(--header-height); }*/
 @media screen and (max-width: 800px) {
 	.navbar-spacer{ padding-top: 175px; }
+	.navbar-spacer-sm{ padding-top: 55px }
 }
 
 .top-padding-xs{ padding-top: var(--space-xs) }

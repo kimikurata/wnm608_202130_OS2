@@ -35,7 +35,7 @@ $cart = MYSQLIQuery("
 <body>
 	<?php include "parts/navbar.php"?>
 	
-	<div class="container navbar-spacer">
+	<div class="container navbar-spacer-sm">
 		<nav class="crumbs bottom-padding-md top-padding-xs">
 			<ul>
 		    	<li><a href="#" >Back</a></li>

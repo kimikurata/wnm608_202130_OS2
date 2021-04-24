@@ -244,7 +244,11 @@ h4.code-spam {
 	padding: 1em;
 }
 
-
+@media screen and (max-width: 1000px) {
+	.product_list_title{
+	  text-align: center;
+	}
+}
 
 
 /* FOOTER */

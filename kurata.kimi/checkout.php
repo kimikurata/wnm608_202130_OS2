@@ -17,13 +17,13 @@
 </head>
 <body>
 	<div class=" checkout_header display-flex flex-align-center">
-		<a class="text-white" href="">Cancel</a>
-		<h2 class="text-center text-white" style="position: absolute; width: 95%;">Checkout</h2>
+		<a class="text-white" href="cart.php">Cancel</a>
+		<h2 class="text-center text-white" style=" width: 95%;">Checkout</h2>
 		
 	</div>
 	<div class="checkout_page_bg">
 		<div class="container">	
-			<form class="grid gap top-padding-md">	
+			<form class="grid gap top-padding-md" action="cart_confirmation.php">	
 				<div class="col-md-8 col-xs-12">
 					<div class="form_card  top-margin-sm">
 						<h3>1 Personal information</h3>
@@ -43,7 +43,7 @@
 							<div class="col-md-12 col-xs-12 bottom-margin-sm">
 								<div class="form-control flex-layout">
 									<label for="useremail" class="form-label">Email</label>
-									<input id="user-email" type="email" placeholder="suculentina@gmail.com" class="form-input">		
+									<input id="user-email" type="email" placeholder="john_doe@gmail.com" class="form-input">		
 								</div>
 							</div>
 						</div>
@@ -55,19 +55,19 @@
 							<div class="col-md-12 col-xs-12">
 								<div class="form-control">
 									<label for="street" class="form-label">Street</label>
-									<input id="street" type="text" placeholder="Type your street" class="form-input">
+									<input id="street" type="text" placeholder="560 Whiff Oaf Lane" class="form-input">
 								</div>
 							</div>
 							<div class="col-md-12 col-xs-12">
 								<div class="form-control">
 									<label for="apt" class="form-label">Apt, suite (optional)</label>
-									<input id="apt" type="text" placeholder="Flr-3 Apt-m000" class="form-input">
+									<input id="apt" type="text" placeholder="Flr-3 Apt-m001" class="form-input">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
 								<div class="form-control">
 									<label for="zipcode" class="form-label">Zip code</label>
-									<input id="zipcode" type="text" placeholder="00000" class="form-input">
+									<input id="zipcode" type="text" placeholder="31324" class="form-input">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
@@ -91,18 +91,9 @@
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12 bottom-margin-sm">
-								<div class="form-control ">
+								<div class="form-control">
 									<label for="state" class="form-label">State</label>
-									<div class="form-select">
-										<select id="state" name="example6" required>
-											<option value="" disabled selected>Select your option</option>
-											<option value="California">California</option>
-											<option value="New York">New York</option>
-											<option value="Texas">Texas</option>
-											<option value="Washington">Washington</option>
-											
-										</select>
-									</div>
+									<input id="state" type="text" placeholder="Richmond" class="form-input">
 								</div>
 							</div>
 						</div>
@@ -121,7 +112,7 @@
 							<div class="col-md-6 col-xs-12">
 								<div class="form-control">
 									<label for="exp-date" class="form-label">Expiration date</label>
-									<input id="ex-date" type="date" placeholder="MM/YY" class="form-input">
+									<input id="ex-date" type="month" placeholder="MM/YY" class="form-input">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12 bottom-margin-sm">
@@ -171,11 +162,11 @@
 						<h3 class="">$00.00</h3>
 					</div>
 					<div class="checkout_summary">
-						<p class="text-right text-xxs" >Eddit order</p>
+						<a href="cart.php"><p class="text-right text-xxs" >Eddit order</p></a>
 					</div>
 
 				</div>
-            	<a class="col-md-8 col-xs-12" href="cart_confirmation.php"><input   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12" type="submit" value="Pay now"  ></a>
+            	<input   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12" type="submit" value="Pay now"  >
 			</form>
 		</div>
 	</div>

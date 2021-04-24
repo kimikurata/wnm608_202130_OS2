@@ -16,15 +16,15 @@
 </head>
 <body>
 	<?php include "parts/navbar.php"?>
-	<div class="container navbar-spacer">
-		<nav class="crumbs bottom-padding-md top-padding-xs">
+	<!-- <div class="container ">
+		<nav class="crumbs bottom-padding-md top-padding-md">
 			<ul>
 		    	<li><a href="#" >Back</a></li>
 			</ul>
 		</nav>
-	</div>
+	</div> -->
 	<div class="container">
-		<h1>Your order has been placed</h1>
+		<h1 class="top-padding-md">Your order has been placed</h1>
 
 		<div class="grid gap-column card hard ">
 			<div class="col-xs-12 col-md-8">

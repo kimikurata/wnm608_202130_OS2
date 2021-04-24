@@ -17,7 +17,7 @@
 
 </head>
 <body>
-   <div class="container navbar-spacer">This is Admin home</div>
+   <div class="container navbar-spacer-sm">This is Admin home</div>
 	
 </body>
 </html>

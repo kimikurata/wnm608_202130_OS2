@@ -25,9 +25,9 @@ include "parts/templates.php";
 </head>
 <body>
    <?php include "parts/navbar.php" ?>
-   <div class="container navbar-spacer ">
+   <div class="container navbar-spacer-sm ">
       <div class="grid gap top-margin-md">
-        <h1 class="col-lg-4  col-xs-12 bottom-padding-sm">Live succulents</h1>
+        <h1 class="col-lg-4  col-xs-12 bottom-padding-sm product_list_title">Live succulents</h1>
         <div class="col-lg-8  col-xs-12">
           <form class="hotdog">
             <div class="flex-stretch">
@@ -41,7 +41,7 @@ include "parts/templates.php";
   
       </div>
     </div>
-    <div class="filter_box">
+    <div class="filter_box top-margin-sm">
       <div class="container">
         <div class="display-flex flex-align-center">
           <p class="text-highlight">Filters</p>
@@ -72,7 +72,7 @@ include "parts/templates.php";
            SELECT *
            FROM `products`
            ORDER BY `date_create` DESC
-           LIMIT 12
+           LIMIT 15
         ");
 
          echo array_reduce($products,'makeProductList');

@@ -1,6 +1,7 @@
 <?php
 
 include "lib/php/functions.php";
+include "parts/templates.php";
 
 $product = MYSQLIQuery("
    SELECT *
@@ -116,39 +117,33 @@ $thumb2 = $thumbs[1];
 		</div>
 	</div>
 
-
-
-
-
 	
 
-	<div class="container">
-		<h2 class="top-margin-lg bottom-margin-md">Products you might also like</h2>
-		<div class="grid gap medium vertical-stretch bottom-margin-lg">	
-			<a class="product card hard col-lg-4 col-md-6 col-xs-12" href="styleguide/#figures">
-				<div class="display-flex flex-justify-center">
-					<img class="image-cover " src="images/placeholder1.png" alt="">
-				</div>
-				<h4 class="product-price text-highlight">$00.00</h4>
-				<p class="product-name text-bold ">Lorem ipsum dolor</p>
 
-			</a>
-			<a class="product card hard col-lg-4 col-md-6 col-xs-12" href="styleguide/#figures">
-				<div class="display-flex flex-justify-center">
-					<img class="image-cover " src="images/placeholder2.png" alt="">
-				</div>
-				<h4 class="product-price text-highlight">$00.00</h4>
-				<p class="product-name text-bold ">Lorem ipsum </p>
-			</a>
-			<a class="product card hard col-lg-4 col-md-6 col-xs-12" href="styleguide/#figures">
-				<div class="display-flex flex-justify-center">
-					<img class="image-cover " src="images/placeholder4.png" alt="">
-				</div>
-				<h4 class="product-price text-highlight">$00.00</h4>
-				<p class="product-name text-bold ">Lorem ipsum dolor sit </p>
-			</a>
-		</div>	
+
+
+	<div class="container">
+		<h2 class="top-margin-lg bottom-margin-lg">Products you might also like</h2>
+		<div class="grid gap medium vertical-stretch bottom-margin-lg">
+
+	<? 
+
+	$recommended = MYSQLIQuery("
+	   SELECT *
+	   FROM `products`
+	   WHERE `category` = '$product->category'
+	   LIMIT 3
+	");
+
+	// pretty_dump($recommended);
+	echo array_reduce($recommended,'makeRecommendedList');
+
+	?>
+
+		</div>
 	</div>
+	
+
 
 
 
