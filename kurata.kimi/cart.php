@@ -104,6 +104,27 @@ $cart = MYSQLIQuery("
 
 	</div>
 
+	<div class="container">
+		<h2 class="top-margin-lg bottom-margin-lg">Products you might also like</h2>
+		<div class="grid gap medium vertical-stretch bottom-margin-lg">
+
+	<? 
+
+	$recommended = MYSQLIQuery("
+	   SELECT *
+	   FROM `products`
+	   WHERE `category` = 'Echeveria'
+	   LIMIT 3
+	");
+
+	// pretty_dump($recommended);
+	echo array_reduce($recommended,'makeRecommendedList');
+
+	?>
+
+		</div>
+	</div>
+
 
 	<?php include "parts/footer.php"?>
 	

@@ -1,3 +1,9 @@
+<?
+include "lib/php/functions.php";
+include "parts/templates.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +30,9 @@
 		</nav>
 	</div> -->
 	<div class="container">
-		<h1 class="top-padding-md">Your order has been placed</h1>
-
+		<div class="navbar-spacer-sm">
+			<h1 class="top-padding-md bottom-padding-md">Your order has been placed</h1>
+		</div>
 		<div class="grid gap-column card hard ">
 			<div class="col-xs-12 col-md-8">
 				
@@ -121,13 +128,28 @@
 				</div>
 				
 			</div>
+		</div>		
+	</div>
 
+	<div class="container">
+		<h2 class="top-margin-lg bottom-margin-lg">Check our sale products</h2>
+		<div class="grid gap medium vertical-stretch bottom-margin-lg">
+
+	<? 
+
+	$recommended = MYSQLIQuery("
+	   SELECT *
+	   FROM `products`
+	   WHERE `on_Sale` = '1'
+	   LIMIT 3
+	");
+
+	// pretty_dump($recommended);
+	echo array_reduce($recommended,'makeRecommendedList');
+
+	?>
 
 		</div>
-		<br><br>
-		
-
-
 	</div>
 
 
