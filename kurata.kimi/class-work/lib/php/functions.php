@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function pretty_dump($data) {
    echo "<pre>",var_dump($data),"</pre>";
@@ -6,11 +6,12 @@ function pretty_dump($data) {
 
 
 function file_get_json($filename) {
-	$data_string = file_get_contents($filename);
-	return json_decode($data_string);
+   $data_string = file_get_contents($filename);
+   return json_decode($data_string);
 }
 
-/* DATABASE CONNECTION AUTHENTIFICATION */
+
+/* DATABASE CONNECTION */
 function MYSQLIConn() {
    include_once "data/auth.php";
 
@@ -23,7 +24,6 @@ function MYSQLIConn() {
 
    return $conn;
 }
-
 
 /* DATABASE CALL */
 function MYSQLIQuery($sql) {

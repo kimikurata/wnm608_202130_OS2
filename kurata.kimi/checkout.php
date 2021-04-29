@@ -1,3 +1,7 @@
+<?
+include "lib/php/functions.php";
+include "parts/templates.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@
 </head>
 <body>
 	<div class=" checkout_header display-flex flex-align-center">
-		<a class="text-white" href="cart.php">Cancel</a>
+		<a class="text-white" href="javascript:window.history.back();" >Cancel</a>
 		<h2 class="text-center text-white" style=" width: 95%;">Checkout</h2>
 		
 	</div>

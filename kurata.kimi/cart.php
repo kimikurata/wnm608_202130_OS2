@@ -38,7 +38,7 @@ $cart = MYSQLIQuery("
 	<div class="container navbar-spacer-sm">
 		<nav class="crumbs bottom-padding-md top-padding-xs">
 			<ul>
-		    	<li><a href="#" >Back</a></li>
+		    	<li><a href="javascript:window.history.back();" >Back</a></li>
 			</ul>
 		</nav>
 	</div>
