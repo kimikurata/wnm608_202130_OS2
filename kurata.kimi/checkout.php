@@ -2,7 +2,7 @@
 include "lib/php/functions.php";
 include "parts/templates.php";
 
-pretty_dump(getCartItems());
+// pretty_dump(getCartItems());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +133,11 @@ pretty_dump(getCartItems());
 				</div>
 				
 				<div class=" col-md-4 col-xs-12 ">
-
+					<?= checkoutTotalsTitle() ?>
+					<div class="grid gap ">
+						
+						<?= checkoutTotalsTumbs() ?>
+					</div>
 					<?= checkoutTotals() ?>
 					<!-- <div class="checkout_summary">
 						<h3 class="top-margin-sm text-weight-light text-black">Order summary</h3>

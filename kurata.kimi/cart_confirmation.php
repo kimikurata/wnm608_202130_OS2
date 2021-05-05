@@ -132,7 +132,7 @@ include "parts/templates.php";
 	</div>
 
 	<div class="container">
-		<h2 class="top-margin-lg bottom-margin-lg">Check our sale products</h2>
+		<h2 class="top-margin-lg bottom-margin-lg">Check our sales</h2>
 		<div class="grid gap medium vertical-stretch bottom-margin-lg">
 
 	<? 
