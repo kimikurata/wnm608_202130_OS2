@@ -2,6 +2,11 @@
 include "lib/php/functions.php";
 include "parts/templates.php";
 
+$_SESSION['num'] = isset($_SESSION['num']) ?
+  $_SESSION['num']+1 :
+   0;
+
+
 ?>
 
 <!DOCTYPE html>

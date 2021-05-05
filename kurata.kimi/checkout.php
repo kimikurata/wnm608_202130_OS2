@@ -1,6 +1,8 @@
 <?
 include "lib/php/functions.php";
 include "parts/templates.php";
+
+pretty_dump(getCartItems());
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +133,9 @@ include "parts/templates.php";
 				</div>
 				
 				<div class=" col-md-4 col-xs-12 ">
-					<div class="checkout_summary">
+
+					<?= checkoutTotals() ?>
+					<!-- <div class="checkout_summary">
 						<h3 class="top-margin-sm text-weight-light text-black">Order summary</h3>
 						<hr class="top-margin-xs bottom-margin-sm">
 						<p class="bottom-margin-sm">Items: #</p>
@@ -164,13 +168,13 @@ include "parts/templates.php";
 						<h3 class="text-black">TOTAL</h3>
 						<div class="flex-stretch"></div>
 						<h3 class="">$00.00</h3>
-					</div>
+					</div> -->
 					<div class="checkout_summary">
 						<a href="cart.php"><p class="text-right text-xxs" >Eddit order</p></a>
 					</div>
 
 				</div>
-            	<input   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12" type="submit" value="Pay now"  >
+            	<a   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12"  href="product_actions.php?crud=reset-cart" >Pay now</a>
 			</form>
 		</div>
 	</div>

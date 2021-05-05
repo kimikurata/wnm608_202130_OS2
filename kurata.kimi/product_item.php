@@ -24,6 +24,8 @@ $thumb2 = $thumbs[1];
 //    return $r."<img src='/images/store/$o'>";
 // });
 
+echo $_SESSION['num'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +42,8 @@ $thumb2 = $thumbs[1];
 			<div class="col-md-8 col-xs-12 display-flex flex-align-end " >
 				<img  class=" main-product-image image-contain"  src="images/<?=$product->image_main ?>" alt="product image" >
 			</div>
-			<div class="col-md-4 col-xs-12 product-main-info-box card flat display-flex flex-justify-end" style="flex-direction: column;">
+			<form class="col-md-4 col-xs-12 product-main-info-box card flat display-flex flex-justify-end" style="flex-direction: column;" action="product_actions.php?crud=add-to-cart" method="post">
+				<input type="hidden" name="id" value="<?= $product->id ?>">
 				<h2 class="top-margin-md "><?= $product->product_name ?></h2>
 				<div class="display-flex flex-align-center bottom-margin-lg">
 					<h4 class="">&dollar;<?= $calculated_price ?></h4>
@@ -51,9 +54,24 @@ $thumb2 = $thumbs[1];
 				<p class="body-text text-highlight bottom-margin-sm"><?= $product->description ?></p>
 				<p class="p-title bottom-margin-sm">Quantity</p>
 				
-				<input class="form-input product-quantity-input bottom-margin-md" id="quantity" type="number" placeholder="1" min="1">
-				<a href="cart.php"><button class="generic-btn full-size"  >Add to cart</button></a>
-			</div>
+				<!-- <input class="form-input product-quantity-input bottom-margin-md" name="amount" id="amount" type="number" placeholder="1" min="1"> -->
+				<div class="form-select product-quantity-input bottom-margin-md">
+					<select  name="amount" id="amount" type="number">
+						
+						<option selected value="1">1 </option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+				<button class="generic-btn full-size" type="submit" >Add to cart</button>
+			</form>
 			<figure class="figure col-lg-3 col-md-6 col-xs-12 secondary-product-a" href="styleguide/#figures">
 				<div class="display-flex flex-justify-center ">
 					<img class="image-cover img300x300" src="images/<? echo $thumb1 ?>" alt="" >

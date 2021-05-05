@@ -3,6 +3,9 @@
 include "lib/php/functions.php";
 include "parts/templates.php";
 
+pretty_dump($_POST);
+
+
 $cart = MYSQLIQuery("
    SELECT *
    FROM `products`

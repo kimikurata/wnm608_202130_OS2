@@ -4,13 +4,18 @@
 include "lib/php/functions.php";
 include "parts/templates.php";
 
-$cart = MYSQLIQuery("
-   SELECT *
-   FROM `products`
-   WHERE `id` IN (3,9,1)
-");
+
+// $cart = MYSQLIQuery("
+//    SELECT *
+//    FROM `products`
+//    WHERE `id` IN (3,9,1)
+// ");
 
 
+// resetCart();
+// pretty_dump(getCart());
+
+$cart = getCartItems();
 
 
 ?>
@@ -35,15 +40,9 @@ $cart = MYSQLIQuery("
 <body>
 	<?php include "parts/navbar.php"?>
 	
-	<div class="container navbar-spacer-sm">
-		<nav class="crumbs bottom-padding-md top-padding-xs">
-			<ul>
-		    	<li><a href="javascript:window.history.back();" >Back</a></li>
-			</ul>
-		</nav>
-	</div>
-	<div class="container">
-		<div class="grid gap">
+	
+	<div class="container bottom-padding-sm">
+		<div class="grid gap top-padding-md">
 			<div class="products_in_list col-xs-12 col-md-8">
 				<h1 class="bottom-padding-sm">Shopping cart</h1>
 				<div class="cart_item_list_header grid">
@@ -60,42 +59,19 @@ $cart = MYSQLIQuery("
 				<hr>
 
 
-
 				<?php
-
-		         echo array_reduce($cart,'makeCartList');
-
-		         ?>
-
-
-
-
+				if(!count($cart)){
+					echo "<p class='text-center empty-cart top-padding-lg' >No items in your cart</p>";
+				}else{
+		         	echo array_reduce($cart,'makeCartList');
+		        }
+		        ?>
 
 			</div>
 
 
 			<div class="col-xs-12 col-md-4  top-margin-sm">
-				<div class="card flat order_summary">
-					<h4 class="text-black text-weight-light">Order Summary</h4>
-					<hr>
-					<div class="display-flex top-margin-sm bottom-margin-sm">
-						<p class="">Sun total</p>
-						<div class="flex-stretch"></div>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr>
-					<div class="display-flex top-margin-sm bottom-margin-sm">
-						<p class="">Tax</p>
-						<div class="flex-stretch"></div>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr>
-					<div class="display-flex top-margin-md bottom-margin-sm">
-						<p class="">TOTAL</p>
-						<div class="flex-stretch"></div>
-						<h4 class="text-highlight">$00.00</h4>
-					</div>
-				</div>
+				<?= cartTotals() ?>
 				<div class="checkout_btn_box  bottom-margin-lg">
 					<a class="" href="checkout.php"><button class="full-size generic-btn checkout_btn">Checkout</button></a>
 				</div>
@@ -105,7 +81,7 @@ $cart = MYSQLIQuery("
 	</div>
 
 	<div class="container">
-		<h2 class="top-margin-lg bottom-margin-lg">Products you might also like</h2>
+		<h2 class=" bottom-margin-md">Products you might also like</h2>
 		<div class="grid gap medium vertical-stretch bottom-margin-lg">
 
 	<? 
