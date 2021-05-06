@@ -21,29 +21,22 @@ include "parts/templates.php";
 	</script>
 </head>
 <body>
-	<?php include "parts/navbar.php"?>
-	<!-- <div class="container ">
-		<nav class="crumbs bottom-padding-md top-padding-md">
-			<ul>
-		    	<li><a href="#" >Back</a></li>
-			</ul>
-		</nav>
-	</div> -->
+	<div class=" checkout_header ">
+		<div class="container display-flex flex-align-center">
+			<div class="flex-stretch"></div>
+			<a class="text-white" href="product_actions.php?crud=reset-cart" >Continue</a>
+		</div>
+	</div>
 	<div class="container">
 		<div class="navbar-spacer-sm">
 			<h1 class="top-padding-md bottom-padding-md">Your order has been placed</h1>
 		</div>
-		<div class="grid gap-column card hard ">
+		<div class="grid gap-column card hard justify-center">
 			<div class="col-xs-12 col-md-8">
-				
-				
-
-
-
-
-
-				
-					<div class="display-flex flex-align-center flex-justify-around ">
+				<div class=" display-flex flex-align-center flex-justify-around display-flex-wrap bottom-margin-sm">	
+					<?= cartConfirmationThumbs() ?>
+				</div>
+					<!-- <div class="display-flex flex-align-center flex-justify-around ">
 						<figure class="figure cart-list-image-box" href="styleguide/#figures">
 							<div class="display-flex flex-justify-center ">
 								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
@@ -53,78 +46,20 @@ include "parts/templates.php";
 						<p class="">1</p>
 						<p class="text-highlight">$00.00</p>
 					</div>
-					<hr class="list_separator">
-
-					<div class="display-flex flex-align-center flex-justify-around ">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-						<p class="">1</p>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr class="list_separator">
-
-
-
-					<div class="display-flex flex-align-center flex-justify-around ">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-						<p class="">1</p>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr class="list_separator">
-
-
-
-					<div class="display-flex flex-align-center flex-justify-around ">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-						<p class="">1</p>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr class="list_separator">
-
-
-
-					<div class="display-flex flex-align-center flex-justify-around ">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-						<p class="">1</p>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr class="list_separator">
-	
-	
-
+					<hr class="list_separator"> -->
 			</div>
 			<div class=" col-xs-12 col-md-4 card flat order_confirmation_summary">
-				<h2 class="text-highlight text-center top-padding-sm">5 ITEMS</h2>
-				<P class="text-xxs text-center top-padding-md">ARRIVING DATE</P>
-				<h3 class="text-black text-weight-light text-center month">MARCH</h3>
-				<p class="giant-text text-highlight text-center">18</p>
+
+				<?= orderDetails() ?>
+
 			</div>
 			<div class="confirmation_secondary_btn_box display-flex flex-align-end">
 
-				<a href=""  style="width: 100%"><button class="generic-btn outline full-size checkout_btn">Order details</button></a>
+				
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<div class="continue_shop_btn_box">
-					<a  href="product_list.php"><button class="generic-btn full-size checkout_btn">Continue shopping</button></a>
+					<a  href="product_actions.php?crud=reset-cart"><button class="generic-btn full-size checkout_btn">Continue shopping</button></a>
 				</div>
 				
 			</div>
@@ -132,9 +67,8 @@ include "parts/templates.php";
 	</div>
 
 	<div class="container">
-		<h2 class="top-margin-lg bottom-margin-lg">Check our sales</h2>
+		<h2 class="top-margin-lg bottom-margin-md">Check our sales</h2>
 		<div class="grid gap medium vertical-stretch bottom-margin-lg">
-
 	<? 
 
 	$recommended = MYSQLIQuery("
@@ -145,16 +79,15 @@ include "parts/templates.php";
 	");
 
 	// pretty_dump($recommended);
-	echo array_reduce($recommended,'makeRecommendedList');
+	echo array_reduce($recommended,'makeRecommendedListCartConfirmation');
 
 	?>
 
 		</div>
 	</div>
-
-
-
-	<?php include "parts/footer.php"?>
+	<div class="copy_right">
+		&#169; 2021 | Kimi Kurata All rights reserved
+	</div>
 	
 </body>
 </html>

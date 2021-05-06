@@ -22,10 +22,10 @@ include "parts/templates.php";
 
 </head>
 <body>
-	<div class=" checkout_header display-flex flex-align-center">
-		<a class="text-white" href="javascript:window.history.back();" >Cancel</a>
-		
-		
+	<div class=" checkout_header ">
+		<div class="container display-flex flex-align-center">
+			<a class="text-white" href="javascript:window.history.back();" >Cancel</a>
+		</div>
 	</div>
 	<div class="checkout_page_bg">
 		<div class="container">	
@@ -141,46 +141,13 @@ include "parts/templates.php";
 						<?= checkoutTotalsTumbs() ?>
 					</div>
 					<?= checkoutTotals() ?>
-					<!-- <div class="checkout_summary">
-						<h3 class="top-margin-sm text-weight-light text-black">Order summary</h3>
-						<hr class="top-margin-xs bottom-margin-sm">
-						<p class="bottom-margin-sm">Items: #</p>
-						<div class="grid gap ">
-							<div class=" col-xs-6 place_center">
-								<img class="image-contain img64x64" src="images/placeholder4.png" alt="" >
-							</div>
-							<div class=" col-xs-6 place_center">
-								<img class="image-contain img64x64" src="images/placeholder4.png" alt="" >
-							</div>
-							<div class=" col-xs-6 place_center">
-								<img class="image-contain img64x64" src="images/placeholder4.png" alt="" >
-							</div>	
-						</div>
-						<hr class="top-margin-sm bottom-margin-sm">
-						<div class="display-flex flex-align-center ">
-							<p class="">Sub total</p>
-							<div class="flex-stretch"></div>
-							<h4 class="">$00.00</h4>
-						</div>
-						<hr class="top-margin-sm bottom-margin-sm">
-						<div class="display-flex flex-align-center ">
-							<p class="">Tax</p>
-							<div class="flex-stretch"></div>
-							<h4 class="">$00.00</h4>
-						</div>
-						<hr class="top-margin-sm bottom-margin-sm">
-					</div>
-					<div class="card  flat display-flex flex-align-center">
-						<h3 class="text-black">TOTAL</h3>
-						<div class="flex-stretch"></div>
-						<h3 class="">$00.00</h3>
-					</div> -->
+					
 					<div class="checkout_summary">
 						<a href="cart.php"><p class="text-right text-xxs" >Eddit order</p></a>
 					</div>
 
 				</div>
-            	<a   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12"  href="product_actions.php?crud=reset-cart" >Pay now</a>
+            	<a   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12"  href="cart_confirmation.php" >Pay now</a>
 			</form>
 		</div>
 	</div>

@@ -120,7 +120,7 @@ function getCartItems() {
 
 function makeCartBadge() {
    $cart = getCart();
-   return count($cart)==0 ? "" :
+   return count($cart)==0 ? "0" :
       array_reduce($cart,function($r,$o){return $r+$o->amount;},0);
 }
 

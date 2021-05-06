@@ -67,7 +67,8 @@
 			<div class="display-flex top-padding-sm">
 				<div class="flex-stretch"></div>
                <a class="generic-btn outline" style="margin-right: 1em;" href="javascript:window.history.back();">Back To Product</a>
-               <a class="generic-btn" href="product_list.php">Continue Shopping</a>
+               <a class="generic-btn outline" style="margin-right: 1em;" href="product_list.php">Continue Shopping</a>
+               <a class="generic-btn" href="cart.php">Checkout Now</a>
 
             </div>
             

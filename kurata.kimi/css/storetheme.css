@@ -107,13 +107,18 @@ h4.code-spam {
 
 
 /* NAVBAR */
-.cart-number{
-	letter-spacing: -1px;
-}
+
 .nav a:hover{
 	background-color:var(--color-highlight);
 }
+.cart-number{
+	background-color: var(--color-highlight);
+	font-weight: 600;
 
+}
+.cart-number:hover{
+	background-color: var(--color-black);
+}
 
 /* FORMS */
 .form-input, 

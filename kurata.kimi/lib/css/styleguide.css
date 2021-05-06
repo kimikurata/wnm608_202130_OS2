@@ -240,6 +240,7 @@ a.text-link {
 	position: relative;
 	top:-5px;
 	left: -5px;
+	
 }
 .cart-number:hover{
 	background-color: var(--color-highlight);

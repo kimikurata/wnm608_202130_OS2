@@ -92,7 +92,31 @@ $onsale_procie_hide = $o->on_sale==0?'hidden':'';
 
 return $r.<<<HTML
 
-<a class="$onsale_class product card hard col-lg-4 col-md-6 col-xs-12 " href="product_item.php?id=$o->id">
+<a class="$onsale_class product card hard col-lg-4 col-md-6 col-xs-12 " href="product_item.php?id=$o->id" >
+	<div class="display-flex flex-justify-center ">
+		<img class="image-cover " src="images/$o->image_thumbnail" alt="">
+	</div>
+	<div class="display-flex flex-align-center">
+		<h4 class="product-price text-highlight ">&dollar;$calculated_price</h4>
+		<h3 class="$onsale_procie_hide sale_price ">&dollar;$o->price</h3>
+	</div>
+	<p class="product-name text-bold ">$o->product_name</p>
+</a>
+
+HTML;
+}
+
+function makeRecommendedListCartConfirmation($r,$o) {
+
+
+$onsale_class = $o->on_sale==1?'onsale':'';
+$discount = $o->on_sale==1? (100 - $o->discount)/100:1; 
+$calculated_price = number_format((float)round($discount*$o->price, 2), 2, '.', '');
+$onsale_procie_hide = $o->on_sale==0?'hidden':'';
+
+return $r.<<<HTML
+
+<a class="$onsale_class product card hard col-lg-4 col-md-6 col-xs-12 " href="product_item.php?id=$o->id" onclick="resetCart()">
 	<div class="display-flex flex-justify-center ">
 		<img class="image-cover " src="images/$o->image_thumbnail" alt="">
 	</div>
@@ -146,7 +170,7 @@ HTML;
 
 function checkoutTotalsTitle(){
 $cart = getCartItems();
-$totalitems = count($cart);
+$totalitems = makeCartBadge();
 return <<<HTML
 <h3 class="top-margin-sm text-weight-light text-black">Order summary</h3>
 <hr class="top-margin-xs bottom-margin-sm">
@@ -170,7 +194,7 @@ $checkoutamounts = explode (",", $checkoutamounts);
    // Example sourse https://stackoverflow.com/questions/4480803/two-arrays-in-foreach-loop
 
 	foreach($checkoutimages as $index=>$value1) {
-		echo"<div class=' col-xs-6 place_center'><img class='image-contain img64x64' src='images/$value1'><p class='text-highlight text-center' style='font-weight:400;'>x$checkoutamounts[$index]</p></div>";
+		echo"<div class=' col-xs-6 place_center'><img class='image-contain img64x64' src='images/$value1'><p class='text-highlight text-center' ;'>x$checkoutamounts[$index]</p></div>";
 	}
 }
 
@@ -208,4 +232,45 @@ return <<<HTML
 </div>
 
 HTML;
+}
+
+function cartConfirmationThumbs(){
+$cart = getCartItems();
+$checkoutimages = implode(",",array_map(function($o){return $o->image_thumbnail;},$cart));
+$checkoutimages = explode ( ",", $checkoutimages);
+
+$checkoutamounts = implode(",",array_map(function($o){return $o->amount;},$cart));
+$checkoutamounts = explode (",", $checkoutamounts);
+
+// pretty_dump($cart);
+// pretty_dump($checkoutimages);
+// pretty_dump($checkoutamounts);
+
+   // Example sourse https://stackoverflow.com/questions/4480803/two-arrays-in-foreach-loop
+
+	foreach($checkoutimages as $index=>$value1) {
+		echo"<div class=' col-xs-4 place_center'><img class='image-contain img120x120' src='images/$value1'><p class='text-highlight text-center' ;'>x$checkoutamounts[$index]</p></div>";
+	}
+}
+
+function orderDetails(){
+	$totalitems= makeCartBadge();
+	$today = date("Y-m-d"); 
+	$date = date_create($today);
+date_add($date, date_interval_create_from_date_string('20 days'));
+
+	$delyverymonth = strtoupper(date_format($date, 'F'));
+	$deliveryday = date_format($date, 'j');
+
+return <<<HTML
+
+<h2 class="text-highlight text-center top-padding-sm">ITEMS: $totalitems</h2>
+	<P class="text-xxs text-center top-padding-sm">ARRIVING DATE</P>
+	<h3 class="text-black text-weight-light text-center month">$delyverymonth</h3>
+	<p class="giant-text text-highlight text-center">$deliveryday</p>
+</div>
+<div class="confirmation_secondary_btn_box display-flex flex-align-end">
+
+HTML;
+
 }

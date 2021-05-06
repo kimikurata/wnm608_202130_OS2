@@ -21,7 +21,7 @@ switch($_GET['crud']) {
       break;
    case "reset-cart":
       resetCart();
-      header("location:cart_confirmation.php");
+      header("location:product_list.php");
       break;
    default: die("Incorrect Action");
 }
