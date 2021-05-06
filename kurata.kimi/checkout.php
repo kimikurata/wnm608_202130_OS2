@@ -24,12 +24,14 @@ include "parts/templates.php";
 <body>
 	<div class=" checkout_header display-flex flex-align-center">
 		<a class="text-white" href="javascript:window.history.back();" >Cancel</a>
-		<h2 class="text-center text-white" style=" width: 95%;">Checkout</h2>
+		
 		
 	</div>
 	<div class="checkout_page_bg">
 		<div class="container">	
+
 			<form class="grid gap top-padding-md" action="cart_confirmation.php">	
+				<h2 class="text-center col-md-8 col-xs-12" style=" width: 95%;">Checkout</h2>
 				<div class="col-md-8 col-xs-12">
 					<div class="form_card  top-margin-sm">
 						<h3>1 Personal information</h3>

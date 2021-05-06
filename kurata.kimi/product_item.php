@@ -24,7 +24,7 @@ $thumb2 = $thumbs[1];
 //    return $r."<img src='/images/store/$o'>";
 // });
 
-echo $_SESSION['num'];
+// echo $_SESSION['num'];
 
 ?>
 <!DOCTYPE html>

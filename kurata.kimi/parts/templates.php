@@ -160,10 +160,17 @@ $cart = getCartItems();
 $checkoutimages = implode(",",array_map(function($o){return $o->image_thumbnail;},$cart));
 $checkoutimages = explode ( ",", $checkoutimages);
 
+$checkoutamounts = implode(",",array_map(function($o){return $o->amount;},$cart));
+$checkoutamounts = explode (",", $checkoutamounts);
 
+// pretty_dump($cart);
 // pretty_dump($checkoutimages);
-	foreach($checkoutimages as $value) {
-		echo"<div class=' col-xs-6 place_center'><img class='image-contain img64x64' src='images/$value' ></div>";
+// pretty_dump($checkoutamounts);
+
+   // Example sourse https://stackoverflow.com/questions/4480803/two-arrays-in-foreach-loop
+
+	foreach($checkoutimages as $index=>$value1) {
+		echo"<div class=' col-xs-6 place_center'><img class='image-contain img64x64' src='images/$value1'><p class='text-highlight text-center' style='font-weight:400;'>x$checkoutamounts[$index]</p></div>";
 	}
 }
 
@@ -180,25 +187,25 @@ $taxed = number_format($cartprice*1.0275,2,".","");
 return <<<HTML
 <div class="checkout_summary">					
 					
-						<hr class="top-margin-sm bottom-margin-sm">
-						<div class="display-flex flex-align-center ">
-							<p class="">Sub total</p>
-							<div class="flex-stretch"></div>
-							<h4 class="">&dollar;$pricefixed</h4>
-						</div>
-						<hr class="top-margin-sm bottom-margin-sm">
-						<div class="display-flex flex-align-center ">
-							<p class="">Tax</p>
-							<div class="flex-stretch"></div>
-							<h4 class="">&dollar;$tax</h4>
-						</div>
-						<hr class="top-margin-sm bottom-margin-sm">
-					</div>
-					<div class="card  flat display-flex flex-align-center">
-						<h3 class="text-black">TOTAL</h3>
-						<div class="flex-stretch"></div>
-						<h3 class="">&dollar;$taxed</h3>
-					</div>
+	<hr class="top-margin-sm bottom-margin-sm">
+	<div class="display-flex flex-align-center ">
+		<p class="">Sub total</p>
+		<div class="flex-stretch"></div>
+		<h4 class="">&dollar;$pricefixed</h4>
+	</div>
+	<hr class="top-margin-sm bottom-margin-sm">
+	<div class="display-flex flex-align-center ">
+		<p class="">Tax</p>
+		<div class="flex-stretch"></div>
+		<h4 class="">&dollar;$tax</h4>
+	</div>
+	<hr class="top-margin-sm bottom-margin-sm">
+</div>
+<div class="card  flat display-flex flex-align-center">
+	<h3 class="text-black">TOTAL</h3>
+	<div class="flex-stretch"></div>
+	<h3 class="">&dollar;$taxed</h3>
+</div>
 
 HTML;
 }

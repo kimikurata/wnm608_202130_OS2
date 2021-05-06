@@ -599,8 +599,8 @@ nav.crumbs> a{
 /* CHECKOUT */
 
 .checkout_header{
-	background-color: var(--color-neutral-dark);
-	padding: 30px;
+	background-color: var(--color-highlight);
+	padding: 1em;
 }
 
 .checkout_page_bg{

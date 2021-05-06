@@ -123,3 +123,4 @@ function makeCartBadge() {
    return count($cart)==0 ? "" :
       array_reduce($cart,function($r,$o){return $r+$o->amount;},0);
 }
+

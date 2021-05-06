@@ -7,8 +7,7 @@
 	$cart_product = cartItemById($product->id);
 
 // pretty_dump($product);
-
-	pretty_dump($product);
+// pretty_dump($cart);
 
 	// calculate discount
 
@@ -29,7 +28,7 @@
 		<?php include "parts/navbar.php" ?>
 
 		<div class="container navbar-spacer">
-			<h3 class="top-padding-lg bottom-padding-sm">The following items were added to the cart:</h3>	
+			<h3 class="top-padding-md bottom-padding-sm">The following items were added to the cart:</h3>	
 			<div class="card ">
 
 				<?php 
@@ -66,12 +65,33 @@
 				}
             	?>
 			<div class="display-flex top-padding-sm">
-               <div class="flex-none"><a class="form-button" href="javascript:window.history.back();">Back To Product</a></div>
-               <div class="flex-stretch"></div>
-               <div class="flex-none"><a class="form-button" href="product_list.php">Continue Shopping</a></div>
+				<div class="flex-stretch"></div>
+               <a class="generic-btn outline" style="margin-right: 1em;" href="javascript:window.history.back();">Back To Product</a>
+               <a class="generic-btn" href="product_list.php">Continue Shopping</a>
+
             </div>
             
 		</div>
+		<div class="container">
+			<h2 class="top-margin-lg bottom-margin-md">Similar products to "<?= $product->product_name?>"</h2>
+			<div class="grid gap medium vertical-stretch bottom-margin-lg">
 
+			<? 
+			$Itemcategory = $product->category;
+			// pretty_dump($Itemcategory);
+			$recommended = MYSQLIQuery("
+			   SELECT *
+			   FROM `products`
+			   WHERE `category` = '$Itemcategory'
+			   LIMIT 3
+			");
+
+			// pretty_dump($recommended);
+			echo array_reduce($recommended,'makeRecommendedList');
+			?>
+
+			</div>
+		</div>
+		<?php include "parts/footer.php"?>
 	</body>
 </html>

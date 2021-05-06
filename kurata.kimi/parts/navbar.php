@@ -15,7 +15,7 @@
 						</ul>
 						<a class="cart-link" href="cart.php" style="display:flex;">
 						<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">
-						<div class="cart-number">0</div>
+						<div class="cart-number"><?= makeCartBadge()?></div>
 						</a>
 
 						</div>
