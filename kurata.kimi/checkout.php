@@ -138,7 +138,15 @@ include "parts/templates.php";
 					<?= checkoutTotalsTitle() ?>
 					<div class="grid gap ">
 						
-						<?= checkoutTotalsTumbs() ?>
+						<?
+						$cartitems= makeCartBadge();
+						if($cartitems == '0'){
+							echo "<p class='text-center top-padding-sm bottom-padding-sm col-md-12 col-xs-12' >No items in your cart</p>";
+						}else{
+				         	echo cartConfirmationThumbs();
+				        }
+				        ?>
+
 					</div>
 					<?= checkoutTotals() ?>
 					

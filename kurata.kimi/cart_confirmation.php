@@ -34,7 +34,16 @@ include "parts/templates.php";
 		<div class="grid gap-column card hard justify-center">
 			<div class="col-xs-12 col-md-8">
 				<div class=" display-flex flex-align-center flex-justify-around display-flex-wrap bottom-margin-sm">	
-					<?= cartConfirmationThumbs() ?>
+					<?php
+					$cartitems= makeCartBadge();
+					if($cartitems == '0'){
+						echo "<p class='text-center top-padding-md' >No items in your cart</p>";
+					}else{
+			         	echo cartConfirmationThumbs();
+			        }
+			        ?>
+
+
 				</div>
 					<!-- <div class="display-flex flex-align-center flex-justify-around ">
 						<figure class="figure cart-list-image-box" href="styleguide/#figures">

@@ -262,6 +262,19 @@ date_add($date, date_interval_create_from_date_string('20 days'));
 	$delyverymonth = strtoupper(date_format($date, 'F'));
 	$deliveryday = date_format($date, 'j');
 
+$cartitems= makeCartBadge();
+	if($cartitems == '0'){
+		return <<<HTML
+
+<h2 class="text-highlight text-center top-padding-sm">ITEMS: 0</h2>
+	<P class="text-xxs text-center top-padding-sm">ARRIVING DATE</P>
+	<h3 class="text-black text-weight-light text-center month">To be define</h3>
+	<p class="giant-text text-highlight text-center"></p>
+</div>
+<div class="confirmation_secondary_btn_box display-flex flex-align-end">
+
+HTML;
+	}else{
 return <<<HTML
 
 <h2 class="text-highlight text-center top-padding-sm">ITEMS: $totalitems</h2>
@@ -272,5 +285,7 @@ return <<<HTML
 <div class="confirmation_secondary_btn_box display-flex flex-align-end">
 
 HTML;
+    }
+
 
 }
