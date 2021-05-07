@@ -8,6 +8,7 @@ function pretty_dump($data) {
 }
 
 
+
 function file_get_json($filename) {
 	$data_string = file_get_contents($filename);
 	return json_decode($data_string);
@@ -124,3 +125,8 @@ function makeCartBadge() {
       array_reduce($cart,function($r,$o){return $r+$o->amount;},0);
 }
 
+
+
+function setDefault($k,$v){
+   if(!isset($_GET[$k])) $_GET[$k] = $v;
+}

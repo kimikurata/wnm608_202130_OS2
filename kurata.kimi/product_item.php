@@ -2,7 +2,8 @@
 
 include "lib/php/functions.php";
 include "parts/templates.php";
-
+include "data/api.php";
+ 
 $product = MYSQLIQuery("
    SELECT *
    FROM `products`
@@ -153,8 +154,10 @@ $thumb2 = $thumbs[1];
 	   LIMIT 3
 	");
 
+
 	// pretty_dump($recommended);
 	echo array_reduce($recommended,'makeRecommendedList');
+
 
 	?>
 

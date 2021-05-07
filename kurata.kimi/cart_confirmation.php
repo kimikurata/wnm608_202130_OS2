@@ -1,7 +1,9 @@
 <?
 include "lib/php/functions.php";
 include "parts/templates.php";
+include "data/api.php";
 ?>
+
 
 
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ include "parts/templates.php";
 	<div class=" checkout_header ">
 		<div class="container display-flex flex-align-center">
 			<div class="flex-stretch"></div>
-			<a class="text-white" href="product_actions.php?crud=reset-cart" >Continue</a>
+			<a class="text-white" href="product_list.php" >Continue</a>
 		</div>
 	</div>
 	<div class="container">
@@ -68,7 +70,7 @@ include "parts/templates.php";
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<div class="continue_shop_btn_box">
-					<a  href="product_actions.php?crud=reset-cart"><button class="generic-btn full-size checkout_btn">Continue shopping</button></a>
+					<a  href="product_list.php"><button class="generic-btn full-size checkout_btn">Continue shopping</button></a>
 				</div>
 				
 			</div>
@@ -88,7 +90,7 @@ include "parts/templates.php";
 	");
 
 	// pretty_dump($recommended);
-	echo array_reduce($recommended,'makeRecommendedListCartConfirmation');
+	echo array_reduce($recommended,'makeRecommendedList');
 
 	?>
 
@@ -97,6 +99,6 @@ include "parts/templates.php";
 	<div class="copy_right">
 		&#169; 2021 | Kimi Kurata All rights reserved
 	</div>
-	
+	<? resetCart(); ?>
 </body>
 </html>

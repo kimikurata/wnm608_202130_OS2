@@ -106,29 +106,6 @@ return $r.<<<HTML
 HTML;
 }
 
-function makeRecommendedListCartConfirmation($r,$o) {
-
-
-$onsale_class = $o->on_sale==1?'onsale':'';
-$discount = $o->on_sale==1? (100 - $o->discount)/100:1; 
-$calculated_price = number_format((float)round($discount*$o->price, 2), 2, '.', '');
-$onsale_procie_hide = $o->on_sale==0?'hidden':'';
-
-return $r.<<<HTML
-
-<a class="$onsale_class product card hard col-lg-4 col-md-6 col-xs-12 " href="product_item.php?id=$o->id" onclick="resetCart()">
-	<div class="display-flex flex-justify-center ">
-		<img class="image-cover " src="images/$o->image_thumbnail" alt="">
-	</div>
-	<div class="display-flex flex-align-center">
-		<h4 class="product-price text-highlight ">&dollar;$calculated_price</h4>
-		<h3 class="$onsale_procie_hide sale_price ">&dollar;$o->price</h3>
-	</div>
-	<p class="product-name text-bold ">$o->product_name</p>
-</a>
-
-HTML;
-}
 
 
 

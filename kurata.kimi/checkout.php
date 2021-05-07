@@ -30,8 +30,8 @@ include "parts/templates.php";
 	<div class="checkout_page_bg">
 		<div class="container">	
 
-			<form class="grid gap top-padding-md" action="cart_confirmation.php">	
-				<h2 class="text-center col-md-8 col-xs-12" style=" width: 95%;">Checkout</h2>
+			<form class="grid gap top-padding-md  action="cart_confirmation.php">	
+				<h2 class="text-center col-md-8 col-xs-12 navbar-spacer-sm" style=" width: 95%;">Checkout</h2>
 				<div class="col-md-8 col-xs-12">
 					<div class="form_card  top-margin-sm">
 						<h3>1 Personal information</h3>
@@ -143,7 +143,7 @@ include "parts/templates.php";
 						if($cartitems == '0'){
 							echo "<p class='text-center top-padding-sm bottom-padding-sm col-md-12 col-xs-12' >No items in your cart</p>";
 						}else{
-				         	echo cartConfirmationThumbs();
+				         	echo checkoutTotalsTumbs();
 				        }
 				        ?>
 

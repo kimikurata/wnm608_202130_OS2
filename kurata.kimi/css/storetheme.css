@@ -606,6 +606,8 @@ nav.crumbs> a{
 .checkout_header{
 	background-color: var(--color-highlight);
 	padding: 1em;
+	position: fixed;
+	z-index: 11; width:100%;
 }
 
 .checkout_page_bg{

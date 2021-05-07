@@ -3,6 +3,7 @@
 
 include "lib/php/functions.php";
 include "parts/templates.php";
+include "data/api.php";
 
 
 // $cart = MYSQLIQuery("
@@ -42,7 +43,7 @@ $cart = getCartItems();
 	
 	
 	<div class="container bottom-padding-sm">
-		<div class="grid gap top-padding-md">
+		<div class="grid gap top-padding-lg">
 			<div class="products_in_list col-xs-12 col-md-8">
 				<h1 class="bottom-padding-sm">Shopping cart</h1>
 				<div class="cart_item_list_header grid">

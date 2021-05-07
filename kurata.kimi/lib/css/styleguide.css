@@ -240,7 +240,7 @@ a.text-link {
 	position: relative;
 	top:-5px;
 	left: -5px;
-	
+	letter-spacing: -1px;
 }
 .cart-number:hover{
 	background-color: var(--color-highlight);
@@ -480,6 +480,7 @@ a.text-link {
 	outline: none;
 	margin: 5px 0;
 	border-radius: 0em 1em 0em 1em;
+	text-align: center;
 
 }
 
@@ -494,6 +495,7 @@ a.text-link {
 	outline: none;
 	margin: 5px;
 	border-radius: 2em;
+	text-align: center;
 }
 
 .generic-btn.full-size{
@@ -503,6 +505,9 @@ a.text-link {
 .chip-btn:hover{
 	background-color: var(--color-highlight);
 }
+/*.chip-btn:active{
+	background-color: var(--color-highlight);
+}*/
 
 .generic-btn:hover{
 	background-color: var(--color-highlight-light);
