@@ -31,11 +31,11 @@ include "parts/templates.php";
 		<div class="display-flex">
 			<div class="flex-stretch"></div>
 			<div class="top-more-link-box display-flex">
-				<a class="more-link top-more-link text-white" href="product_list.php">LEARN MORE &#8594;</a>
+				<a class="more-link top-more-link text-white" href="#new">LEARN MORE &#8594;</a>
 			</div>	
 		</div>
 	</div>
-	<div class="new-arrivals" style="background-image: var(--color-gradient-medium);">
+	<div id="new" class="new-arrivals" style="background-image: var(--color-gradient-medium);">
 		<div class="grid container">
 			<div class="col-md-6 col-xs-12 display-flex flex-justify-center" >
 				<img  class="image-contain intro-image top-margin-md" src="images/moon_terrarium_1.png" alt="image placeholder">
@@ -44,7 +44,7 @@ include "parts/templates.php";
 				<h3 class="">New Arrivals</h3>
 				<h2 class="top-margin-sm">Moon Terrarium</h2>
 				<h4 class=" top-margin-xs">$ 00.00</h4>
-				<button class="arrival-btn generic-btn " type="button">Shop now</button>
+				<a href="product_item.php?id=1"><button  class="arrival-btn generic-btn " type="button">Shop now</button></a>
 			</div>
 		</div>
 		<div class="grid container">
@@ -54,7 +54,7 @@ include "parts/templates.php";
 				<h4 class="top-margin-xs ">$ 00.00</h4>
 				<div class="display-flex">
 					<div class="flex-stretch"></div>
-					<button class="arrival-btn generic-btn " type="button">Shop now</button>
+					<a href="product_item.php?id=14" class="arrival-btn generic-btn " type="button">Shop now</a>
 				</div>
 			</div>
 			<div class="col-md-6 col-xs-12 display-flex flex-justify-center " >
@@ -73,67 +73,21 @@ include "parts/templates.php";
 				<h2 class=" text-center text-highlight-light">SALE</h2>
 				<div class="display-flex">
 					<div class="flex-stretch"></div>
-					<button class="sale_btn generic-btn outline " type="button" >Shop now</button>
+					<a href="product_list.php?t=products_by_category&category=Accessory&d=DESC&o=date_create&l=12&s=" class="sale_btn generic-btn outline " type="button" >Shop now</a>
 					<div class="flex-stretch"></div>
 				</div>
 			</div>		
 		</div>
 	</div>
-	<div style="background-color: var(--color-white);">
-		<div class="container" >
-			<h2 class="top-padding-md bottom-padding-md">Best seller</h2>
-			<div class="grid gap medium vertical-stretch best-seller-box bottom-padding-md">	
-				<a class="card flat col-lg-3 col-md-12 col-xs-6 vertical-figure neutral-light layout-order2" href="styleguide/#figures">
-					<p class="text-body text-center ">Venus Flower</p>
-					<div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/best_seller_1.png" alt="">
-					</div>
-					<p class="product-price text-highlight text-center">$25.99</p>
-				</a>	
-				<a class="card flat col-lg-6 col-md-12 col-xs-12 white display-flex flex-align-center display-flex-wrap" href="styleguide/#figures ">
-					
-						<div class="display-flex flex-justify-center flex-grow-1">
-							<img class="image-contain img200x200 " src="images/moon_terrarium_3.png" alt="">
-						</div>
-						<div class="flex-grow-2 best_seller_bigbox" >
-							<p class="text-bold bottom-padding-sm">Terrariums</p>
-							<p class="text-body bottom-padding-sm">Get the most suitable succulent combinations</p>
-							<button class="generic-btn outline">Explore</button>
-						</div>		
-				</a>
-				<a class="card flat col-lg-3 col-md-12 col-xs-6 vertical-figure neutral-light" href="styleguide/#figures layout-order2">
-					<p class="text-body text-center">Lion Mane</p>
-					<div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/best_seller_2.png" alt="">
-					</div>
-					<p class="product-price text-highlight text-center">$15.99</p>
-				</a>
-				<a class="card flat col-lg-3 col-md-6 col-xs-6 vertical-figure white layout-order2" href="styleguide/#figures">
-					<p class="text-body text-center">Looking for a special succulent?</p>
-					<div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/best_seller_3.png" alt="">
-					</div>
-				</a>
-				<a class="card flat col-lg-3 col-md-6 col-xs-6 vertical-figure highlight layout-order2" href="styleguide/#figures">	
-					<p class="text-body text-center">Take a look to the best Senecio succulents</p><div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/p1.png" alt="">
-					</div>
-				</a>
-				<a class="card flat col-lg-3 col-md-6 col-xs-6 vertical-figure neutral-light layout-order2" href="styleguide/#figures">
-					<div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/best_seller_4.png" alt="">
-					</div>
-					<p class="text-body text-center">Take a look to the best Echeveria succulents</p>
-				</a>
-				<a class="card flat white col-lg-3 col-md-6 col-xs-6 vertical-figure layout-order2" href="styleguide/#figures">	
-					<p class="text-body text-center">Search for your succulents here!</p>
-					<div class="display-flex flex-justify-center" >
-						<img class="image-contain img200x200 " src="images/best_seller_5.png" alt="">
-					</div>
-				</a>		
-			</div>
-		</div>
-	</div>
+	
+
+
+	<? include "parts/best_seller.php"?>
+
+
+
+
+
 	<div class="event-info-box">
 			<div class="container" style="width: 90%;">
 			<h1 class="text-white home-top-title text-center">COME AND CELEBRATE WITH US THE TREE DAY</h1>	

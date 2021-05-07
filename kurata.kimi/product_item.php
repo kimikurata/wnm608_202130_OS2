@@ -154,10 +154,8 @@ $thumb2 = $thumbs[1];
 	   LIMIT 3
 	");
 
-
 	// pretty_dump($recommended);
 	echo array_reduce($recommended,'makeRecommendedList');
-
 
 	?>
 

@@ -355,6 +355,12 @@ footer a:hover{
 .event-info-box{
 	background-image: url("../images/home_bg_2.png");  /* https://unsplash.com/photos/EMQlhm12OfI  */	
 }
+					
+.event-info-box2{
+	background-image: url("../images/home_bg_2.png");  /* https://unsplash.com/photos/EMQlhm12OfI  */	
+	
+}
+
 
 .giant-date{
 	font-size: 7em;
@@ -482,6 +488,27 @@ footer a:hover{
 nav.crumbs> a{
 	color: var(--color-highlight);
 }
+
+/* ADDED TO CATR */
+.added-list-image{
+	max-width: 200px; 
+	justify-self: center; 
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@media screen and (max-width: 1000px) {
+	.cart-list-image{
+		width: 200px;
+		height: 200px;
+	}
+	.added_list_header{
+		  visibility: hidden;
+		  height: 0px;
+
+	}
+}
+
+
 
 /* SHOPPING CART */
 .cart_item_quantity{

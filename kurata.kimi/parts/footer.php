@@ -33,7 +33,7 @@
 			<p class="footer-title-b bottom-margin-xs">DON’T MISS ANYTHING</p>
 			<p class="body-text text-white bottom-margin-sm">Signup for our newsletter</p>
 			<div class="display-flex">
-					<input class="form-input half-left footer" id="newsletter" style="flex-grow:6" type="email" placeholder="suculentina@gmail.com" required>
+					<input class="form-input half-left footer" id="newsletter" style="flex-grow:6; max-width:70%;" type="email" placeholder="suculentina@gmail.com" required>
 					<input  class="form-button half-right-icon footer" type="" action="">
 				</div>
 		</div>

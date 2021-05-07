@@ -39,26 +39,23 @@
 				} else {
 					?>
 					
-					<div class="display-flex">
-						<p>Image</p>
-						<div class="flex-stretch"></div>
-						<p>Name</p>
-						<div class="flex-stretch"></div>
-						<p>Amount</p>
-						<div class="flex-stretch"></div>
-						<p>Price</p>
+					<div class="grid gap added_list_header">
+						<p class="col-xs-12 col-md-4">Image</p>
+						<p class="col-xs-12 col-md-3">Name</p>
+						<p class="col-xs-12 col-md-3 text-center">Amount</p>
+						<p class="col-xs-12 col-md-1">Price</p>
 					</div>
-					<hr>
-					<div class="display-flex flex-align-center">
-						<div class="" style="width: 120px">
+					<hr class="cart_item_list_header">
+					<div class="grid gap justify-center">
+						<div class="col-xs-12 col-md-4 added-list-image" style="">
 							<img class="image-contain" src="images/<?= $product->image_thumbnail ?>" alt="product item">
 						</div>
-						<div class="flex-stretch"></div>
-						<p><?= $product->product_name ?></p>
-						<div class="flex-stretch"></div>
-						<p><?= $cart_product->amount ?></p>
-						<div class="flex-stretch"></div>
-						<p><?= $calculated_price ?></p>
+						<!-- <div class="flex-stretch"></div> -->
+						<p style="justify-self: center;" class="col-xs-12 col-md-3" ><?= $product->product_name ?></p>
+						<!-- <div class="flex-stretch"></div> -->
+						<p style="justify-self: center;" class="col-xs-6 col-md-3  text-center">x<?= $cart_product->amount ?></p>
+						<!-- <div class="flex-stretch"></div> -->
+						<p style="justify-self: center;" class="col-xs-6 col-md-1" >&dollar;<?= $calculated_price ?></p>
 					</div>
 					
 				</div>

@@ -2,7 +2,7 @@
 include "lib/php/functions.php";
 include "parts/templates.php";
 include "data/api.php";
-
+ 
 // $_SESSION['num'] = isset($_SESSION['num']) ?
 //   $_SESSION['num']+1 :
 //    0;
@@ -41,9 +41,11 @@ function makeSortOptions() {
 if(isset($_GET['t'])) {
    $result = makeStatement($_GET['t']);
    $products = isset($result['error']) ? [] : $result;
+
 } else {
    $result = makeStatement("products_all");
    $products = isset($result['error']) ? [] : $result;
+   
 }
 
 

@@ -23,23 +23,27 @@ include "data/api.php";
 	</script>
 </head>
 <body>
-	<div class=" checkout_header ">
-		<div class="container display-flex flex-align-center">
-			<div class="flex-stretch"></div>
-			<a class="text-white" href="product_list.php" >Continue</a>
-		</div>
-	</div>
+	<?php include "parts/navbar.php" ?>
+	
 	<div class="container">
 		<div class="navbar-spacer-sm">
-			<h1 class="top-padding-md bottom-padding-md">Your order has been placed</h1>
+			<?php
+					$cartitems= makeCartBadge();
+					if($cartitems == '0'){
+						echo "<h1 class='top-padding-md bottom-padding-md'>Sorry..</h1>";
+					}else{
+			         	echo "<h1 class='top-padding-md bottom-padding-md'>Your order has been placed</h1>";
+			        }
+			        ?>
 		</div>
-		<div class="grid gap-column card hard justify-center">
-			<div class="col-xs-12 col-md-8">
+
+		<div class="grid gap-column  justify-center bottom-padding-lg">
+			<div class="card hard col-xs-12 col-md-8">
 				<div class=" display-flex flex-align-center flex-justify-around display-flex-wrap bottom-margin-sm">	
 					<?php
 					$cartitems= makeCartBadge();
 					if($cartitems == '0'){
-						echo "<p class='text-center top-padding-md' >No items in your cart</p>";
+						echo "<p class='text-center top-padding-md bottom-padding-sm' >No items in your cart</p>";
 					}else{
 			         	echo cartConfirmationThumbs();
 			        }
@@ -47,17 +51,6 @@ include "data/api.php";
 
 
 				</div>
-					<!-- <div class="display-flex flex-align-center flex-justify-around ">
-						<figure class="figure cart-list-image-box" href="styleguide/#figures">
-							<div class="display-flex flex-justify-center ">
-								<img class="image-contain cart-list-image" src="images/placeholder4.png" alt="" >
-							</div>	
-						</figure>
-						<p class="text-body">Product name</p>
-						<p class="">1</p>
-						<p class="text-highlight">$00.00</p>
-					</div>
-					<hr class="list_separator"> -->
 			</div>
 			<div class=" col-xs-12 col-md-4 card flat order_confirmation_summary">
 
@@ -76,6 +69,14 @@ include "data/api.php";
 			</div>
 		</div>		
 	</div>
+	<div class="event-info-box2">
+		<div class="container" style="width: 90%;">
+			<h1 class="text-white home-top-title text-center">COME AND CELEBRATE THE TREE DAY</h1>	
+			<h2 class="text-white event-subtitle bottom-padding-md">Suculentina for a greener world</h2>	
+		
+		</div>
+	</div>
+	<!-- <? include "parts/best_seller.php"?> -->
 
 	<div class="container">
 		<h2 class="top-margin-lg bottom-margin-md">Check our sales</h2>
@@ -96,9 +97,7 @@ include "data/api.php";
 
 		</div>
 	</div>
-	<div class="copy_right">
-		&#169; 2021 | Kimi Kurata All rights reserved
-	</div>
+	<?php include "parts/footer.php" ?>
 	<? resetCart(); ?>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-
+ 
 @include_once "../lib/php/functions.php";
 
 
@@ -15,7 +15,7 @@ function makeStatement($type) {
    switch($type) {
       case "products_all":
          if(!getRequires(['o','d','l']))
-            return ["error"=>"Missing Properties"];
+            return ["error"=>"Missing Properties1"];
          return MYSQLIQuery("
             SELECT *
             FROM `products`
@@ -26,7 +26,7 @@ function makeStatement($type) {
          
       case "product_by_id":
          if(!getRequires(['id']))
-            return ["error"=>"Missing Properties"];
+            return ["error"=>"Missing Properties2"];
          return MYSQLIQuery("
             SELECT *
             FROM `products`
@@ -36,7 +36,7 @@ function makeStatement($type) {
          
       case "products_by_category":
          if(!getRequires(['category']))
-            return ["error"=>"Missing Properties"];
+            return ["error"=>"Missing Properties3"];
          return MYSQLIQuery("
             SELECT *
             FROM `products`
@@ -53,7 +53,7 @@ function makeStatement($type) {
 
       case "search":
          if(!getRequires(['s','o','d','l']))
-            return ["error"=>"Missing Properties"];
+            return ["error"=>"Missing Properties4"];
          return MYSQLIQuery("
             SELECT *
             FROM `products`
