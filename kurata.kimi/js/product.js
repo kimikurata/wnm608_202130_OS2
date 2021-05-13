@@ -22,3 +22,4 @@ const checkSort = (el) => {
 
    form.submit();
 }
+

@@ -38,7 +38,7 @@ $thumb2 = $thumbs[1];
 </head>
 <body>
 	<?php include "parts/navbar.php" ?>
-	<div class="product-box navbar-spacer">
+	<div class="product-box ">
 		<div class="grid container">
 			<div class="col-md-8 col-xs-12 display-flex flex-align-end " >
 				<img  class=" main-product-image image-contain"  src="images/<?=$product->image_main ?>" alt="product image" >

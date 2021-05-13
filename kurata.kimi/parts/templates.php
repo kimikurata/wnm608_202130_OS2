@@ -107,8 +107,6 @@ HTML;
 }
 
 
-
-
 function cartTotals() {
 $cart = getCartItems();
 

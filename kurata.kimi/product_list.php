@@ -45,12 +45,7 @@ if(isset($_GET['t'])) {
 } else {
    $result = makeStatement("products_all");
    $products = isset($result['error']) ? [] : $result;
-   
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -99,10 +94,12 @@ if(isset($_GET['t'])) {
         <div class="display-flex flex-align-center overscroll-x">
           <p class="text-highlight ">Filters</p>
           <!-- <button class="chip-btn">Solid btn</button> -->
-            <a class="chip-btn" href="product_list.php?t=products_by_category&category=Terrarium&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Terrarium</a>
-            <a class="chip-btn" href="product_list.php?t=products_by_category&category=Echeveria&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Echeveria</a>
-            <a class="chip-btn" href="product_list.php?t=products_by_category&category=Senecio&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Senecio</a>
-            <a class="chip-btn" href="product_list.php?t=products_by_category&category=Accessory&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Accesories</a>
+            <a id="terrarium" class="chip-btn active" href="product_list.php?t=products_by_category&category=Terrarium&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Terrarium</a>
+            <a id="echeveria"class="chip-btn" href="product_list.php?t=products_by_category&category=Echeveria&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Echeveria</a>
+            <a id="senecio" class="chip-btn" href="product_list.php?t=products_by_category&category=Senecio&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Senecio</a>
+            <a id="accesories" class="chip-btn" href="product_list.php?t=products_by_category&category=Accessory&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Accesories</a>
+            
+            </script>
 
         </div>
       </div>

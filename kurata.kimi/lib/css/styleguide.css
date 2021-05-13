@@ -505,9 +505,9 @@ a.text-link {
 .chip-btn:hover{
 	background-color: var(--color-highlight);
 }
-/*.chip-btn:active{
+.chip-btn.active{
 	background-color: var(--color-highlight);
-}*/
+}
 
 .generic-btn:hover{
 	background-color: var(--color-highlight-light);
