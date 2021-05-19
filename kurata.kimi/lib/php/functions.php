@@ -16,7 +16,10 @@ function file_get_json($filename) {
 
 /* DATABASE CONNECTION AUTHENTIFICATION */
 function MYSQLIConn() {
-   include_once "data/auth.php";
+   @include_once "data/auth.php";
+   if (!function_exists('MYSQLIAuth')) {
+      @include_once "../data/auth.php";
+   }
 
    @$conn = new mysqli(...MYSQLIAuth());
 
@@ -51,6 +54,9 @@ function MYSQLIQuery($sql) {
  
 
 // CART FUNCTIONS
+function getItemById($a,$id) {
+   return array_find($a,function($o)use($id){ return $o->id==$id; });
+}
 function array_find($array,$fn) {
    foreach($array as $o) if($fn($o)) return $o;
    return false;

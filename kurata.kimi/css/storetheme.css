@@ -684,5 +684,30 @@ nav.crumbs> a{
 	margin-top: var(--space-md);
 	margin-bottom: var(--space-sm);
 	}
-
  }
+
+
+/* PRODUCT ADMIN */
+
+.admin-top-nav{
+	visibility: hidden;
+	height: 0px;
+}
+.admin-side-nav{
+	visibility: visible;
+}
+@media screen and (max-width: 750px) {
+	.admin-top-nav{
+		visibility: visible;
+		height: auto;
+	}
+	.admin-side-nav{
+		visibility: hidden;
+	}
+}
+.admin-gig-number{
+	    font-size: 3em;
+    font-weight: 200;
+
+}
+

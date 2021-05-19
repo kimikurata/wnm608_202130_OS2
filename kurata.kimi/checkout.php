@@ -30,7 +30,7 @@ include "parts/templates.php";
 	<div class="checkout_page_bg">
 		<div class="container">	
 
-			<form class="grid gap top-padding-md  action="cart_confirmation.php">	
+			<form class="grid gap top-padding-md"  action="cart_confirmation.php">	
 				<h2 class="text-center col-md-8 col-xs-12 navbar-spacer-sm" style=" width: 95%;">Checkout</h2>
 				<div class="col-md-8 col-xs-12">
 					<div class="form_card  top-margin-sm">

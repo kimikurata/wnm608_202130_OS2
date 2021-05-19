@@ -37,6 +37,20 @@ function makeSortOptions() {
    }
 }
 
+function makeFilterSet() {
+   $options = [
+      "Terrarium",
+      "Echeveria",
+      "Senecio",
+      "Accessory"
+   ];
+   foreach($options as $option) {
+      echo "
+      <a href='product_list.php?t=products_by_category&category=$option&d={$_GET['d']}&o={$_GET['o']}&l={$_GET['l']}&s={$_GET['s']}' class='chip-btn ".($option==$_GET['category']?"active":"")."'>$option</a>
+      ";
+   }
+}
+
 
 if(isset($_GET['t'])) {
    $result = makeStatement($_GET['t']);
@@ -94,12 +108,8 @@ if(isset($_GET['t'])) {
         <div class="display-flex flex-align-center overscroll-x">
           <p class="text-highlight ">Filters</p>
           <!-- <button class="chip-btn">Solid btn</button> -->
-            <a id="terrarium" class="chip-btn active" href="product_list.php?t=products_by_category&category=Terrarium&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Terrarium</a>
-            <a id="echeveria"class="chip-btn" href="product_list.php?t=products_by_category&category=Echeveria&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Echeveria</a>
-            <a id="senecio" class="chip-btn" href="product_list.php?t=products_by_category&category=Senecio&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Senecio</a>
-            <a id="accesories" class="chip-btn" href="product_list.php?t=products_by_category&category=Accessory&d=<?=$_GET['d']?>&o=<?=$_GET['o']?>&l=<?=$_GET['l']?>&s=<?=$_GET['s']?>" class="form-button inline">Accesories</a>
             
-            </script>
+           <? makeFilterSet() ?>
 
         </div>
       </div>
@@ -137,10 +147,12 @@ if(isset($_GET['t'])) {
 
         ?>
         </div>
-
-
    	</div>
+    <div class="container">
+      <div class="card hard"><a href="admin">Product Admin</a></div>
+   </div>
 	<?php include "parts/footer.php" ?>
+  
 
 </body>
 </html>
