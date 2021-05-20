@@ -175,7 +175,7 @@ if(isset($_GET['t'])) {
         ?>
         </div>
    	</div>
-    <div class="container">
+    <div class="container bottom-padding-md">
       <div class="card hard"><a href="admin" target="_blank">Product Admin</a></div>
    </div>
 	<?php include "parts/footer.php" ?>

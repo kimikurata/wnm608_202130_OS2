@@ -11,7 +11,7 @@
 						<ul class="nav display-flex">
 							<li><a href="product_list.php">Shopp</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="admin_home.php">Admin</a></li>
+							<li><a href="admin" target="_blank">Admin</a></li>
 						</ul>
 						<a class="cart-link" href="cart.php" style="display:flex;">
 						<img  class="nav-icon image-contain" src="images/icon/shopping-cart.svg" alt="image placeholder">

@@ -32,8 +32,6 @@ $productsLast = MYSQLIQuery("
 // pretty_dump($productsLast );
 
 
-
-
 $empty_object = (object) [
    "product_name"=>"",
    "category"=>"",
@@ -70,7 +68,19 @@ $empty_object = (object) [
 
 function productListItem($r, $product) {
 return $r.<<<HTML
-<div><a href="{$_SERVER['PHP_SELF']}?id=$product->id">$product->product_name</a></div>
+<div>
+   <div class="display-flex flex-align-center" >
+      <div class=""><img class="image-contain img96x96" src="images/$product->image_thumbnail"></div>
+      
+      <div>$product->product_name</div>
+      <div class="flex-stretch"></div>
+
+      <div><a class="form-button outlined" style="width: 80px; display: block; margin-right: 1em" href="product_item.php?id=$product->id" target="_blank">Visit</a></div>
+      <div><a class="form-button highlighted" style="width: 80px;" href="{$_SERVER['PHP_SELF']}?id=$product->id">EDIT</a></div>
+      
+   </div>
+   <hr style="border-top: 1px solid var(--color-disable-light);">
+</div>
 HTML;
 }
 
@@ -96,7 +106,7 @@ $createorupdate = $id=="new" ? 'create' : 'update';
 echo <<<HTML
 
 <div class="grid gap ">  
-   <form class="col-xs-12 col-md-6 col-lg-5" method="post" action="{$_SERVER['PHP_SELF']}?id=$id&crud=$createorupdate">
+   <form class="col-xs-12 col-md-6 col-lg-5 admin-edit-form-box" method="post" action="{$_SERVER['PHP_SELF']}?id=$id&crud=$createorupdate">
       <div class="form-admin-edit">
          <div class="admin-edit-top-nav pills display-flex flex-align-center">
             <a href="{$_SERVER['PHP_SELF']}"><img src="images/icon/left-arrow.svg" class="icon" style="font-size:1.5em; margin-right: 1em;"></a>
@@ -301,7 +311,7 @@ HTML;
          <nav class="flex-none nav flex">
             <ul>
                <li><a href="<?= $_SERVER['PHP_SELF'] ?>">List</a></li>
-               <li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
+               <li><a href="product_list.php" target="_blank">Store</a></li>
             </ul>
          </nav>
       </div>
@@ -311,7 +321,9 @@ HTML;
          <nav class="navbar side-var">
             <a class="brand-text" href="#">Product Admin</a>
             <ul class="nav">
-               <a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li> 
+               <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li> 
+               <li><a href="product_list.php" target="_blank">Store</a></li>
+
             </ul>
          </nav>
       </div>
@@ -363,12 +375,14 @@ HTML;
                   </div>
                </div>
             </div>  
-            <div class="card col-xs-12">
+            <div class="card col-xs-12 col-md-9" >
                <div class="card-section"><h2>Product List</h2></div>
-               
-               <?php echo array_reduce($products,'productListItem'); ?>
+               <div class="admin-list">
+                  <?php echo array_reduce($products,'productListItem'); ?>
 
-               <div class="display-flex">
+               </div>
+               
+               <div class="display-flex " >
                   <div class="flex-stretch"></div>
                   <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">
                      <div class="circle-sm">
@@ -376,6 +390,8 @@ HTML;
                      </div>
                   </a>
                </div>
+            </div>
+            <div class="card col-xs-12 col-md-3">
             </div>
                
          </div>   

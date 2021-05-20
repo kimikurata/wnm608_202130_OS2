@@ -73,7 +73,7 @@ function setCart($a) {
 function resetCart() { setCart([]); }
 
 function cartItemById($id) {
-   return array_find(getCart(),function($o)use($id){ return $o->id==$id; });
+   return getItemById(getCart(),$id);
 }
 
 

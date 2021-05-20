@@ -39,7 +39,7 @@
 		</div>
 		<div class="col-lg-3 col-md-3 col-xs-3 footer-links-box" >
 			<p class="footer-title-b bottom-margin-xs">LINKS</p>
-			<a class="body-text text-white bottom-margin-xs" href="admin_home.php">Admin page</a>
+			<a class="body-text text-white bottom-margin-xs" href="admin" target="_blank">Admin page</a>
 			<br>
 			<a class="body-text text-white bottom-margin-xs" href="product_list.php">Produc list</a>
 			<br>

@@ -719,6 +719,10 @@ nav.crumbs> a{
 	justify-content: space-between;
 	min-width: 350px;
 }
+.admin-edit-form-box{
+	overflow:auto;
+	max-height: 100vh;
+}
 .responsive-boxes{
 	display: flex;
 }
@@ -732,6 +736,10 @@ nav.crumbs> a{
     padding: 2.5em;
     overflow: hidden;
     position: relative;
+}
+.admin-list{
+	overflow:auto;
+	max-height: 550px;
 }
 /**/
 
