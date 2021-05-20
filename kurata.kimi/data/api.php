@@ -75,7 +75,7 @@ function makeStatement($type) {
          ");
          break;
 
-      // CRUD
+      // CRUD  create, read, update, delete
       case "product_update":
          $conn = MYSQLIConn();
          $stmt = $conn->prepare("UPDATE `products`
@@ -85,20 +85,22 @@ function makeStatement($type) {
                `image_main` = ?,
                `image_thumbnail` = ?,
                `image_other` = ?,
-               `price` = ?
-               `description` = ?
-               `dimentions` = ?
-               `planter_type` = ?
-               `plant_care` = ?
-               `watering` = ?
-               `on_sale` = ?
-               `discount` = ?
+               `price` = ?,
+               `description` = ?,
+               `dimentions` = ?,
+               `planter_type` = ?,
+               `plant_care` = ?,
+               `watering` = ?,
+               `on_sale` = ?,
+               `discount` = ?,
+               `date_modify` = NOW(),
+              
             WHERE `id` = ?
             ");
-         $stmt->bind_param("sssssdssssssii",
-            $_POST['product_name'],
+         $stmt->bind_param("sssssdsssssiii",
+            $_POST['product-product_name'],
             $_POST['product-category'],
-            $_POST['image_main'],
+            $_POST['product-image_main'],
             $_POST['product-image_thumbnail'],
             $_POST['product-image_other'],
             $_POST['product-price'],
@@ -112,19 +114,30 @@ function makeStatement($type) {
             $_POST['id']
          );
          $stmt->execute();
+         break;
+
+
       case "product_insert":
          $conn = MYSQLIConn();
          $stmt = $conn->prepare("INSERT INTO `products`
             (
-               `title`,
-               `price`,
+               `product_name`,
                `category`,
+               `image_main`,
+               `image_thumbnail`,
                `image_other`,
-               `image_thumb`,
+               `price`,
                `description`,
-               `quantity`,
+               `dimentions`,
+               `planter_type`,
+               `plant_care`,
+               `watering`,
+               `on_sale`,
+               `discount`,
                `date_create`,
-               `date_modify`
+               `date_modify`,
+               `sale_start_date`,
+               `sale_end_date`
             )
             VALUES
             (
@@ -135,21 +148,48 @@ function makeStatement($type) {
                ?,
                ?,
                ?,
+               ?,
+               ?,
+               ?,
+               ?,
+               ?,
+               ?,
+               NOW(),
+               NOW(),
                NOW(),
                NOW()
             )
             ");
-         $stmt->bind_param("sdssssi",
-            $_POST['product-title'],
-            $_POST['product-price'],
+         $stmt->bind_param("sssssdsssssii",
+            $_POST['product-product_name'],
             $_POST['product-category'],
-            $_POST['product-image_other'],
-            $_POST['product-image_thumb'],
+            $_POST['product-image_main'],
+            $_POST['product-image_thumbnail'],
+            $_POST['image_other'],
+            $_POST['product-price'],
             $_POST['product-description'],
-            $_POST['product-quantity']
+            $_POST['product-dimentions'],
+            $_POST['product-planter_type'],
+            $_POST['product-plant_care'],
+            $_POST['product-watering'],
+            $_POST['product-on_sale'],
+            $_POST['product-discount']
+
          );
          $stmt->execute();
          return $conn;
+
+
+      case "product_delete":
+         $conn = MYSQLIConn();
+         $stmt = $conn->prepare("DELETE FROM `products`
+            WHERE `id` = ?
+            ");
+         $stmt->bind_param("i",$_GET['id']);
+         $stmt->execute();
+         break;
+
+      
 
 
       default: return ["error"=>"No Matched Type"];

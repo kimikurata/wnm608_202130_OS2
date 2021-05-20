@@ -691,10 +691,10 @@ nav.crumbs> a{
 .admin-summary{
 	padding: 2.5em 2em;
 }
-.admin-top-nav{
+/*.admin-top-nav{
 	visibility: hidden;
 	height: 0px;
-}
+}*/
 .admin-side-nav{
 	visibility: visible;
 }
@@ -719,10 +719,10 @@ nav.crumbs> a{
 	justify-content: space-between;
 	min-width: 350px;
 }
-.admin-edit-form-box{
+/*.admin-edit-form-box{
 	overflow:auto;
 	max-height: 100vh;
-}
+}*/
 .responsive-boxes{
 	display: flex;
 }
@@ -737,9 +737,9 @@ nav.crumbs> a{
     overflow: hidden;
     position: relative;
 }
-.admin-list{
+/*.admin-list{
 	overflow:auto;
 	max-height: 550px;
-}
+}*/
 /**/
 

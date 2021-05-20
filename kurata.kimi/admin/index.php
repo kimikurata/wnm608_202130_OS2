@@ -33,36 +33,37 @@ $productsLast = MYSQLIQuery("
 
 
 $empty_object = (object) [
-   "product_name"=>"",
-   "category"=>"",
-   "image_main"=>"",
-   "image_thumbnail"=>"",
-   "image_other"=>"",
-   "price"=>"",
-   "description"=>"",
-   "dimentions"=>"",
-   "planter_type"=>"",
-   "plant_care"=>"",
-   "watering"=>"",
-   "on_sale"=>"",
-   "discount"=>""
+   "id"=>'',
+   "product_name"=>"Silver Jupiter",
+   "category"=>"Echeveria",
+   "image_main"=>"silver_jupiter_1.png",
+   "image_thumbnail"=>"silver_jupiter_thu.png",
+   "image_other"=>"silver_jupiter_2.png,silver_jupiter_3.png",
+   "price"=>"12.88",
+   "description"=>"Fleshy silver-blue rosette with pointed, upright leaves. They are closely related to sedums and echeveria.",
+   "dimentions"=>"5in tall in a 5 x 5 x 5 planter",
+   "planter_type"=>"Plastic",
+   "plant_care"=>"Bright to indirect light",
+   "watering"=>"Every 3 weeks",
+   "on_sale"=>"1",
+   "discount"=>"25"
 ];
-
+// pretty_dump($empty_object);
 
 
 switch(@$_GET['crud']) {
-//    case 'update':
-//       makeStatement("product_update");
-//       header("location:{$_SERVER['PHP_SELF']}?id=".$_GET['id']);
-//       break;
-//    case 'create':
-//       $result = makeStatement("product_insert");
-//       header("location:{$_SERVER['PHP_SELF']}?id=".$result->insert_id);
-//       break;
-//    case 'delete':
-//       makeStatement("product_delete");
-//       header("location:{$_SERVER['PHP_SELF']}");
-//       break;
+   case 'update':
+      makeStatement("product_update");
+      header("location:{$_SERVER['PHP_SELF']}?id=".$_GET['id']);
+      break;
+   case 'create':
+      $result = makeStatement("product_insert");
+      header("location:{$_SERVER['PHP_SELF']}?id=".$result->insert_id);
+      break;
+   case 'delete':
+      makeStatement("product_delete");
+      header("location:{$_SERVER['PHP_SELF']}");
+      break;
 }
 
 
@@ -102,6 +103,10 @@ $thumb_elements = array_reduce($thumbs,function($r,$o){
 });
 $addoredit = $id=="new" ? 'Add' : 'Edit';
 $createorupdate = $id=="new" ? 'create' : 'update';
+$showvisitlink = $id!="new" ? "<div><a href='product_item.php?id=$id' class='form-button'>Visit</a></div>" : "";
+$showdeletelink = $id!="new" ? "<div><a href='product_item.php?id=$id' class='form-button'>Visit</a></div>" : "";
+
+
 
 echo <<<HTML
 
@@ -119,12 +124,12 @@ echo <<<HTML
          <div class="grid gap ">
             <input type="hidden" name="id" value="$id">
             <div class="form-control col-md-6 col-xs-12 ">
-               <label class="form-label" for="product_name">Product Name</label>
-               <input class="form-input" type="text" id="product-product_name" name="product_name" value="$product->product_name">
+               <label class="form-label" for="product-product_name">Product Name</label>
+               <input class="form-input" type="text" id="product-product_name" name="product-product_name" value="$product->product_name">
             </div>
             <div class="form-control col-md-6 col-xs-12">
-               <label class="form-label" for="product_category">Category</label>
-               <input class="form-input" type="text" id="product-category" name="product_category" value="$product->category">
+               <label class="form-label" for="product-category">Category</label>
+               <input class="form-input" type="text" id="product-category" name="product-category" value="$product->category">
             </div>
             <div class="form-control col-xs-12">
                <label class="form-label" for="product-description">Description</label>
@@ -146,16 +151,16 @@ echo <<<HTML
             </div>
             <h3 class="col-xs-12 top-padding-xs">3 Aditional information</h3>
             <div class="form-control col-md-6 col-xs-12">
-               <label class="form-label" for="product_planter_type">Planter Type</label>
-               <input class="form-input" type="text" id="product-planter_type" name="product_planter_type" value="$product->planter_type">
+               <label class="form-label" for="product-planter_type">Planter Type</label>
+               <input class="form-input" type="text" id="product-planter_type" name="product-planter_type" value="$product->planter_type">
             </div>
             <div class="form-control col-md-6 col-xs-12">
-               <label class="form-label" for="product_dimentions">Dimentions</label>
-               <input class="form-input" type="text" id="product-dimentions" name="product_dimentions" value="$product->dimentions">
+               <label class="form-label" for="product-dimentions">Dimentions</label>
+               <input class="form-input" type="text" id="product-dimentions" name="product-dimentions" value="$product->dimentions">
             </div>
             <div class="form-control col-xs-12">
-               <label class="form-label" for="product_planter_care">Plant Care</label>
-               <input class="form-input" type="text" id="product-planter_care" name="product_planter_care" value="$product->plant_care">
+               <label class="form-label" for="product-planter_care">Plant Care</label>
+               <input class="form-input" type="text" id="product-planter_care" name="product-planter_care" value="$product->plant_care">
             </div>
             <div class="form-control col-xs-12">
                <label class="form-label" for="product-watering">Watering</label>
@@ -193,7 +198,7 @@ echo <<<HTML
             <div class="display-flex flex-align-center">
                <a href="{$_SERVER['PHP_SELF']}?id=$id&crud=delete"><img src="images/icon/trash-green.svg" class="icon" style="font-size:1.5em"></a>
                <div style="margin-left: 1em;">
-                  <a href="product_item.php?id=$product->id" class="form-button" target="_blank">Visit</a>
+                  $showvisitlink
                </div>
             </div>
          </div>
@@ -316,7 +321,7 @@ HTML;
          </nav>
       </div>
    </header>
-   <div class="grid gap admin-side-nav">
+  <!--  <div class="grid gap admin-side-nav">
       <div class="col-2">           
          <nav class="navbar side-var">
             <a class="brand-text" href="#">Product Admin</a>
@@ -327,7 +332,7 @@ HTML;
             </ul>
          </nav>
       </div>
-   </div>
+   </div> -->
    <!-- NAVBAR END  -->
 
 
