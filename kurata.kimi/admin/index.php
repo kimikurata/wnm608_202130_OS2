@@ -50,7 +50,7 @@ $empty_object = (object) [
 
 
 
-// switch(@$_GET['crud']) {
+switch(@$_GET['crud']) {
 //    case 'update':
 //       makeStatement("product_update");
 //       header("location:{$_SERVER['PHP_SELF']}?id=".$_GET['id']);
@@ -63,7 +63,7 @@ $empty_object = (object) [
 //       makeStatement("product_delete");
 //       header("location:{$_SERVER['PHP_SELF']}");
 //       break;
-// }
+}
 
 
 function productListItem($r, $product) {
