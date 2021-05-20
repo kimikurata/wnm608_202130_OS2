@@ -688,7 +688,9 @@ nav.crumbs> a{
 
 
 /* PRODUCT ADMIN */
-
+.admin-summary{
+	padding: 2.5em 2em;
+}
 .admin-top-nav{
 	visibility: hidden;
 	height: 0px;
@@ -708,6 +710,28 @@ nav.crumbs> a{
 .admin-gig-number{
 	    font-size: 3em;
     font-weight: 200;
-
 }
+.admin-product-edit-general-info{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	min-width: 350px;
+}
+.responsive-boxes{
+	display: flex;
+}
+@media screen and (max-width: 750px) {
+	.responsive-boxes{
+	display: initial;
+	}	
+}
+.form-admin-edit{
+	background-color: var(--color-pure-white);
+    padding: 2.5em;
+    overflow: hidden;
+    position: relative;
+}
+/**/
 

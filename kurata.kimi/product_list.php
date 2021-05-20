@@ -36,8 +36,21 @@ function makeSortOptions() {
       ";
    }
 }
-
 function makeFilterSet() {
+   $options = [
+      "Terrarium",
+      "Echeveria",
+      "Senecio",
+      "Accessory"
+   ];
+   foreach($options as $option) {
+      echo "
+      <a href='product_list.php?t=products_by_category&category=$option&d={$_GET['d']}&o={$_GET['o']}&l={$_GET['l']}&s={$_GET['s']}' class='chip-btn "."'>$option</a>
+      ";
+   }
+}
+
+function makeFilterSetCategory() {
    $options = [
       "Terrarium",
       "Echeveria",
@@ -109,7 +122,13 @@ if(isset($_GET['t'])) {
           <p class="text-highlight ">Filters</p>
           <!-- <button class="chip-btn">Solid btn</button> -->
             
-           <? makeFilterSet() ?>
+           <?
+            if(empty($_GET['category'])) {
+              makeFilterSet();
+            } else {
+               makeFilterSetCategory();
+            }
+          ?>
 
         </div>
       </div>
@@ -125,10 +144,18 @@ if(isset($_GET['t'])) {
         <div class="flex-none" ><label class="text-only-label" for="example8" >Sort by:</label></div>
         <div class="form-select onlytext">
           <select onChange="checkSort(this)">
-             <? makeSortOptions() ?>
+
+             <?php 
+
+              
+
+             makeSortOptions() ?>
+
+             
           </select>
         </div>
       </form>
+            
   
     </div>
     <div class="container">    
@@ -149,7 +176,7 @@ if(isset($_GET['t'])) {
         </div>
    	</div>
     <div class="container">
-      <div class="card hard"><a href="admin">Product Admin</a></div>
+      <div class="card hard"><a href="admin" target="_blank">Product Admin</a></div>
    </div>
 	<?php include "parts/footer.php" ?>
   

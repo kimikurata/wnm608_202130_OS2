@@ -665,7 +665,7 @@ form.icon {
 }
 textarea{
 	max-width: 100%;
-	max-height: 40%;
+	min-height: 40%;
 }
 
 .form-control {
