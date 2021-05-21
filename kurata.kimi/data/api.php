@@ -93,10 +93,12 @@ function makeStatement($type) {
                `watering` = ?,
                `on_sale` = ?,
                `discount` = ?,
-               `date_modify` = NOW(),
-              
+               `date_modify` = NOW()
+
             WHERE `id` = ?
             ");
+         // pretty_dump([$_POST,$stmt,isset($_POST['product-on_sale'])]); die;
+         $onsale = isset($_POST['product-on_sale']) ? 1 : 0;
          $stmt->bind_param("sssssdsssssiii",
             $_POST['product-product_name'],
             $_POST['product-category'],
@@ -109,7 +111,7 @@ function makeStatement($type) {
             $_POST['product-planter_type'],
             $_POST['product-plant_care'],
             $_POST['product-watering'],
-            $_POST['product-on_sale'],
+            $onsale,
             $_POST['product-discount'],
             $_POST['id']
          );
@@ -165,7 +167,7 @@ function makeStatement($type) {
             $_POST['product-category'],
             $_POST['product-image_main'],
             $_POST['product-image_thumbnail'],
-            $_POST['image_other'],
+            $_POST['product-image_other'],
             $_POST['product-price'],
             $_POST['product-description'],
             $_POST['product-dimentions'],
@@ -176,6 +178,7 @@ function makeStatement($type) {
             $_POST['product-discount']
 
          );
+         // pretty_dump([$_POST,$stmt]); die;
          $stmt->execute();
          return $conn;
 

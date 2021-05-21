@@ -6,7 +6,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 
 
+
 <base href="http://kimikurata.com/aau/wnm608/kurata.kimi/">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
 
 <link rel="stylesheet" href="lib/css/styleguide.css">
 <link rel="stylesheet" href="lib/css/gridsystem.css">

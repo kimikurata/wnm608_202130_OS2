@@ -33,7 +33,7 @@ $productsLast = MYSQLIQuery("
 
 
 $empty_object = (object) [
-   "id"=>'',
+   // "id"=>'',
    "product_name"=>"Silver Jupiter",
    "category"=>"Echeveria",
    "image_main"=>"silver_jupiter_1.png",
@@ -68,14 +68,16 @@ switch(@$_GET['crud']) {
 
 
 function productListItem($r, $product) {
+   $onsale_class = $product->on_sale==1?'onsale-admin':'';
 return $r.<<<HTML
 <div>
-   <div class="display-flex flex-align-center" >
-      <div class=""><img class="image-contain img96x96" src="images/$product->image_thumbnail"></div>
-      
-      <div>$product->product_name</div>
-      <div class="flex-stretch"></div>
+   <div class="display-flex flex-align-center flex-wrap" >
 
+      <div class="$onsale_class" style="width: 150px">
+         <img class="image-contain img96x96 " src="images/$product->image_thumbnail">
+      </div>
+      <div class="admin-item-list-name ">$product->product_name</div>
+      <div class="flex-stretch"></div>
       <div><a class="form-button outlined" style="width: 80px; display: block; margin-right: 1em" href="product_item.php?id=$product->id" target="_blank">Visit</a></div>
       <div><a class="form-button highlighted" style="width: 80px;" href="{$_SERVER['PHP_SELF']}?id=$product->id">EDIT</a></div>
       
@@ -107,6 +109,18 @@ $showvisitlink = $id!="new" ? "<div><a href='product_item.php?id=$id' class='for
 $showdeletelink = $id!="new" ? "<div><a href='product_item.php?id=$id' class='form-button'>Visit</a></div>" : "";
 
 
+$onsale = $product->on_sale ? "checked" : "";
+// $onsale_class_price = $product->on_sale==1?'onsale-admin-mini':'';
+$onsale_class_image = $product->on_sale==1?'onsale-admin2':'';
+
+
+
+$onsale_class2 = $product->on_sale==1?'onsale2':'';
+$discount = $product->on_sale==1? (100 - $product->discount)/100:1; 
+$calculated_price = number_format((float)round($discount*$product->price, 2), 2, '.', '');
+$onsale_price_hide = $product->on_sale==0? 'hidden':'';
+
+
 
 echo <<<HTML
 
@@ -117,9 +131,6 @@ echo <<<HTML
             <a href="{$_SERVER['PHP_SELF']}"><img src="images/icon/left-arrow.svg" class="icon" style="font-size:1.5em; margin-right: 1em;"></a>
             <h2 calss="" style="color: var(--color-desable-light);">$addoredit Product form</h2>
          </div>
-
-
-
          <h3 class="top-padding-sm">1 General information</h3>
          <div class="grid gap ">
             <input type="hidden" name="id" value="$id">
@@ -135,21 +146,6 @@ echo <<<HTML
                <label class="form-label" for="product-description">Description</label>
                <textarea class="form-input" id="product-description" name="product-description"  rows="4">$product->description</textarea>
             </div>
-
-            <h3 class="col-xs-12 top-padding-xs">2 Pricing</h3>
-            <div class="form-control col-md-4 col-xs-12">
-               <label class="form-label" for="product-price">Price</label>
-               <input class="form-input" type="number" min="1" step=".01" id="product-price" name="product-price" value="$product->price">
-            </div>
-            <div class="form-control col-md-4 col-xs-12">
-               <label class="form-label" for="product-on_sale">On Sale</label>
-               <input class="form-input" type="text" id="product-on_sale" name="product-on_sale" value="$product->on_sale">
-            </div>
-            <div class="form-control col-md-4 col-xs-12">
-               <label class="form-label" for="product-discount">Discount %</label>
-               <input class="form-input" type="number" min="1" step="1" id="product-discount" name="product-discount" value="$product->discount">
-            </div>
-            <h3 class="col-xs-12 top-padding-xs">3 Aditional information</h3>
             <div class="form-control col-md-6 col-xs-12">
                <label class="form-label" for="product-planter_type">Planter Type</label>
                <input class="form-input" type="text" id="product-planter_type" name="product-planter_type" value="$product->planter_type">
@@ -159,14 +155,30 @@ echo <<<HTML
                <input class="form-input" type="text" id="product-dimentions" name="product-dimentions" value="$product->dimentions">
             </div>
             <div class="form-control col-xs-12">
-               <label class="form-label" for="product-planter_care">Plant Care</label>
-               <input class="form-input" type="text" id="product-planter_care" name="product-planter_care" value="$product->plant_care">
+               <label class="form-label" for="product-plant_care">Plant Care</label>
+               <input class="form-input" type="text" id="product-plant_care" name="product-plant_care" value="$product->plant_care">
             </div>
             <div class="form-control col-xs-12">
                <label class="form-label" for="product-watering">Watering</label>
                <input class="form-input" type="text" id="product-watering" name="product-watering" value="$product->watering">
             </div>
-            <h3 class="col-xs-12 top-padding-xs">4 Product images</h3>
+            <h3 class="col-xs-12 top-padding-xs">2 Pricing</h3>
+            <div class="form-control col-md-4 col-xs-12">
+               <label class="form-label" for="product-price">Price</label>
+               <input class="form-input" type="number" min="1" step=".01" id="product-price" name="product-price" value="$product->price">
+            </div>
+            <div class="form-control col-md-4 col-xs-12 place_center">
+               <label class="form-label text-center" for="product-on_sale">On Sale</label>
+               <div class="toggle">
+                  <input class="hidden" type="checkbox" id="product-on_sale" name="product-on_sale" value="1" $onsale>
+                  <label for="product-on_sale"></label>
+               </div>
+            </div>
+            <div class="form-control col-md-4 col-xs-12">
+               <label class="form-label" for="product-discount">Discount %</label>
+               <input class="form-input" type="number" min="1" step="1" id="product-discount" name="product-discount" value="$product->discount">
+            </div>
+            <h3 class="col-xs-12 top-padding-xs">3 Product images</h3>
             <div class="form-control col-md-6 col-xs-12">
                <label class="form-label" for="product-image_main">Main image</label>
                <input class="form-input" type="text" id="product-image_main" name="product-image_main" value="$product->image_main">
@@ -176,7 +188,7 @@ echo <<<HTML
                <input class="form-input" type="text" id="product-image_thumbnail" name="product-image_thumbnail" value="$product->image_thumbnail">
             </div>
             <div class="form-control col-xs-12">
-               <label class="form-label" for="product-image_other">Image Other</label>
+               <label class="form-label" for="product-image_other">Other Images</label>
                <input class="form-input" type="text" id="product-image_other" name="product-image_other" value="$product->image_other">
             </div>            
             <div class="form-control col-xs-12">
@@ -234,40 +246,35 @@ echo <<<HTML
                   <p>$product->watering</p>
                </div>
             </div>
-            <hr style="margin:0em 1em; margin-top: 1em;">
+            <hr class="transparent-line" style="margin:0em 1em; margin-top: 1em;">
             <div>
-          
-               <div class="card flat">
-                  <div>
-                     <p class="text-bold ">Price</p>
-                     <p>&dollar;$product->price</p>
+               
+               <div class="card flat flex-justify-center">
+                  <p class="text-bold bottom-margin-sm">Price / Sale / Discount</p>
+                  <div class="display-flex flex-align-center ">
+                     <h4 class="">&dollar; $calculated_price </h4>
+                     <h3 class="$onsale_price_hide ?> sale_price ">&dollar;  $product->price </h3>
+                     <div class=" $onsale_price_hide  onsale2"> $product->discount  %</div>
                   </div>
-                  <div calss="">
-                     <p class="text-bold ">On sale</p>
-                     <p>$product->on_sale</p>
-                  </div>
-                  <div calss="">
-                     <p class="text-bold ">Discount</p>
-                     <p>$product->discount %</p>
-                  </div>
+                
                </div>
-               <hr>
+               <hr  class="transparent-line">
                <div class=" card flat">
                   <div class="">
                      <p class="text-bold">Image main</p>
-                     <div class="image-thumbnail ">
+                     <div class="image-thumbnail $onsale_class_image bottom-margin-sm">
                         <img class="img300x300" src="images/$product->image_main">
                      </div>
                   </div>
                   <div class="">
                      <div>
-                        <p class="text-bold">Image Thumb</p>
-                        <div class="image-thumbnail display-flex flex-justify-center" >
+                        <p class="text-bold ">Image Thumb</p>
+                        <div class="image-thumbnail display-flex flex-justify-center bottom-margin-sm" >
                            <img class="img120x120" src="images/$product->image_thumbnail">
                         </div>
                      </div>
                      <div>
-                        <p class="text-bold ">Image Other</p>
+                        <p class="text-bold ">Other Images</p>
                         <div class="image-thumbs display-flex flex-justify-centers">$thumb_elements</div>
                      </div>
                   </div>
@@ -287,18 +294,6 @@ HTML;
 
 
 
-
-// function showProductPage($product) {
-// return <<<HTML
-// <div>$product->product_name</div>
-// <div>&dollar;$product->price</div>
-// HTML;
-// }
-
-
-
-
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,12 +303,12 @@ HTML;
 <body class="checkout_page_bg">
    <!-- NAVBARS  -->
    <header class="navbar admin-top-nav">
-      <div class="container display-flex flex-align-center">
-         <div class="flex-none">
+      <div class="container display-flex flex-align-center display-flex-wrap">
+         <div class="flex-none flex-grow-1">
             <h1 class="brand-text">Product Admin</h1>
          </div>
          <div class="flex-stretch"></div>
-         <nav class="flex-none nav flex">
+         <nav class="flex-none nav flex " style="margin:auto;">
             <ul>
                <li><a href="<?= $_SERVER['PHP_SELF'] ?>">List</a></li>
                <li><a href="product_list.php" target="_blank">Store</a></li>
@@ -321,10 +316,10 @@ HTML;
          </nav>
       </div>
    </header>
-  <!--  <div class="grid gap admin-side-nav">
+   <div class="grid gap admin-side-nav">
       <div class="col-2">           
          <nav class="navbar side-var">
-            <a class="brand-text" href="#">Product Admin</a>
+            <a class="brand-text" href="admin">Product Admin</a>
             <ul class="nav">
                <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li> 
                <li><a href="product_list.php" target="_blank">Store</a></li>
@@ -332,7 +327,7 @@ HTML;
             </ul>
          </nav>
       </div>
-   </div> -->
+   </div>
    <!-- NAVBAR END  -->
 
 
@@ -350,29 +345,29 @@ HTML;
             } else {
             ?>
       <div class="admin-summary" >
-         <h2>ADMIN SUMMARY</h2>
+         <h2 class="bottom-padding-sm">ADMIN SUMMARY</h2>
          <div class="grid gap">
-            <div class="col-xs-12 col-md-3">
-               <div class=" card flat highlight">
+            <div class="card flat highlight col-xs-12 col-md-3 card-exception">
+               <div class=" ">
                   <h3 class="text-center text-white">Total items in the store</h3>
                   <p class="text-center admin-gig-number"><?= $totalItems?></p>
                </div>
             </div>  
-            <div class="col-xs-12 col-md-3">
-               <div class="card flat">
-                  <h3 class="text-center">On sale items</h3>
+            <div class="card flat col-xs-12 col-md-3 card-exception">
+               <div class="bottom-margin-sm">
+                  <h3 class="text-center ">On sale items</h3>
                   <p class="text-center admin-gig-number"><?= $totalItemsOnSale?></p>
                </div>
             </div>
-            <div class="col-xs-12 col-md-3">
-               <div class="card flat">
+            <div class="card flat col-xs-12 col-md-3 card-exception">
+               <div class="">
                   <h3 class="text-center">Sold out</h3>
                   <p class="text-center admin-gig-number">2</p>
                </div>
             </div>   
-            <div class="col-xs-12 col-md-3">
-               <div class="card flat ">
-                  <h3 class="text-center">Recently added items</h3>
+            <div class="card flat col-xs-12 col-md-3 card-exception" >
+               <div class=" ">
+                  <h3 class="text-center bottom-margin-xs">Recently added items</h3>
                   <div class="display-flex flex-justify-around">
                      <?php 
                      echo array_reduce($productsLast,'recentItemsThumbs');
@@ -384,9 +379,7 @@ HTML;
                <div class="card-section"><h2>Product List</h2></div>
                <div class="admin-list">
                   <?php echo array_reduce($products,'productListItem'); ?>
-
                </div>
-               
                <div class="display-flex " >
                   <div class="flex-stretch"></div>
                   <a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">
@@ -396,14 +389,30 @@ HTML;
                   </a>
                </div>
             </div>
-            <div class="card col-xs-12 col-md-3">
+            <div class="card flat col-xs-12 col-md-3">
+               <h3 class="text-center ">Admin activity history</h3>
+               <p class="top-padding-xs">Today</p>
+               <hr>
+               <ul>
+                  <li>Item [Solstice Premium LOVE] - "Name" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Categoty" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "On sale" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Description" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Price" - changed</li>
+               </ul>
+               <p class="top-padding-xs">05 / 18 /2021</p>
+               <hr>
+               <ul>
+                  <li>Item [Solstice Premium LOVE] - "Name" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Categoty" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "On sale" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Description" - changed</li>
+                  <li>Item [Solstice Premium LOVE] - "Price" - changed</li>
+               </ul>
             </div>
                
          </div>   
       </div>
-               
-               
-         
             <?php
             }
             ?>

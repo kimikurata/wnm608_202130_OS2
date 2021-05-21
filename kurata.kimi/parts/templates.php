@@ -9,7 +9,7 @@ $onsale_procie_hide = $o->on_sale==0?'hidden':'';
 return $r.<<<HTML
 
 <a class="$onsale_class product card hard col-lg-4 col-md-6 col-xs-12 " href="product_item.php?id=$o->id">
-	<div class="display-flex flex-justify-center ">
+	<div class="display-flex flex-justify-center " >
 		<img class="image-cover " src="images/$o->image_thumbnail" alt="">
 	</div>
 	<div class="display-flex flex-align-center">

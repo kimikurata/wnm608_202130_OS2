@@ -8,8 +8,9 @@
 	--color-neutral-medium: #a9a9a9;
 	--color-neutral-dark: #262020;
 
-	--color-highlight: #7572D1;
-	--color-highlight-alfa: rgba(117, 114, 209, 0.6);
+	--color-highlight-rgb: 117, 114, 209;
+	--color-highlight: rgb(var(--color-highlight-rgb));
+	--color-highlight-alfa: rgba(var(--color-highlight-rgb), 0.6);
 	--color-highlight-light: #b2affe;
 
 	--color-desable: #b2b2b2;
@@ -950,6 +951,39 @@ input[type=text].search-bar-animated {
 input[type=text].search-bar-animated:focus {
   width: 100%;
 }
+
+
+
+
+
+
+
+.toggle label {
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border-radius: 0.2em;
+    background-color: var(--color-neutral-lighter);
+    font-size: calc(2em + 2px);
+    position:relative;
+    overflow:hidden;
+}
+.toggle label::before {
+	content:'';
+	left:0;
+	top:0;
+	width:50%;
+	height:100%;
+	position:absolute;
+	border-radius: 0;
+	background-color:rgba(var(--color-highlight-rgb), 0.3);
+	transition:all 0.3s;
+}
+.toggle input:checked+label::before {
+	left:1em;
+	background-color:rgba(var(--color-highlight-rgb), 1);
+}
+
 
 
 

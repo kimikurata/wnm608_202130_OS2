@@ -5,9 +5,10 @@
 	--color-neutral-light: #EDEDED;
 	--color-neutral-dark: #35414B;
 
-	--color-highlight: #517577;
+	--color-highlight-rgb:83, 118, 120;
+	/*--color-highlight: #517577;*/
 	--color-highlight-light: #8F97AB;
-	--color-highlight-alfa: rgba(83, 118, 120, 0.6);
+	/*--color-highlight-alfa: rgba(83, 118, 120, 0.6);*/
 	--coloe-gradient-light:linear-gradient(130deg, #ff00a2, blue, #00ff99, #ebff00);
 	--color-gradient-medium: linear-gradient(-45deg, #D3D9D9, #F6F6F6);
 
@@ -105,7 +106,6 @@ h4.code-spam {
 	    font-size: var(--font-size-xxs);
 }
 
-
 /* NAVBAR */
 
 .nav a:hover{
@@ -134,6 +134,8 @@ h4.code-spam {
 .card{
 	padding: 1.5em;
 }
+
+/* FIGURES */
 
 
 /* PRODUCT PAGE */
@@ -689,12 +691,12 @@ nav.crumbs> a{
 
 /* PRODUCT ADMIN */
 .admin-summary{
-	padding: 2.5em 2em;
+	padding: 1.5em 2em;
 }
-/*.admin-top-nav{
+.admin-top-nav{
 	visibility: hidden;
 	height: 0px;
-}*/
+}
 .admin-side-nav{
 	visibility: visible;
 }
@@ -708,8 +710,9 @@ nav.crumbs> a{
 	}
 }
 .admin-gig-number{
-	    font-size: 3em;
-    font-weight: 200;
+	font-size: 3em;
+    line-height: 0.8;
+    margin-top: 20px;
 }
 .admin-product-edit-general-info{
 	display: flex;
@@ -719,10 +722,10 @@ nav.crumbs> a{
 	justify-content: space-between;
 	min-width: 350px;
 }
-/*.admin-edit-form-box{
+.admin-edit-form-box{
 	overflow:auto;
 	max-height: 100vh;
-}*/
+}
 .responsive-boxes{
 	display: flex;
 }
@@ -736,10 +739,43 @@ nav.crumbs> a{
     padding: 2.5em;
     overflow: hidden;
     position: relative;
+    
 }
-/*.admin-list{
+.admin-list{
 	overflow:auto;
 	max-height: 550px;
-}*/
+}
+.admin-item-list-name{
+	padding-left:  1em;
+	min-width: 300px;
+}
+.onsale-admin::after{
+	content:"Sale";
+	position: relative;
+	top: -43px;
+	color:var(--color-white);
+	background-color: var(--color-highlight);
+	border-radius: 50%;
+	font-size: 0.6em;
+	padding: 16px 9px 16px 9px;
+}
+.onsale-admin2::after{
+	content:"Sale";
+	position: absolute;
+	top: 80px;
+	right: 80px;
+	color:var(--color-white);
+	background-color: var(--color-highlight);
+	border-radius: 50%;
+	font-size: 1em;
+	padding: 22px 15px 22px 15px;
+}
+.transparent-line{
+	border: 0px solid var(--color-pure-white);
+}
+.card-exception{
+	padding:1em 1.5em;
+}
 /**/
+
 
