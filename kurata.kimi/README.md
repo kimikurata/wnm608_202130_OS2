@@ -15,11 +15,11 @@ Suculentina is an E-commerce website prototype that sells live succulents and ga
 - Purchase confirmation page
 - Added to a cart confirmation page   
 
-[Link to SUCULENTINA STORE](http://kimikurata.com/aau/wnm608/kurata.kimi)
+[Link to suculentina STORE](http://kimikurata.com/aau/wnm608/kurata.kimi)
 
 In addition to the website prototype, there was created a simple and functional "Store Administration Panel" that helps the store administration users to modify, add or delete products from the store.
 
-[Link to SUCULENTINA ADMIN](http://kimikurata.com/aau/wnm608/kurata.kimi/admin)
+[Link to suculentina ADMIN](http://kimikurata.com/aau/wnm608/kurata.kimi/admin)
 
 Finally, to facilitate the development of more pages in the furutre; all UI elements used in this project were collected in onepage style guide! 
 
