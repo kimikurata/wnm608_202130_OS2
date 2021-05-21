@@ -2,7 +2,7 @@
 
 This repository contains all the projects I created during the WNM608 Back End class using HTML, CSS, Javascript, and PHP.
 
-##1 Suculentina 
+## 1 Suculentina 
 Suculentina is an E-commerce website prototype that sells live succulents and gardening accessories. 
 
 ### Website content: 
@@ -26,7 +26,7 @@ Finally, to facilitate the development of more pages in the furutre; all UI elem
 [Take a look to the style guidelines](http://kimikurata.com/aau/wnm608/kurata.kimi/styleguide/)
 
 
-##2 Recipies 
+## 2 Recipies 
 Recipies is a onesingle page website that contains delicious recipies. Don't miss the opportunity to learn how to cook my best Mexican salsa recipe!
 
 [Link to Recipies](http://kimikurata.com/aau/wnm608/kurata.kimi/styleguide/)
