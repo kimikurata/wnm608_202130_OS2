@@ -44,7 +44,7 @@ include "parts/templates.php";
 				<h3 class="">New Arrivals</h3>
 				<h2 class="top-margin-sm">Moon Terrarium</h2>
 				<h4 class=" top-margin-xs">$ 00.00</h4>
-				<a href="product_item.php?id=1"><button  class="arrival-btn generic-btn " type="button">Shop now</button></a>
+				<a href="product_item.php?id=18"><button  class="arrival-btn generic-btn " type="button">Shop now</button></a>
 			</div>
 		</div>
 		<div class="grid container">

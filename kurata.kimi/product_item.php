@@ -43,7 +43,7 @@ $thumb2 = $thumbs[1];
 			<div class="col-md-8 col-xs-12 display-flex flex-align-end " >
 				<img  class=" main-product-image image-contain"  src="images/<?=$product->image_main ?>" alt="product image" >
 			</div>
-			<form class="col-md-4 col-xs-12 product-main-info-box card flat display-flex flex-justify-end" style="flex-direction: column;" action="product_actions.php?crud=add-to-cart" method="post">
+			<form class="sticky-div-top col-md-4 col-xs-12 product-main-info-box card flat display-flex flex-justify-end" style="flex-direction: column;" action="product_actions.php?crud=add-to-cart" method="post">
 				<input type="hidden" name="id" value="<?= $product->id ?>">
 				<h2 class="top-margin-md "><?= $product->product_name ?></h2>
 				<div class="display-flex flex-align-center bottom-margin-lg">
@@ -92,7 +92,7 @@ $thumb2 = $thumbs[1];
 
 
 
-	<div class="product-details-list-box">
+	<div class="product-details-list-box sticky-div">
 		<div class="container">
 			<h4 class="porduct-details-list-title top-padding-lg bottom-padding-xs">PRODUCT DETAILS</h4>
 			<hr class="bottom-margin-sm top-margin-sm">

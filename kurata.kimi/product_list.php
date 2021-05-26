@@ -36,12 +36,14 @@ function makeSortOptions() {
       ";
    }
 }
+
 function makeFilterSet() {
    $options = [
       "Terrarium",
       "Echeveria",
       "Senecio",
       "Accessory"
+
    ];
    foreach($options as $option) {
       echo "

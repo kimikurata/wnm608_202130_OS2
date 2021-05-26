@@ -175,8 +175,6 @@ h4.code-spam {
 	margin-left: 10px;
 }
 
-
-
 .product-main-info-box.card.flat{
 	background-color: var(--color-pure-white-alfa50);
 	border-radius: 0 0 1em 1em ;
@@ -197,7 +195,6 @@ h4.code-spam {
 	  position:relative; 
 	  top:-150px;
 	  left: -20px;
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -222,6 +219,24 @@ h4.code-spam {
 	overflow: hidden;
 }
 
+.sticky-div-top {
+   position : sticky;
+	top : 50px;
+}
+.sticky-div{
+	position : sticky;
+}
+
+@media screen and (max-width: 1000px) {
+	.sticky-div-top {
+   		position : inherit;
+		
+	}
+	.sticky-div{
+		position : inherit;
+	}
+}
+	
 
 /* PRODUCT LIST */
 

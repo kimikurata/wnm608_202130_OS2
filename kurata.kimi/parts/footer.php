@@ -43,6 +43,8 @@
 			<br>
 			<a class="body-text text-white bottom-margin-xs" href="product_list.php">Produc list</a>
 			<br>
+			<a class="body-text text-white bottom-margin-xs" href="styleguide" target="_blank">Style guide</a>
+			<br>
 			<a class="body-text text-white bottom-margin-xs" href="about.php">About us</a>
 		</div>
 		<div class="col-lg-3 col-md-6 col-xs-6">

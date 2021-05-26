@@ -81,7 +81,7 @@ include "parts/templates.php";
 							<div class="col-md-6 col-xs-12">
 								<div class="form-control">
 									<label for="city" class="form-label">City</label>
-									<input id="city" type="text" placeholder="Your city" class="form-input">
+									<input id="city" type="text" placeholder="California" class="form-input">
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12">
