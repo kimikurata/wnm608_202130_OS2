@@ -36,8 +36,8 @@ include "parts/templates.php";
 	</div>
 	<div id="new" class="new-arrivals" style="background-image: var(--color-gradient-medium);">
 		<div class="grid container">
-			<div class="col-md-6 col-xs-12 display-flex flex-justify-center" >
-				<img  class="image-contain intro-image top-margin-md" src="images/moon_terrarium_1.png" alt="image placeholder">
+			<div class="col-md-6 col-xs-12 display-flex flex-justify-center " >
+				<img  class="new-img top-margin-md" src="images/moon_terrarium_1.png" alt="image placeholder">
 			</div>
 			<div class="arrival-content-box col-md-6 col-xs-12">
 				<h3 class="">New Arrivals</h3>
@@ -57,7 +57,7 @@ include "parts/templates.php";
 				</div>
 			</div>
 			<div class="col-md-6 col-xs-12 display-flex flex-justify-center " >
-				<img  class="image-contain img400x400 top-margin-md" src="images/new-arrival2.png" alt="image placeholder">
+				<img  class="new-img top-margin-md" src="images/new-arrival2.png" alt="image placeholder">
 			</div>	
 		</div>
 	</div>
@@ -68,7 +68,7 @@ include "parts/templates.php";
 			</div>
 			<div class=" col-md-6 col-xs-12">
 				<h2 class="top-margin-lg text-center text-highlight-light">50% OFF</h2>
-				<h2 class=" text-center">ACCESSOIRES</h2>
+				<h2 class=" text-center">ACCESSORIES</h2>
 				<h2 class=" text-center text-highlight-light">SALE</h2>
 				<div class="display-flex">
 					<div class="flex-stretch"></div>

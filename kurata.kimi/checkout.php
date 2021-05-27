@@ -145,7 +145,7 @@ include "parts/templates.php";
 					</div>
 					<?= checkoutTotals() ?>
 					<div class="checkout_summary">
-						<a href="cart.php"><p class="text-right text-xxs" >Eddit order</p></a>
+						<a href="cart.php"><p class="text-right text-xxs" >Edit order</p></a>
 					</div>
 				</div>
             	<a   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12"  href="cart_confirmation.php" >Pay now</a>

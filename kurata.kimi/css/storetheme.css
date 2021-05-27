@@ -215,6 +215,7 @@ h4.code-spam {
 	color: var(--color-white);
 	font-weight: 400;
 }
+
 .main-product-image{
 	overflow: hidden;
 }
@@ -351,6 +352,11 @@ footer a:hover{
 	margin-top: var(--space-lg);
 }
 
+.new-img{
+	width: 500px;
+    height: 500px;
+}
+
 .giant-text{
 	font-size: 5em;
 }
@@ -431,6 +437,10 @@ footer a:hover{
 	}
 	.event-subtitle{
 		text-align: center;
+	}
+	.new-img{
+		width: 300px;
+    	height: 300px;
 	}
 	.arrival-content-box, .arrival-content-box.left{
 	margin-top: var(--space-sm);

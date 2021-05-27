@@ -9,7 +9,7 @@
 						<div class="flex-stretch"></div>
 						<div class="display-flex flex-align-center nav-links-box">
 						<ul class="nav display-flex">
-							<li><a href="product_list.php">Shopp</a></li>
+							<li><a href="product_list.php">Shop</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="admin" target="_blank">Admin</a></li>
 						</ul>
