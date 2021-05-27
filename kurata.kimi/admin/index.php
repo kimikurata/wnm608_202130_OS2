@@ -169,7 +169,7 @@ echo <<<HTML
                <label class="form-label text-center" for="product-on_sale">On Sale</label>
                <div class="toggle">
                   
-                  <input class="hidden sale_input" type="checkbox" id="product-on_sale" name="product-on_sale" value="" $onsale >
+                  <input class="hidden sale_input" type="checkbox" id="product-on_sale" name="product-on_sale" value="1" $onsale >
                   <label for="product-on_sale"></label>
                </div>
             </div>
