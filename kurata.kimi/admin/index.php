@@ -80,7 +80,6 @@ return $r.<<<HTML
       <div class="flex-stretch"></div>
       <div><a class="form-button outlined" style="width: 80px; display: block; margin-right: 1em" href="product_item.php?id=$product->id" target="_blank">Visit</a></div>
       <div><a class="form-button highlighted" style="width: 80px;" href="{$_SERVER['PHP_SELF']}?id=$product->id">EDIT</a></div>
-      
    </div>
    <hr style="border-top: 1px solid var(--color-disable-light);">
 </div>
@@ -94,7 +93,6 @@ return $r.<<<HTML
 </div>
 HTML;
 }
-
 
 function showProductPage($product) {
 
@@ -170,7 +168,8 @@ echo <<<HTML
             <div class="form-control col-md-4 col-xs-12 place_center">
                <label class="form-label text-center" for="product-on_sale">On Sale</label>
                <div class="toggle">
-                  <input class="hidden" type="checkbox" id="product-on_sale" name="product-on_sale" value="1" $onsale>
+                  
+                  <input class="hidden sale_input" type="checkbox" id="product-on_sale" name="product-on_sale" value="" $onsale >
                   <label for="product-on_sale"></label>
                </div>
             </div>
@@ -197,14 +196,9 @@ echo <<<HTML
          </div>
       </div>
    </form>
-
    <div class="col-xs-12 col-md-6 col-lg-6">
-      
       <div class="top-padding-sm ">
-         
-            
-         <div class="display-flex flex-align-center ">
-            
+         <div class="display-flex flex-align-center ">     
             <h2 class="">$product->product_name</h2>
             <div class="flex-stretch" ></div>
             <div class="display-flex flex-align-center">
@@ -215,7 +209,6 @@ echo <<<HTML
             </div>
          </div>
          <div class="responsive-boxes">
-
             <div class="admin-product-edit-general-info card flat">
                <div calss="">
                   <p class="text-bold ">Name</p>
@@ -247,8 +240,7 @@ echo <<<HTML
                </div>
             </div>
             <hr class="transparent-line" style="margin:0em 1em; margin-top: 1em;">
-            <div>
-               
+            <div>    
                <div class="card flat flex-justify-center">
                   <p class="text-bold bottom-margin-sm">Price / Sale / Discount</p>
                   <div class="display-flex flex-align-center ">
@@ -256,7 +248,6 @@ echo <<<HTML
                      <h3 class="$onsale_price_hide ?> sale_price ">&dollar;  $product->price </h3>
                      <div class=" $onsale_price_hide  onsale2"> $product->discount  %</div>
                   </div>
-                
                </div>
                <hr  class="transparent-line">
                <div class=" card flat">
@@ -281,17 +272,11 @@ echo <<<HTML
                </div>
             </div>
          </div>  
-
-
-
-
       </div>
    </div>
 </div>
 HTML;
 }
-
-
 
 
 ?><!DOCTYPE html>
@@ -323,14 +308,11 @@ HTML;
             <ul class="nav">
                <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li> 
                <li><a href="product_list.php" target="_blank">Store</a></li>
-
             </ul>
          </nav>
       </div>
    </div>
    <!-- NAVBAR END  -->
-
-
    <div class="side-var-spacer">
       <div class="" >
 
@@ -344,6 +326,7 @@ HTML;
                );
             } else {
             ?>
+            
       <div class="admin-summary" >
          <h2 class="bottom-padding-sm">ADMIN SUMMARY</h2>
          <div class="grid gap">
@@ -389,28 +372,29 @@ HTML;
                   </a>
                </div>
             </div>
-            <div class="card flat col-xs-12 col-md-3">
+            <div class="card flat col-xs-12 col-md-3 ">
                <h3 class="text-center ">Admin activity history</h3>
                <p class="top-padding-xs">Today</p>
                <hr>
-               <ul>
-                  <li>Item [Solstice Premium LOVE] - "Name" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Categoty" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "On sale" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Description" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Price" - changed</li>
-               </ul>
-               <p class="top-padding-xs">05 / 18 /2021</p>
-               <hr>
-               <ul>
-                  <li>Item [Solstice Premium LOVE] - "Name" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Categoty" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "On sale" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Description" - changed</li>
-                  <li>Item [Solstice Premium LOVE] - "Price" - changed</li>
-               </ul>
-            </div>
-               
+               <div class="admin-list">
+                  <ul>
+                     <li>Item [Solstice Premium LOVE] - "Name" - changed</li>
+                     <li>Item [Solstice Premium LOVE] - "Categoty" - changed</li>
+                     <li>Item [Solstice Premium LOVE] - "On sale" - changed</li>
+                     <li>Item [Solstice Premium LOVE] - "Description" - changed</li>
+                     <li>Item [Solstice Premium LOVE] - "Price" - changed</li>
+                  </ul>
+                  <p class="top-padding-xs">05 / 18 /2021</p>
+                  <hr>
+                  <ul>
+                     <li>Item [Solstice Premium] - "Name" - changed</li>
+                     <li>Item [Solstice Premium] - "Categoty" - changed</li>
+                     <li>Item [Solstice Premium] - "On sale" - changed</li>
+                     <li>Item [Solstice Premium] - "Description" - changed</li>
+                     <li>Item [Solstice Premium] - "Price" - changed</li>
+                  </ul>
+               </div>
+            </div>   
          </div>   
       </div>
             <?php

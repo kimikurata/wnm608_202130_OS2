@@ -16,7 +16,6 @@ $calculated_price = number_format((float)round($discount*$product->price, 2), 2,
 $onsale_price_hide = $product->on_sale==0? 'hidden':'';
 
 
-
 $thumbs = explode(",", $product->image_other);
 $thumb1 = $thumbs[0];
 $thumb2 = $thumbs[1];
@@ -26,15 +25,12 @@ $thumb2 = $thumbs[1];
 // });
 
 // echo $_SESSION['num'];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Suculentina cart</title>
 	<?php include "parts/meta.php"?>
-
 </head>
 <body>
 	<?php include "parts/navbar.php" ?>
@@ -54,7 +50,6 @@ $thumb2 = $thumbs[1];
 				<p class="p-title bottom-margin-xs">Description</p>
 				<p class="body-text text-highlight bottom-margin-sm"><?= $product->description ?></p>
 				<p class="p-title bottom-margin-sm">Quantity</p>
-				
 				<!-- <input class="form-input product-quantity-input bottom-margin-md" name="amount" id="amount" type="number" placeholder="1" min="1"> -->
 				<div class="form-select product-quantity-input bottom-margin-md">
 					<select  name="amount" id="amount" type="number">
@@ -85,11 +80,6 @@ $thumb2 = $thumbs[1];
 			</figure>
 		</div>
 	</div>
-
-
-
-
-
 
 
 	<div class="product-details-list-box sticky-div">
@@ -135,38 +125,22 @@ $thumb2 = $thumbs[1];
 			<div class="top-padding-lg"></div>
 		</div>
 	</div>
-
-	
-
-
-
-
 	<div class="container">
 		<h2 class="top-margin-lg bottom-margin-lg">Products you might also like</h2>
 		<div class="grid gap medium vertical-stretch bottom-margin-lg">
+		<? 
+		$recommended = MYSQLIQuery("
+		   SELECT *
+		   FROM `products`
+		   WHERE `category` = '$product->category'
+		   LIMIT 3
+		");
 
-	<? 
-
-	$recommended = MYSQLIQuery("
-	   SELECT *
-	   FROM `products`
-	   WHERE `category` = '$product->category'
-	   LIMIT 3
-	");
-
-	// pretty_dump($recommended);
-	echo array_reduce($recommended,'makeRecommendedList');
-
-	?>
-
+		// pretty_dump($recommended);
+		echo array_reduce($recommended,'makeRecommendedList');
+		?>
 		</div>
 	</div>
-	
-
-
-
-
-	<?php include "parts/footer.php"?>
-	
+	<?php include "parts/footer.php"?>	
 </body>
 </html>

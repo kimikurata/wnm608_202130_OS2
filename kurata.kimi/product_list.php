@@ -10,8 +10,6 @@ include "data/api.php";
 
 // $search = isset($_GET['s']) ? $_GET['s'] : "";
 
-
-
 setDefault('s',''); // search
 setDefault('t','products_all'); // type
 setDefault('d','DESC'); // order direction
@@ -19,7 +17,6 @@ setDefault('o','date_create'); // order by
 setDefault('l','12'); // limit
 
 // pretty_dump($_GET);
-
 
 function makeSortOptions() {
    $options = [
@@ -43,7 +40,6 @@ function makeFilterSet() {
       "Echeveria",
       "Senecio",
       "Accessory"
-
    ];
    foreach($options as $option) {
       echo "
@@ -80,11 +76,8 @@ if(isset($_GET['t'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Product list</title>
-
 	<?php include "parts/meta.php"?>
-
    <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLE3Z44F0K"></script>
    <script>
@@ -94,7 +87,6 @@ if(isset($_GET['t'])) {
 
      gtag('config', 'G-VLE3Z44F0K');
    </script>
-
 </head>
 <body>
    <?php include "parts/navbar.php" ?>
@@ -115,15 +107,13 @@ if(isset($_GET['t'])) {
             </div>
           </form>
         </div>
-  
       </div>
     </div>
     <div class="filter_box top-margin-sm">
       <div class="container">
         <div class="display-flex flex-align-center overscroll-x">
           <p class="text-highlight ">Filters</p>
-          <!-- <button class="chip-btn">Solid btn</button> -->
-            
+          <!-- <button class="chip-btn">Solid btn</button> -->  
            <?
             if(empty($_GET['category'])) {
               makeFilterSet();
@@ -131,7 +121,6 @@ if(isset($_GET['t'])) {
                makeFilterSetCategory();
             }
           ?>
-
         </div>
       </div>
     </div>
@@ -146,25 +135,15 @@ if(isset($_GET['t'])) {
         <div class="flex-none" ><label class="text-only-label" for="example8" >Sort by:</label></div>
         <div class="form-select onlytext">
           <select onChange="checkSort(this)">
-
-             <?php 
-
-              
-
-             makeSortOptions() ?>
-
-             
+             <?php makeSortOptions() ?>   
           </select>
         </div>
       </form>
-            
-  
     </div>
     <div class="container">    
         <div class="grid gap medium vertical-stretch top-padding-md bottom-padding-md">
         <?
-
-         
+  
         if(empty($products)) {
            echo "<p class='col-xs-12 col-md-12 text-center'>Sorry... No products found.</p>";
         } else {
@@ -173,7 +152,6 @@ if(isset($_GET['t'])) {
 
         // pretty_dump($products);
 
-
         ?>
         </div>
    	</div>
@@ -181,7 +159,5 @@ if(isset($_GET['t'])) {
       <div class="card hard"><a href="admin" target="_blank">Product Admin</a></div>
    </div>
 	<?php include "parts/footer.php" ?>
-  
-
 </body>
 </html>

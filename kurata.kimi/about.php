@@ -5,7 +5,6 @@ include "parts/templates.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Suculentina About</title>
 
 	<?php include "parts/meta.php" ?>
@@ -53,7 +52,6 @@ include "parts/templates.php";
 				<h2 class="text-center text-highlight ">YEARS</h2>
 			</div>
 		</div>
-
 		<div class="grid gap medium bottom-margin-md">	
 			<div class="card vertical-stretch flat col-lg-4 col-md-6 col-xs-12" >
 				<div class="display-flex flex-justify-center">
@@ -67,8 +65,7 @@ include "parts/templates.php";
 				<p class="text-body ">Our plants grow beautiful, strong and, fast because we take care of them with peace and love.</p>
 				<div class="display-flex flex-justify-center">
 					<img class="image-cover " src="images/best_seller_1.png" alt="">
-				</div>
-				
+				</div>	
 			</div>	
 			<div class="card vertical-stretch flat col-lg-4 col-md-6 col-xs-12" >
 				<div class="display-flex flex-justify-center">
@@ -92,6 +89,5 @@ include "parts/templates.php";
 		</div>
 	</div>
 	<?php include "parts/footer.php" ?>
-	
 </body>
 </html>

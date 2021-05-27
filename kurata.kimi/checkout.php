@@ -7,7 +7,6 @@ include "parts/templates.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Suculentina checkout</title>
 	<?php include "parts/meta.php"?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,7 +18,6 @@ include "parts/templates.php";
 
 		gtag('config', 'G-X6SWW7S9CJ');
 	</script>
-
 </head>
 <body>
 	<div class=" checkout_header ">
@@ -29,7 +27,6 @@ include "parts/templates.php";
 	</div>
 	<div class="checkout_page_bg">
 		<div class="container">	
-
 			<form class="grid gap top-padding-md"  action="cart_confirmation.php">	
 				<h2 class="text-center col-md-8 col-xs-12 navbar-spacer-sm" style=" width: 95%;">Checkout</h2>
 				<div class="col-md-8 col-xs-12">
@@ -106,7 +103,6 @@ include "parts/templates.php";
 							</div>
 						</div>
 					</div>
-
 					<hr class="form_hr">
 					<div class="form_card">
 						<h3>3 Payment method</h3>
@@ -133,7 +129,6 @@ include "parts/templates.php";
 					</div>
 					<hr class="form_hr_last">
 				</div>
-				
 				<div class=" col-md-4 col-xs-12 ">
 					<?= checkoutTotalsTitle() ?>
 					<div class="grid gap ">
@@ -149,11 +144,9 @@ include "parts/templates.php";
 
 					</div>
 					<?= checkoutTotals() ?>
-					
 					<div class="checkout_summary">
 						<a href="cart.php"><p class="text-right text-xxs" >Eddit order</p></a>
 					</div>
-
 				</div>
             	<a   class="form-button highlighted bottom-margin-md col-md-8 col-xs-12"  href="cart_confirmation.php" >Pay now</a>
 			</form>
@@ -162,6 +155,5 @@ include "parts/templates.php";
 	<div class="copy_right">
 		&#169; 2021 | Kimi Kurata All rights reserved
 	</div>
-
 </body>
 </html>

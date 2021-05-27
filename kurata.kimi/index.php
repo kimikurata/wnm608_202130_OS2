@@ -5,7 +5,6 @@ include "parts/templates.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Suculentina Home</title>
 	<?php include "parts/meta.php"?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -79,15 +78,7 @@ include "parts/templates.php";
 			</div>		
 		</div>
 	</div>
-	
-
-
 	<? include "parts/best_seller.php"?>
-
-
-
-
-
 	<div class="event-info-box">
 			<div class="container" style="width: 90%;">
 			<h1 class="text-white home-top-title text-center">COME AND CELEBRATE WITH US THE TREE DAY</h1>	
@@ -105,6 +96,5 @@ include "parts/templates.php";
 		</div>
 	</div>
    <?php include "parts/footer.php" ?>
-	
 </body>
 </html>

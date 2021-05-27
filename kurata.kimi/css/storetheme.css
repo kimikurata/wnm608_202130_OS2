@@ -738,8 +738,7 @@ nav.crumbs> a{
 	min-width: 350px;
 }
 .admin-edit-form-box{
-	overflow:auto;
-	max-height: 100vh;
+	
 }
 .responsive-boxes{
 	display: flex;

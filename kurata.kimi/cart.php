@@ -12,19 +12,15 @@ include "data/api.php";
 //    WHERE `id` IN (3,9,1)
 // ");
 
-
 // resetCart();
 // pretty_dump(getCart());
 
 $cart = getCartItems();
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<title>Suculentina cart</title>
 	<?php include "parts/meta.php"?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,12 +32,9 @@ $cart = getCartItems();
 
 	  gtag('config', 'G-BMJCHVRBZM');
 	</script>
-
 </head>
 <body>
 	<?php include "parts/navbar.php"?>
-	
-	
 	<div class="container bottom-padding-sm">
 		<div class="grid gap top-padding-lg">
 			<div class="products_in_list col-xs-12 col-md-8">
@@ -49,16 +42,12 @@ $cart = getCartItems();
 				<div class="cart_item_list_header grid">
 					<p class="col-md-6">Product</p>
 					<div class="col-md-6 display-flex flex-justify-around">
-						<p>Quantity</p>
-						
+						<p>Quantity</p>	
 						<p>Price</p>
 						<p>Remove</p>
-
 					</div>
-					
 				</div>
 				<hr>
-
 
 				<?php
 				if(!count($cart)){
@@ -69,8 +58,6 @@ $cart = getCartItems();
 		        ?>
 
 			</div>
-
-
 			<div class="col-xs-12 col-md-4  top-margin-sm">
 				<?= cartTotals() ?>
 				<div class="checkout_btn_box  bottom-margin-lg">
@@ -78,32 +65,25 @@ $cart = getCartItems();
 				</div>
 			</div>
 		</div>
-
 	</div>
-
 	<div class="container">
 		<h2 class=" bottom-margin-md">Products you might also like</h2>
 		<div class="grid gap medium vertical-stretch bottom-margin-lg">
+		<? 
 
-	<? 
+		$recommended = MYSQLIQuery("
+		   SELECT *
+		   FROM `products`
+		   WHERE `category` = 'Echeveria'
+		   LIMIT 3
+		");
 
-	$recommended = MYSQLIQuery("
-	   SELECT *
-	   FROM `products`
-	   WHERE `category` = 'Echeveria'
-	   LIMIT 3
-	");
+		// pretty_dump($recommended);
+		echo array_reduce($recommended,'makeRecommendedList');
 
-	// pretty_dump($recommended);
-	echo array_reduce($recommended,'makeRecommendedList');
-
-	?>
-
+		?>
 		</div>
 	</div>
-
-
-	<?php include "parts/footer.php"?>
-	
+	<?php include "parts/footer.php"?>	
 </body>
 </html>
